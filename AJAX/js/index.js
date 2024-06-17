@@ -20,7 +20,7 @@ btnXhrReadElm.addEventListener("click", () => {
 
     console.log('READY STATE',xhr.readyState);
     //3. open the request
-    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts',true);
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/todos',true);
 
     //4. set additional headers and prepare the payload
 
