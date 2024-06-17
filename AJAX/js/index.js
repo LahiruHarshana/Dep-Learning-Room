@@ -1,5 +1,4 @@
 const btnXhrReadElm = document.getElementById("btn-xhr-read");
-const btnXhrWrite = document.getElementById("btn-xhr-write");
 btnXhrReadElm.addEventListener("click", () => {
     //1. Let's create an instance of XMLHttpRequest
     const xhr = new XMLHttpRequest();
@@ -28,4 +27,26 @@ btnXhrReadElm.addEventListener("click", () => {
     //5. send the request
     xhr.send();
 
+});
+
+const btnXhrWrite = document.getElementById("btn-xhr-write");
+
+btnXhrWrite.addEventListener("click", () => {
+
+    //1. create a xhr instance
+    const xhr = new XMLHttpRequest();
+
+    //2. set up a call back function
+    xhr.addEventListener('readystatechange', () => {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 201){
+            alert('Data has been created');
+        }
+    });
+
+    //3. open the request
+    xhr.open('POST','https://jsonplaceholder.typicode.com/todos',true);
+
+    //4. set additional headers and prepare the payload
+
+    xhr.setRequestHeader('Content-Type','application/json');
 });
