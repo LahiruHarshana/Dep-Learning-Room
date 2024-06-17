@@ -9,7 +9,7 @@ btnXhrReadElm.addEventListener("click", () => {
     });
 
     //3. open the request
-    xhr.open('GET', 'http://ijse.lk',true);
+    xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts',true);
 
     //4. set additional headers and prepare the payload
 
