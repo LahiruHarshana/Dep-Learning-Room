@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+</head>
+<body>
+<h1>Form</h1>
+
+<form id="form" action="kale" method="POST" enctype="application/x-www-form-urlencoded">
+    <p>
+        Customer ID : <input id="txtId" type="text" name="id" >
+    </p>
+
+    <p>
+        Customer Name : <input id="txtName" type="text" name="name" >
+    </p>
+
+    <p>
+        Gender :
+        <label>
+            <input type="radio" name="gender" value="male"> Male
+        </label>
+        <input id="rd-femail" type="radio" name="gender" value="female" >
+        <label for="rd-femail">Female</label>
+    </p>
+
+    <p>
+        <input id="chk-profile" type="checkbox">
+        <label for="chk-profile">Include Profile Picture</label>
+    </p>
+    <p>
+        Profile Picture: <input type="file" id="fl-profile-picture"disabled name="picture">
+    </p>
+
+    <button id="btn-save">Save</button>
+    <button id="btn-clear" type="button">Clear</button>
+
+</form>
+<a href="https://google.lk/search?q=IJSE in Sri Lanka%#@$">Search IJSE</a>
+<script defer src="js/index.js"></script>
+</body>
+</html>
