@@ -14,6 +14,6 @@ btnXhrReadElm.addEventListener("click", () => {
     //4. set additional headers and prepare the payload
 
     //5. send the request
-
+    xhr.send();
 
 });
