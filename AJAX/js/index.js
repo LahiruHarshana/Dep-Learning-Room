@@ -5,9 +5,14 @@ btnXhrReadElm.addEventListener("click", () => {
 
     //2. set up a call back function
     xhr.addEventListener('readystatechange', () => {
-        console.log('AWAITING RESPONSE');
+        if(xhr.readyState === 4){
+            console.log('RESPONSE',xhr.responseText);
+            console.log('STATUS',xhr.status);
+            console.log('STATUS TEXT',xhr.statusText);
+        }
     });
 
+    console.log('READY STATE',xhr.readyState);
     //3. open the request
     xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts',true);
 
