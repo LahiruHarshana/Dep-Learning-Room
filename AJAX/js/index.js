@@ -47,6 +47,19 @@ btnXhrWrite.addEventListener("click", () => {
     xhr.open('POST','https://jsonplaceholder.typicode.com/todos',true);
 
     //4. set additional headers and prepare the payload
+    const newToDoItem = {
+        userId: 1,
+        id: 500,
+        title: 'New To Do Item',
+        completed: false
+    };
+
+
+    const jsonNewToDoItem = JSON.stringify(newToDoItem);
 
     xhr.setRequestHeader('Content-Type','application/json');
+
+    //5. send the request
+    xhr.send(jsonNewToDoItem);
+
 });
