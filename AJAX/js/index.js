@@ -5,7 +5,13 @@ btnXhrReadElm.addEventListener("click", () => {
 
     //2. set up a call back function
     xhr.addEventListener('readystatechange', () => {
-        if(xhr.readyState === 4){
+        // if(xhr.readyState === 4){
+        //     console.log('RESPONSE',xhr.responseText);
+        //     console.log('STATUS',xhr.status);
+        //     console.log('STATUS TEXT',xhr.statusText);
+        // }
+
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             console.log('RESPONSE',xhr.responseText);
             console.log('STATUS',xhr.status);
             console.log('STATUS TEXT',xhr.statusText);
