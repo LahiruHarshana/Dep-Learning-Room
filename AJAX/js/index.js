@@ -12,7 +12,7 @@ btnXhrReadElm.addEventListener("click", () => {
         // }
 
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            console.log('RESPONSE',xhr.responseText);
+            console.log(JSON.parse(xhr.responseText));
             console.log('STATUS',xhr.status);
             console.log('STATUS TEXT',xhr.statusText);
         }
