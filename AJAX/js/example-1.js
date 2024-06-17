@@ -10,8 +10,6 @@ txtId.addEventListener("change", () => {
 
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             const todoItems = JSON.parse(xhr.responseText);
-
-
         }
     });
     //3. open the request
