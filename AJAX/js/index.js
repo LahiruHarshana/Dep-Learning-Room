@@ -5,7 +5,7 @@ btnXhrReadElm.addEventListener("click", () => {
 
     //2. set up a call back function
     xhr.addEventListener('readystatechange', () => {
-
+        console.log('AWAITING RESPONSE');
     });
 
     //3. open the request
