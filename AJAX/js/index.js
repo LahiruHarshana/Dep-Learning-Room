@@ -1,4 +1,5 @@
 const btnXhrReadElm = document.getElementById("btn-xhr-read");
+const btnXhrWrite = document.getElementById("btn-xhr-write");
 btnXhrReadElm.addEventListener("click", () => {
     //1. Let's create an instance of XMLHttpRequest
     const xhr = new XMLHttpRequest();
