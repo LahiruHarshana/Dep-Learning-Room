@@ -64,13 +64,13 @@ btnXhrWrite.addEventListener("click", () => {
 
 });
 
-const btnGetAllEmployees = document.getElementById("btn-get-all-employees");
+const btnGetAllEmployees2 = document.getElementById("btn-get-all-employees-2");
 
 
 const API_URL = 'https://4c6c534c-1b8e-4c80-81a4-b1f6bd98e6cc.mock.pstmn.io';
 
 
-btnGetAllEmployees.addEventListener("click", () => {
+btnGetAllEmployees2.addEventListener("click", () => {
 const xhr = new XMLHttpRequest();
 
 xhr.addEventListener('readystatechange', () => {
@@ -79,8 +79,20 @@ xhr.addEventListener('readystatechange', () => {
     }
 });
 
+xhr.addEventListener('loadstart', () => {
+    console.log('LOAD START');
+});
 
-xhr.open('GET', `${API_URL}/employees`,true);
+
+xhr.addEventListener('loadend', () => {
+    console.log('LOAD END');
+});
+
+xhr.addEventListener('load', () => {
+    console.log('LOAD');
+});
+
+xhr.open('GET', `${API_URL}/employees/E001`,true);
 
 xhr.send();
 
