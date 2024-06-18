@@ -96,9 +96,11 @@ xhr.addEventListener('load', () => {
 xhr.addEventListener('readystatechange', () =>{
     console.log('READY STATE',xhr.readyState);
 });
-xhr.open('GET', `${API_URL}/employees/E001hjkkjvk`,true);
+xhr.open('GET', `${API_URL}/employees/E001`,true);
+
+console.log('Open');
 
 xhr.send();
-
+console.log('Send');
 
 });
