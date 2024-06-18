@@ -75,12 +75,12 @@ const xhr = new XMLHttpRequest();
 
 xhr.addEventListener('readystatechange', () => {
     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-
+        console.log(xhr.responseText);
     }
 });
 
 
-xhr.open('GET',API_URL,true);
+xhr.open('GET', `${API_URL}/employees/E001`,true);
 
 xhr.send();
 
