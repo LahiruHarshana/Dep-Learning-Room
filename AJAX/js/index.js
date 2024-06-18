@@ -63,3 +63,7 @@ btnXhrWrite.addEventListener("click", () => {
     xhr.send(jsonNewToDoItem);
 
 });
+
+const btnGetAllEmployees = document.getElementById("btn-get-all-employees");
+btnGetAllEmployees.addEventListener("click", () => {
+});
