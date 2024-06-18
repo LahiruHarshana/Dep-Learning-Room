@@ -92,6 +92,10 @@ xhr.addEventListener('load', () => {
     console.log('LOAD');
 });
 
+xhr.addEventListener('error', () => {
+    console.error('ERROR');
+});
+
 
 xhr.addEventListener('readystatechange', () =>{
     console.log('READY STATE',xhr.readyState);
