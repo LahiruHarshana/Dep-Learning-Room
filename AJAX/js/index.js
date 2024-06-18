@@ -65,5 +65,24 @@ btnXhrWrite.addEventListener("click", () => {
 });
 
 const btnGetAllEmployees = document.getElementById("btn-get-all-employees");
+
+
+const API_URL = 'https://f04107be-7b58-4c98-90de-9a5e39bbbd0f.mock.pstmn.io';
+
+
 btnGetAllEmployees.addEventListener("click", () => {
+const xhr = new XMLHttpRequest();
+
+xhr.addEventListener('readystatechange', () => {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+
+    }
+});
+
+
+xhr.open('GET',API_URL,true);
+
+xhr.send();
+
+
 });
