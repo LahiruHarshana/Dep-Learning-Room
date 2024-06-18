@@ -67,7 +67,7 @@ btnXhrWrite.addEventListener("click", () => {
 const btnGetAllEmployees = document.getElementById("btn-get-all-employees");
 
 
-const API_URL = 'https://f04107be-7b58-4c98-90de-9a5e39bbbd0f.mock.pstmn.io';
+const API_URL = 'https://4c6c534c-1b8e-4c80-81a4-b1f6bd98e6cc.mock.pstmn.io';
 
 
 btnGetAllEmployees.addEventListener("click", () => {
@@ -80,7 +80,7 @@ xhr.addEventListener('readystatechange', () => {
 });
 
 
-xhr.open('GET', `${API_URL}/employees/E001`,true);
+xhr.open('GET', `${API_URL}/employees`,true);
 
 xhr.send();
 
