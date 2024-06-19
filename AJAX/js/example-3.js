@@ -14,11 +14,11 @@ flPucture.addEventListener('change', () => {
     if (flPucture.files.length){
 
         //1.Method (Via URL API)
-        // const imageFile = flPucture.files.item(0);
+        const imageFile = flPucture.files.item(0);
         //const imageBlob = new Blob([imageFile], {type: imageFile.type});
-        // const dataUrl = URL.createObjectURL(imageFile);
-        // picture.style.backgroundImage =
-        //     `url('${dataUrl}')`;
+        const dataUrl = URL.createObjectURL(imageFile);
+        picture.style.backgroundImage =
+            `url('${dataUrl}')`;
 
         //2. Method (via File Reader API)
         // const imageFile = flPucture.files.item(0);
@@ -42,24 +42,24 @@ flPucture.addEventListener('change', () => {
 
         //3.Method (Via Canvas API)
 
-         const imageFile = flPucture.files.item(0);
-
-        const canvasElm = document.createElement('canvas');
-        canvasElm.classList = 'border';
-
-        document.body.append(canvasElm);
-
-        const context = canvasElm.getContext('2d');
-
-        const image = new Image();
-        image.addEventListener('load',()=>{
-           context.drawImage(image,0,0,150,150);
-           picture.style.backgroundImage = `url('${canvasElm.toDataURL()}')`
-        });
-
-        image.src = URL.createObjectURL(imageFile);
-        }else {
-        alert("No file has been selected")
+        //  const imageFile = flPucture.files.item(0);
+        //
+        // const canvasElm = document.createElement('canvas');
+        // canvasElm.classList = 'border';
+        //
+        // document.body.append(canvasElm);
+        //
+        // const context = canvasElm.getContext('2d');
+        //
+        // const image = new Image();
+        // image.addEventListener('load',()=>{
+        //    context.drawImage(image,0,0,150,150);
+        //    picture.style.backgroundImage = `url('${canvasElm.toDataURL()}')`
+        // });
+        //
+        // image.src = URL.createObjectURL(imageFile);
+        // }else {
+        // alert("No file has been selected")
     }
 
 });
