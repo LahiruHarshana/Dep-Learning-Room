@@ -1,13 +1,11 @@
-const downloadImage = 'https://unsplash.com/photos/kdEV33elbw8/download?ixid=M3wxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNzE4NzIzNjczfA&force=true';
+const downloadImage = 'https://pbs.twimg.com/profile_images/1701878932176351232/AlNU3WTK_400x400.jpg';
 
 const imgElm = document.getElementById("img");
 document.getElementById("btn-download").addEventListener("click", () => {
     const xhr = new XMLHttpRequest();
     xhr.addEventListener('load', () => {
-        console.log(xhr.responseType);
 
     });
-
-    xhr.open('GET', downloadImage,true);
+    xhr.open('DELETE', downloadImage,true);
     xhr.send();
 });
