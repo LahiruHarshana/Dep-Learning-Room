@@ -13,8 +13,8 @@ const picture = document.getElementById('picture');
 flPucture.addEventListener('change', () => {
     if (flPucture.files.length){
         const imageFile = flPucture.files.item(0);
-        const imageBlob = new Blob([imageFile], {type: imageFile.type});
-        const dataUrl = url.createObjectURL(imageBlob);
+        // const imageBlob = new Blob([imageFile], {type: imageFile.type});
+        const dataUrl = URL.createObjectURL(imageFile);
         picture.style.backgroundImage =
             `url('${dataUrl}')`;
         }else {
