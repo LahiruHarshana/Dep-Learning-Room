@@ -15,6 +15,7 @@ const imgElm = document.getElementById("img");
 // });
 
 document.getElementById("btn-download").addEventListener("click", () => {
+    // alert('Download started');
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'blob';
     xhr.addEventListener('load', () => {
