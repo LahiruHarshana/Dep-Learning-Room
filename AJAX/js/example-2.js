@@ -16,6 +16,7 @@ const imgElm = document.getElementById("img");
 
 
 const progressBar = document.getElementById("progress-bar");
+progressBar.style.width = '0%';
 const loader = document.getElementById("loader");
 document.getElementById("btn-download").addEventListener("click", () => {
     loader.classList.remove('hide');
