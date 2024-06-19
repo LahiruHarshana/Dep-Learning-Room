@@ -87,4 +87,8 @@ frmElm.addEventListener('formdata',(e)=>{
     xhr.upload.addEventListener('progress',()={
 
     })
+
+    const url = '';
+    xhr.open('POST',url,true);
+    xhr.send(e.formData);
 })
