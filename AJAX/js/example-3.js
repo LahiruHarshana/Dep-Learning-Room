@@ -77,7 +77,14 @@ frmElm.addEventListener('submit',(e)=>{
     }
 });
 
-
 frmElm.addEventListener('formdata',(e)=>{
-console.log(e.formData);
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('loadend',()=>{
+
+    });
+
+    xhr.upload.addEventListener('progress',()={
+
+    })
 })
