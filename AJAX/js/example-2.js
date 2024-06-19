@@ -14,15 +14,26 @@ const imgElm = document.getElementById("img");
 //     xhr.send();
 // });
 
+const loader = document.getElementById("loader");
 document.getElementById("btn-download").addEventListener("click", () => {
+    loader.classList.remove('hide');
+    imgElm.classList.add('hide');
     // alert('Download started');
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'blob';
     xhr.addEventListener('load', () => {
+
         const url = URL.createObjectURL(xhr.response);
         imgElm.src = url;
+    });
+
+
+    xhr.addEventListener('loadend', () => {
+        loader.classList.add('hide');
+        imgElm.classList.remove('hide');
     });
         xhr.open('GET', downloadImage,true);
         xhr.send();
 
 });
+
