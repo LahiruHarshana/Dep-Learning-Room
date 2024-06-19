@@ -69,6 +69,8 @@ flPucture.addEventListener('change', () => {
 
 const frmElm = document.querySelector('form');
 
+const status = document.getElementById('status');
+
 const progressWrapperElm = document.getElementById('progress-wrapper');
 const progressBarElm = document.getElementById('progress-bar');
 frmElm.addEventListener('submit',(e)=>{
