@@ -148,7 +148,6 @@ btnFetchWrite.addEventListener('click',async () => {
             headers: {
                 'Content-Type': 'application/json'
             }
-
         });
 
     console.log(await response.join());
