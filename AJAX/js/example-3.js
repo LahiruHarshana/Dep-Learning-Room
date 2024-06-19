@@ -70,6 +70,7 @@ flPucture.addEventListener('change', () => {
 const frmElm = document.querySelector('form');
 
 const progressWrapperElm = document.getElementById('progress-wrapper');
+document
 frmElm.addEventListener('submit',(e)=>{
     if (!flPucture.files.length){
         e.preventDefault();
@@ -84,10 +85,10 @@ frmElm.addEventListener('formdata',(e)=>{
     const xhr = new XMLHttpRequest();
 
     xhr.addEventListener('loadend',()=>{
-
+        progressWrapperElm.classList.add('d-none');
     });
 
-    xhr.upload.addEventListener('progress',()={
+    xhr.upload.addEventListener('progress',()=>{
 
     })
 
