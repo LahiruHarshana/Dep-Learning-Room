@@ -7,6 +7,8 @@ document.getElementById("btn-download").addEventListener("click", () => {
     xhr.addEventListener('load', () => {
         const byteArray = [xhr.response];
         const blob = new Blob(byteArray, {type: 'image/jpeg'});
+        const url = URL.createObjectURL(blob);
+        imgElm.src = url;
     });
     xhr.open('GET', downloadImage,true);
     xhr.send();
