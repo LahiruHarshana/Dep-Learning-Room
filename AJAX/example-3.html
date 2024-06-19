@@ -57,15 +57,22 @@
     </form>
 
     <style>
-        #progress-wrapper{
+        #progress-bar{
             background-color: #2efff9;
             height: 10px;
             width: 50%;
             border-radius: 5px;
         }
+
+        #progress{
+            background-color: #ff2e2e;
+            width: 100%;
+            border-radius: 5px;
+            position: relative;
+        }
     </style>
         <div id="progress-wrapper" class="mt-4 d-grid w-100 text-center">
-            <div>
+            <div id="progress">
                 <div id="progress-bar"></div>
             </div>
             <span  class="fs-4 mt-2"> Uploading 0%</span>
