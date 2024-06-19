@@ -145,7 +145,7 @@ btnFetchWrite.addEventListener('click',()=>{
                 title : "New To-do Item",
                 complete : false
             }),
-            headers{
+            headers:{
                 'Content-Type':'application/json'
             }
 
