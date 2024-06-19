@@ -137,7 +137,7 @@ btnFetchRead.addEventListener('click',async () => {
 
 btnFetchWrite.addEventListener('click',async () => {
 
-    fetch('https://jsonplaceholder.typicode.com/todos',
+    const response = await fetch('https://jsonplaceholder.typicode.com/todos',
         {
             method: "POST",
             body: JSON.stringify({
