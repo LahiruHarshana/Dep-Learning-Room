@@ -3,6 +3,7 @@ const downloadImage = 'https://images.pexels.com/photos/24879566/pexels-photo-24
 const imgElm = document.getElementById("img");
 document.getElementById("btn-download").addEventListener("click", () => {
     const xhr = new XMLHttpRequest();
+    xhr.responseType = 'arraybuffer';
     xhr.addEventListener('load', () => {
 
     });
