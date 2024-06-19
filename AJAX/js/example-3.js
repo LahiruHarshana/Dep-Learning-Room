@@ -79,5 +79,5 @@ frmElm.addEventListener('submit',(e)=>{
 
 
 frmElm.addEventListener('formdata',(e)=>{
-
+console.log(e.formData);
 })
