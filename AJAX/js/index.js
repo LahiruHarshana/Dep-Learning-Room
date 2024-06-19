@@ -125,7 +125,7 @@ btnFetchRead.addEventListener('click',async () => {
     try {
         const response = await fetch(`${API_URL}/employees`);
         console.log(response.status);
-        console.log(await response.json());
+        // console.log(await response.json());
         console.log(await response.text());
         response.blob()
     } catch (e) {
