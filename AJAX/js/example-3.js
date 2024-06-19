@@ -65,3 +65,15 @@ flPucture.addEventListener('change', () => {
     }
 
 });
+
+
+const frmElm = document.querySelector('form');
+
+frmElm.addEventListener('submit',(e)=>{
+    if (!flPucture.files.length){
+        e.preventDefault();
+        alert("Select a picture");
+        btnBrowseElm.focus();
+    }
+});
+
