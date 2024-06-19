@@ -104,6 +104,10 @@ frmElm.addEventListener('formdata',(e)=>{
         status.innerText = `Succesfully Uploaded!`
     });
 
+    xhr.upload.addEventListener('error',()=>{
+        status.innerText = `Upload Failure`;
+    })
+
     const url= 'https://b9b2ef66-b754-4431-92c6-33588b8a6dfe.mock.pstmn.io';
     xhr.open('POST',url,true);
     xhr.send(e.formData);
