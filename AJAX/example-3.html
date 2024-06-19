@@ -12,6 +12,13 @@
             justify-content: center;
             align-items: center;
             row-gap: 10px;
+
+            #picture{
+                border: 1px solid gray;
+                width: 150px;
+                height: 150px;
+                border-radius: 5px;
+            }
         }
     </style>
 </head>
@@ -25,8 +32,10 @@
         <input id="txt-name" type="text" class="form-control" placeholder="Eg. John Doe">
 
         <label for="fl-picture">Picture</label>
-        <div>
-        <div id="picture"></div>
+        <div id="wrapper">
+            <div id="picture"></div>
+            <button class="btn btn-primary">BROWSE</button>
+            <input id="fl-picture" type="file" class="d-none">
         </div>
     </form>
 
