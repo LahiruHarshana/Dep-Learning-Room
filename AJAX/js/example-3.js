@@ -20,26 +20,40 @@ flPucture.addEventListener('change', () => {
         // picture.style.backgroundImage =
         //     `url('${dataUrl}')`;
 
-        //2. Method (via Canvas API)
-        const imageFile = flPucture.files.item(0);
+        //2. Method (via File Reader API)
+        // const imageFile = flPucture.files.item(0);
+        //
+        // const canvasElm = document.createElement('canvas');
+        // canvasElm.classList = 'border';
+        //
+        // document.body.append(canvasElm);
+        //
+        // const contex = canvasElm.getContext('2d');
+        //
+        // const fileReader = new FileReader();
+        //
+        // fileReader.addEventListener('load',(e)=>{
+        //     console.log(e.target.result);
+        //     picture.style.backgroundImage = `url('${e.target.result}')`;
+        // });
+        // fileReader.readAsDataURL(imageFile);
+        // contex.drawImage(imageFile);
+
+
+        //3.Method (Via Canvas API)
+
+         const imageFile = flPucture.files.item(0);
 
         const canvasElm = document.createElement('canvas');
         canvasElm.classList = 'border';
 
         document.body.append(canvasElm);
 
-        const contex = canvasElm.getContext('2d');
+        const context = canvasElm.getContext('2d');
 
-        const fileReader = new FileReader();
+        const image = new Image(100,100);
+        image.src = URL.createObjectURL(imageFile);
 
-        fileReader.addEventListener('load',(e)=>{
-            console.log(e.target.result);
-            flPucture.style.backgroundImage = `url('${e.target.result}')`;
-        });
-        fileReader.readAsDataURL(imageFile);
-
-
-        contex.drawImage(imageFile);
         }else {
         alert("No file has been selected")
     }
