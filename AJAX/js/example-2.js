@@ -32,6 +32,10 @@ document.getElementById("btn-download").addEventListener("click", () => {
         loader.classList.add('hide');
         imgElm.classList.remove('hide');
     });
+
+    xhr.addEventListener('progress', () => {
+        console.log('Progress');
+    });
         xhr.open('GET', downloadImage,true);
         xhr.send();
 
