@@ -118,7 +118,7 @@ const btnFetchWrite = document.getElementById('btn-fetch-write');
 
 
 btnFetchRead.addEventListener('click',()=>{
-    alert('Read');
+    fetch(API_URL);
 });
 
 
