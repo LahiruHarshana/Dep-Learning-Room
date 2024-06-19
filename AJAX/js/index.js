@@ -135,22 +135,21 @@ btnFetchRead.addEventListener('click',async () => {
 });
 
 
-btnFetchWrite.addEventListener('click',async () => {
-
-
+btnFetchWrite.addEventListener('click', async () => {
     const headers = new Headers();
+    headers.append("Content-Type", 'application/json');
 
-    const response = await fetch('https://jsonplaceholder.typicode.com/todos',
-        {
-            method: "POST",
-            body: JSON.stringify({
-                userId: 1,
-                title: "New To-do Item",
-                complete: false
-            }),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        });
-    console.log(await response.join());
+    const request = new Request('https://jsonplaceholder.typicode.com/todos', {
+        method: "POST",
+        body: JSON.stringify({
+            userId: 1,
+            title: "New To-do Item",
+            completed: false  // Fixed typo: should be 'completed' not 'complete'
+        }),
+        headers: headers
+    });
+
+    const response = await fetch(request);
+    const data = await response.json();  // Fixed: response.json() to parse JSON response
+    console.log(data);
 });
