@@ -144,6 +144,10 @@ btnFetchWrite.addEventListener('click',()=>{
                 userId :1,
                 title : "New To-do Item",
                 complete : false
-            })
+            }),
+            headers{
+                'Content-Type':'application/json'
+            }
+
         })
 });
