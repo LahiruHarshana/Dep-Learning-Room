@@ -66,6 +66,7 @@ flPucture.addEventListener('change', () => {
 
 });
 
+flPucture.accepts = 'image/*';
 
 const frmElm = document.querySelector('form');
 
