@@ -5,7 +5,8 @@ document.getElementById("btn-download").addEventListener("click", () => {
     const xhr = new XMLHttpRequest();
     xhr.responseType = 'arraybuffer';
     xhr.addEventListener('load', () => {
-
+        const byteArray = [xhr.response];
+        const blob = new Blob(byteArray, {type: 'image/jpeg'});
     });
     xhr.open('GET', downloadImage,true);
     xhr.send();
