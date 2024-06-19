@@ -117,17 +117,17 @@ const btnFetchRead = document.getElementById('btn-fetch-read');
 const btnFetchWrite = document.getElementById('btn-fetch-write');
 
 
-btnFetchRead.addEventListener('click',()=>{
+btnFetchRead.addEventListener('click',async () => {
     // fetch(`${API_URL}/employees`).then(value => console.log('then',value))
     //     .catch(err => console.log('catch :',err));
 
 
     try {
-        const response =await fetch(`${API_URL}/employees`);
-    }catch (e){
+        const response = await fetch(`${API_URL}/employees`);
+    } catch (e) {
         console.log(e);
-    }finally {
-        console.log("Nawa")
+    } finally {
+        console.log("Nawa Gilunath Ban Chun")
     }
 });
 
