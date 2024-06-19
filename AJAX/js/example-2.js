@@ -13,3 +13,12 @@ const imgElm = document.getElementById("img");
 //     xhr.open('GET', downloadImage,true);
 //     xhr.send();
 // });
+
+document.getElementById("btn-download").addEventListener("click", () => {
+    const xhr = new XMLHttpRequest();
+    xhr.responseType = 'blob';
+    xhr.addEventListener('load', () => {
+        const url = URL.createObjectURL(xhr.response);
+        imgElm.src = url;
+    });
+});
