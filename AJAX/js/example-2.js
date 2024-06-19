@@ -22,4 +22,7 @@ document.getElementById("btn-download").addEventListener("click", () => {
         const url = URL.createObjectURL(xhr.response);
         imgElm.src = url;
     });
+        xhr.open('GET', downloadImage,true);
+        xhr.send();
+
 });
