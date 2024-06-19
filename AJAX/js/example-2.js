@@ -14,6 +14,8 @@ const imgElm = document.getElementById("img");
 //     xhr.send();
 // });
 
+
+const progressBar = document.getElementById("progress-bar");
 const loader = document.getElementById("loader");
 document.getElementById("btn-download").addEventListener("click", () => {
     loader.classList.remove('hide');
@@ -33,8 +35,13 @@ document.getElementById("btn-download").addEventListener("click", () => {
         imgElm.classList.remove('hide');
     });
 
-    xhr.addEventListener('progress', () => {
+
+    xhr.addEventListener('progress', (e) => {
         console.log('Progress');
+        if (e.lengthComputable){
+            const percent = (e.loaded / e.total) * 100;
+            progressBar.style.width = `${percent}%`;
+        }
     });
         xhr.open('GET', downloadImage,true);
         xhr.send();
