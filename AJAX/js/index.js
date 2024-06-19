@@ -108,3 +108,10 @@ xhr.send();
 console.log('Send');
 
 });
+
+
+//=======================================Fetch Api =============================
+
+
+const btnFetchRead = document.getElementById('btn-fetch-read');
+const btnFetchWrite = document.getElementById('btn-fetch-write');
