@@ -22,6 +22,8 @@ flPucture.addEventListener('change', () => {
 
         //2. Method (via Canvas API)
         const canvasElm = document.createElement('canvas');
+        document.body.append(canvasElm);
+
         }else {
         alert("No file has been selected")
     }
