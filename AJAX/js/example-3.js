@@ -12,11 +12,15 @@ const picture = document.getElementById('picture');
 
 flPucture.addEventListener('change', () => {
     if (flPucture.files.length){
-        const imageFile = flPucture.files.item(0);
-        // const imageBlob = new Blob([imageFile], {type: imageFile.type});
-        const dataUrl = URL.createObjectURL(imageFile);
-        picture.style.backgroundImage =
-            `url('${dataUrl}')`;
+
+        //1.Method (Via URL API)
+        // const imageFile = flPucture.files.item(0);
+        //const imageBlob = new Blob([imageFile], {type: imageFile.type});
+        // const dataUrl = URL.createObjectURL(imageFile);
+        // picture.style.backgroundImage =
+        //     `url('${dataUrl}')`;
+
+        //2. Method (via Canvas API)
         }else {
         alert("No file has been selected")
     }
