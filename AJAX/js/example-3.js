@@ -34,7 +34,7 @@ flPucture.addEventListener('change', () => {
 
         fileReader.addEventListener('load',(e)=>{
             console.log(e.target.result);
-
+            flPucture.style.backgroundImage = `url('${e.target.result}')`;
         });
         fileReader.readAsDataURL(imageFile);
 
