@@ -127,7 +127,6 @@ btnFetchRead.addEventListener('click',async () => {
         console.log(response.status);
         // console.log(await response.json());
         console.log(await response.text());
-        response.blob()
     } catch (e) {
         console.log(e);
     } finally {
