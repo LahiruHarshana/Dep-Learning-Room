@@ -33,6 +33,7 @@ document.getElementById("btn-download").addEventListener("click", () => {
     xhr.addEventListener('loadend', () => {
         loader.classList.add('hide');
         imgElm.classList.remove('hide');
+        progressBar.style.width = '0%';
     });
 
 
