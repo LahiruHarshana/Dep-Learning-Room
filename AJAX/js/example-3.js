@@ -79,8 +79,6 @@ frmElm.addEventListener('submit',(e)=>{
         e.preventDefault();
         alert("Select a picture");
         btnBrowseElm.focus();
-    }else{
-        picture.style.backgroundImage = '';
     }
 });
 
