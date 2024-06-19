@@ -91,11 +91,15 @@ frmElm.addEventListener('formdata',(e)=>{
         progressBarElm.style.width = '0';
     });
 
-    xhr.upload.addEventListener('progress',()=>{
+    xhr.upload.addEventListener('progress',(e)=>{
+        if (e.lengthComputable){
+            const progress = e.loaded / e.total *100;
+            progressBarElm.style.width =`${progress}%`;
+            status.innerText = `uplaoding ${progress}%`;
+        }
+    });
 
-    })
-
-    const url = '';
+    const url= 'https://b9b2ef66-b754-4431-92c6-33588b8a6dfe.mock.pstmn.io';
     xhr.open('POST',url,true);
     xhr.send(e.formData);
 })
