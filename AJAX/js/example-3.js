@@ -30,6 +30,15 @@ flPucture.addEventListener('change', () => {
 
         const contex = canvasElm.getContext('2d');
 
+        const fileReader = new FileReader();
+
+        fileReader.addEventListener('load',(e)=>{
+            console.log(e.target.result);
+
+        });
+        fileReader.readAsDataURL(imageFile);
+
+
         contex.drawImage(imageFile);
         }else {
         alert("No file has been selected")
