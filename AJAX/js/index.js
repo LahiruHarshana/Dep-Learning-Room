@@ -115,3 +115,13 @@ console.log('Send');
 
 const btnFetchRead = document.getElementById('btn-fetch-read');
 const btnFetchWrite = document.getElementById('btn-fetch-write');
+
+
+btnFetchRead.addEventListener('click',()=>{
+    alert('Read');
+});
+
+
+btnFetchWrite.addEventListener('click',()=>{
+    alert('Write');
+});
