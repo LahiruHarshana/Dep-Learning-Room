@@ -54,6 +54,7 @@ flPucture.addEventListener('change', () => {
         const image = new Image();
         image.addEventListener('load',()=>{
            context.drawImage(image,0,0,150,150);
+           picture.style.backgroundImage = `url('${canvasElm.toDataURL()}')`
         });
 
         image.src = URL.createObjectURL(imageFile);
