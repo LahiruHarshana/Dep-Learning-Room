@@ -32,7 +32,7 @@
 
             #progress-bar{
                 width: 100%;
-                height: 100px;
+                height: 5px;
                 background-color: lightgray;
                 position: fixed;
                 top: 0;
@@ -41,11 +41,71 @@
                 background: linear-gradient(to right,  #8eff32 0%,#21adb2 36%,#d822d5 64%,#7db9e8 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 
             }
+
+            .lds-ripple,
+            .lds-ripple div {
+                box-sizing: border-box;
+            }
+            .lds-ripple {
+                display: inline-block;
+                position: relative;
+                width: 80px;
+                height: 80px;
+            }
+            .lds-ripple div {
+                position: absolute;
+                border: 4px solid currentColor;
+                opacity: 1;
+                border-radius: 50%;
+                animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+            }
+            .lds-ripple div:nth-child(2) {
+                animation-delay: -0.5s;
+            }
+            @keyframes lds-ripple {
+                0% {
+                    top: 36px;
+                    left: 36px;
+                    width: 8px;
+                    height: 8px;
+                    opacity: 0;
+                }
+                4.9% {
+                    top: 36px;
+                    left: 36px;
+                    width: 8px;
+                    height: 8px;
+                    opacity: 0;
+                }
+                5% {
+                    top: 36px;
+                    left: 36px;
+                    width: 8px;
+                    height: 8px;
+                    opacity: 1;
+                }
+                100% {
+                    top: 0;
+                    left: 0;
+                    width: 80px;
+                    height: 80px;
+                    opacity: 0;
+                }
+            }
+
+
         }
     </style>
 </head>
 <body>
+    <div id="progress-bar"></div>
     <button id="btn-download">Download</button>
+    <div>
+        <div id="loader">
+            <div class="lds-ripple"><div></div><div></div></div>
+        </div>
+    </div>
     <img id="img" src="" alt="no Img Yet">
+
 </body>
 </html>
