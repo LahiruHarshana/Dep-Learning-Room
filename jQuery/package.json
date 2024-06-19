@@ -1,7 +1,11 @@
 {
   "name": "jquery",
   "version": "1.0.0",
-  "sourse": "src/index.html",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
   "author": "Direct Entry Program <dep@ijse.lk> (https://ijse.lk)",
   "license": "MIT",
   "description": "jQuery",
