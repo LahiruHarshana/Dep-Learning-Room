@@ -60,6 +60,8 @@ flPucture.addEventListener('change', () => {
         // image.src = URL.createObjectURL(imageFile);
         // }else {
         // alert("No file has been selected")
+    }else{
+        picture.style.backgroundImage = '';
     }
 
 });
