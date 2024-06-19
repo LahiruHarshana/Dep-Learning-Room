@@ -86,6 +86,7 @@ frmElm.addEventListener('formdata',(e)=>{
 
     xhr.addEventListener('loadend',()=>{
         progressWrapperElm.classList.add('d-none');
+        progressBarElm.style.width = '0';
     });
 
     xhr.upload.addEventListener('progress',()=>{
