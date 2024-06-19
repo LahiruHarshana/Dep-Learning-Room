@@ -21,9 +21,15 @@ flPucture.addEventListener('change', () => {
         //     `url('${dataUrl}')`;
 
         //2. Method (via Canvas API)
+        const imageFile = flPucture.files.item(0);
+
         const canvasElm = document.createElement('canvas');
         document.body.append(canvasElm);
+        canvasElm.classList = 'border';
 
+        const contex = canvasElm.getContext('2d');
+
+        contex.drawImage(imageFile);
         }else {
         alert("No file has been selected")
     }
