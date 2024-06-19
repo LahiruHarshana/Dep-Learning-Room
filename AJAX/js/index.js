@@ -135,19 +135,21 @@ btnFetchRead.addEventListener('click',async () => {
 });
 
 
-btnFetchWrite.addEventListener('click',()=>{
+btnFetchWrite.addEventListener('click',async () => {
 
     fetch('https://jsonplaceholder.typicode.com/todos',
         {
-            method:"POST",
-            body:JSON.stringify({
-                userId :1,
-                title : "New To-do Item",
-                complete : false
+            method: "POST",
+            body: JSON.stringify({
+                userId: 1,
+                title: "New To-do Item",
+                complete: false
             }),
-            headers:{
-                'Content-Type':'application/json'
+            headers: {
+                'Content-Type': 'application/json'
             }
 
-        })
+        });
+
+    console.log(await response.join());
 });
