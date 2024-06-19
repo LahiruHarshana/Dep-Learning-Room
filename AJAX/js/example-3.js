@@ -90,13 +90,14 @@ frmElm.addEventListener('formdata',(e)=>{
     xhr.addEventListener('loadend',()=>{
         progressWrapperElm.classList.add('d-none');
         progressBarElm.style.width = '0';
+        status.innerText = `Uploading 0%`;
     });
 
     xhr.upload.addEventListener('progress',(e)=>{
         if (e.lengthComputable){
             const progress = e.loaded / e.total *100;
             progressBarElm.style.width =`${progress}%`;
-            status.innerText = `uplaoding ${progress}%`;
+            status.innerText = `uplaoding ${progress.toFixed(2)}%`;
         }
     });
 
