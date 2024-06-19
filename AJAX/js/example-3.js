@@ -70,7 +70,7 @@ flPucture.addEventListener('change', () => {
 const frmElm = document.querySelector('form');
 
 const progressWrapperElm = document.getElementById('progress-wrapper');
-document
+const progressBarElm = document.getElementById('progress-bar');
 frmElm.addEventListener('submit',(e)=>{
     if (!flPucture.files.length){
         e.preventDefault();
