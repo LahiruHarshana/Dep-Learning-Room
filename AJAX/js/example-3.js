@@ -51,9 +51,12 @@ flPucture.addEventListener('change', () => {
 
         const context = canvasElm.getContext('2d');
 
-        const image = new Image(100,100);
-        image.src = URL.createObjectURL(imageFile);
+        const image = new Image();
+        image.addEventListener('load',()=>{
+           context.drawImage(image,0,0,150,150);
+        });
 
+        image.src = URL.createObjectURL(imageFile);
         }else {
         alert("No file has been selected")
     }
