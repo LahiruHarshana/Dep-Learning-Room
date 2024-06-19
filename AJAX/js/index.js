@@ -140,10 +140,10 @@ btnFetchWrite.addEventListener('click',()=>{
     fetch('https://jsonplaceholder.typicode.com/todos',
         {
             method:"POST",
-            body:{
+            body:JSON.stringify({
                 userId :1,
                 title : "New To-do Item",
                 complete : false
-            }
+            })
         })
 });
