@@ -24,8 +24,9 @@ flPucture.addEventListener('change', () => {
         const imageFile = flPucture.files.item(0);
 
         const canvasElm = document.createElement('canvas');
-        document.body.append(canvasElm);
         canvasElm.classList = 'border';
+
+        document.body.append(canvasElm);
 
         const contex = canvasElm.getContext('2d');
 
