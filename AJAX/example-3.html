@@ -5,6 +5,8 @@
     <title>Example-3</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <script defer src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script defer src="../AJAX/js/example-3.js"></script>
+
     <style>
         form{
             display:grid;
@@ -38,7 +40,6 @@
             }
         }
     </style>
-    <script src="../AJAX/js/example-3.js"></script>
 </head>
 <body class="container">
     <h1 class="text-center mt-2">Uploading</h1>
@@ -52,13 +53,13 @@
         <label for="fl-picture">Picture</label>
         <div id="wrapper">
             <div id="picture"></div>
-            <button class="btn btn-primary" type="button">BROWSE</button>
+            <button class="btn btn-primary" id="btn-browse" type="button">BROWSE</button>
             <input id="fl-picture" type="file" class="d-none">
         </div>
 
         <div id="button-wrapper" class="d-flex gap-2">
-            <button class="btn btn-success">SAVE</button>
-            <button class="btn btn-danger" type="reset">CLEAR</button>
+            <button id="btn-save" class="btn btn-success">SAVE</button>
+            <button id="btn-clear" class="btn btn-danger" type="reset">CLEAR</button>
         </div>
     </form>
 
