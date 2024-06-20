@@ -64,13 +64,14 @@ $("ul").on("click","li > button",()=>{
 
 
 $('#txt-number').on('Keyup',(e)=>{
-    if (e.code === "Enter"){
+    if (e.which ===13){
         $("#btn-validate").trigger('click');
     }
 });
 
 
 $("#btn-validate").on('click',()=>{
-    alert("Validated");
-})
+    // $("#txt-number").val()
+
+});
 

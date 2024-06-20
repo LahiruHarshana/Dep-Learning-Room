@@ -629,10 +629,10 @@ const liElm = (0, _jqueryDefault.default)("ul>li:first-child").clone();
     alert("okay");
 });
 (0, _jqueryDefault.default)("#txt-number").on("Keyup", (e)=>{
-    if (e.code === "Enter") (0, _jqueryDefault.default)("#btn-validate").trigger("click");
+    if (e.which === 13) (0, _jqueryDefault.default)("#btn-validate").trigger("click");
 });
 (0, _jqueryDefault.default)("#btn-validate").on("click", ()=>{
-    alert("Validated");
+// $("#txt-number").val()
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
