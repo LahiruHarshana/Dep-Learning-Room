@@ -629,7 +629,7 @@ btnInsertBefore.on("click", ()=>{
     (0, _jqueryDefault.default)("#picture").prop("src", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cZP7bGqm5f0Xjk_OxSNra3rJ1sfTRGpf7QrbVMkGrnB3RdVBl2E2xE_UIK3xnl_4RXg&usqp=CAU");
 });
 (0, _jqueryDefault.default)("#clear-image-src").on("click", ()=>{
-    (0, _jqueryDefault.default)("");
+    (0, _jqueryDefault.default)("picture").prop("src", "");
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["aSqj6","akLjM"], "akLjM", "parcelRequirec9aa")

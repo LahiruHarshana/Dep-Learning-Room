@@ -60,6 +60,6 @@ $('#set-image-src').on('click',()=>{
 });
 
 $('#clear-image-src').on('click',()=>{
-    $('')
+    $('picture').prop("src","");
 })
 
