@@ -42,7 +42,16 @@ btnClearEvents.on('click',()=>{
     btnClickMe.off('click');
     event2 = false;
     event1 = false;
+});
+
+$('btn-genarate-more-items').on('click',()=>{
+
 })
+
+$('btn-clear-all-items').on('click',()=>{
+
+})
+
 
 
 
