@@ -36,3 +36,8 @@ $("#btn-clone").on('click',()=>{
 $('#btn-remove').on('click',()=>{
     $("#list-2 li:not(#list-2 li:first-child)").remove();
 });
+
+
+$('#btn-replace').on('click',()=>{
+    alert("Replace");
+})

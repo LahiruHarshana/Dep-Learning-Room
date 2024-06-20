@@ -614,6 +614,9 @@ btnInsertBefore.on("click", ()=>{
 (0, _jqueryDefault.default)("#btn-remove").on("click", ()=>{
     (0, _jqueryDefault.default)("#list-2 li:not(#list-2 li:first-child)").remove();
 });
+(0, _jqueryDefault.default)("#btn-replace").on("click", ()=>{
+    (0, _alertDefault.default)("Replace");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","bootstrap/js/src/alert":"j2vO3"}],"j2vO3":[function(require,module,exports) {
 /**
