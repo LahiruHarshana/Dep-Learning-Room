@@ -40,4 +40,8 @@ $('#btn-remove').on('click',()=>{
 
 $('#btn-replace').on('click',()=>{
     alert("Replace");
-})
+});
+
+$('#btn-replace-with').on('click',()=>{
+    alert('replace With');
+});
