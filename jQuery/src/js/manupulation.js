@@ -1,5 +1,4 @@
 import $ from 'jquery';
-import alert from "bootstrap/js/src/alert";
 
 const btnAppend = $('#btn-append');
 const btnPrepend = $('#btn-prepend');
@@ -8,7 +7,7 @@ const btnInsertBefore = $('#btn-insert-before')
 
 
 btnAppend.on('click',()=>{
-    alert('append');
+    alert('hai');
 });
 
 btnPrepend.on('click',()=>{
@@ -45,3 +44,22 @@ $('#btn-replace').on('click',()=>{
 $('#btn-replace-with').on('click',()=>{
 $(".target-2").replaceWith("<Button>Reset</Button>");
 });
+
+
+$('#btn-set-tooltip-text').on('click',()=>{
+    $("h2").attr("tittle","Hello Manipulation");
+});
+
+$('#btn-get-tooltip-text').on('click',()=>{
+    alert($("h2").attr("tittle"));
+});
+
+$('#set-image-src').on('click',()=>{
+    // $('#picture').attr("src",'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cZP7bGqm5f0Xjk_OxSNra3rJ1sfTRGpf7QrbVMkGrnB3RdVBl2E2xE_UIK3xnl_4RXg&usqp=CAU')
+    $('#picture').prop("src",'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3cZP7bGqm5f0Xjk_OxSNra3rJ1sfTRGpf7QrbVMkGrnB3RdVBl2E2xE_UIK3xnl_4RXg&usqp=CAU')
+});
+
+$('#clear-image-src').on('click',()=>{
+    $('')
+})
+
