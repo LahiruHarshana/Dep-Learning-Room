@@ -597,6 +597,7 @@ li2Elm.prev().css("background-color", "red");
 li2Elm.parent("body").css("background-color", "lightblue");
 // $(li2Elm.parent().children().get(3)).css('border','2px solid black');
 li2Elm.parent().children().eq(3).css("border", "2px solid black");
+li2Elm.parents("body").find("span").css("font-size", "2rem");
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["88JbP","d131J"], "d131J", "parcelRequirec9aa")
 
