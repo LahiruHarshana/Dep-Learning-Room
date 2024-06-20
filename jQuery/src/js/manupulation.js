@@ -39,9 +39,9 @@ $('#btn-remove').on('click',()=>{
 
 
 $('#btn-replace').on('click',()=>{
-    alert("Replace");
+    $('.target-1').html("Random : "+Math.random() + "<button>Reset</button>");
 });
 
 $('#btn-replace-with').on('click',()=>{
-    alert('replace With');
+$(".target-2").replaceWith("<Button>Reset</Button>");
 });
