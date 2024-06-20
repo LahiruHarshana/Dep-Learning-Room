@@ -8,5 +8,5 @@ li2Elm.next().css('background-color','red');
 //parentElm
 li2Elm.prev().css('background-color','red');
 
-
+//closets
 li2Elm.parent("body").css('background-color','lightblue');
