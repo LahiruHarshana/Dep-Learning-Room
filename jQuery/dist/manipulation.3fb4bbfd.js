@@ -631,6 +631,16 @@ btnInsertBefore.on("click", ()=>{
 (0, _jqueryDefault.default)("#clear-image-src").on("click", ()=>{
     (0, _jqueryDefault.default)("picture").prop("src", "");
 });
+(0, _jqueryDefault.default)("#btn-browse").on("click", ()=>{
+    (0, _jqueryDefault.default)("#fl-picture").trigger("click");
+});
+(0, _jqueryDefault.default)("#fl-picture").on("change", ()=>{
+    if ((0, _jqueryDefault.default)("#fl-picture").prop("files").length) {
+        const imageFile = (0, _jqueryDefault.default)("#fl-picture").prop("files")[0];
+        const dataUrl = URL.createObjectURL(imageFile);
+        (0, _jqueryDefault.default)("#picture-2").prop("src", dataUrl);
+    } else (0, _jqueryDefault.default)("#picture-2").prop("src", "");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["aSqj6","akLjM"], "akLjM", "parcelRequirec9aa")
 

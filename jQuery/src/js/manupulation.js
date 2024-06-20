@@ -61,5 +61,19 @@ $('#set-image-src').on('click',()=>{
 
 $('#clear-image-src').on('click',()=>{
     $('picture').prop("src","");
-})
+});
 
+$('#btn-browse').on('click',()=>{
+    $('#fl-picture').trigger('click');
+});
+
+$("#fl-picture").on('change',()=>{
+    if ($("#fl-picture").prop("files").length){
+        const imageFile = $("#fl-picture").prop("files")[0];
+        const dataUrl = URL.createObjectURL(imageFile);
+        $("#picture-2").prop("src",dataUrl);
+
+    }else{
+        $("#picture-2").prop("src","");
+    }
+})
