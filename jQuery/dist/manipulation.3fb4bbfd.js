@@ -595,7 +595,9 @@ btnAppend.on("click", ()=>{
     alert("append");
 });
 btnPrepend.on("click", ()=>{});
-btnInsertAfter.on("click", ()=>{});
+btnInsertAfter.on("click", ()=>{
+    (0, _jqueryDefault.default)("#list-1>li").eq(1).after("<li></li>>");
+});
 btnInsertBefore.on("click", ()=>{
     const jQueryHtml = (0, _jqueryDefault.default)("<li>Before Second</li>>");
     (0, _jqueryDefault.default)("#list-1" > li).eq(1).before(jQueryHtml);
