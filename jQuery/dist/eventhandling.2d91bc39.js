@@ -605,6 +605,10 @@ btnSetEvent.on("click", ()=>{
     btnClickMe.on("click", fn1);
     btnClickMe.on("click", fn2);
 });
+btnOffEvent1.on("click", ()=>{
+    btnClickMe.off("click", fn2);
+    event1 = false;
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
