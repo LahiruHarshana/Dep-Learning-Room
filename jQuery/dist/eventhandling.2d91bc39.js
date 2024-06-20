@@ -593,11 +593,18 @@ const btnOffEvent2 = (0, _jqueryDefault.default)("#btn-off-event-2");
 const btnClearEvents = (0, _jqueryDefault.default)("#btn-clear-events");
 const btnClickMe = (0, _jqueryDefault.default)("#btn-click-me");
 // [btnClearEvents,btnClickMe,btnOffEvent2,btnOffEvent1,btnClearEvents,btnSetEvent].forEach(e=>e.remove());
-btnSetEvent.on("click", ()=>{
-    alert("ok");
-});
 const fn1 = ()=>console.log("call back fn 1");
 const fn2 = ()=>console.log("call back fn 2");
+let event1 = false;
+let event2 = false;
+btnSetEvent.on("click", ()=>{
+    if (event1 || event2) {
+        alert("Events Listeners have been already attachment");
+        return;
+    }
+    btnClickMe.on("click", fn1);
+    btnClickMe.on("click", fn2);
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
