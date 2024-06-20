@@ -9,3 +9,7 @@ const btnClickMe = $("#btn-click-me");
 
 // [btnClearEvents,btnClickMe,btnOffEvent2,btnOffEvent1,btnClearEvents,btnSetEvent].forEach(e=>e.remove());
 
+
+btnSetEvent.on('click',()=>{
+    alert("ok");
+})

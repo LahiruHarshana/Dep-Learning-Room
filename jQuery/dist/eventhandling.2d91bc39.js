@@ -591,7 +591,11 @@ const btnSetEvent = (0, _jqueryDefault.default)("#btn-set-events");
 const btnOffEvent1 = (0, _jqueryDefault.default)("#btn-off-event-1");
 const btnOffEvent2 = (0, _jqueryDefault.default)("#btn-off-event-2");
 const btnClearEvents = (0, _jqueryDefault.default)("#btn-clear-events");
-const btnClickMe = (0, _jqueryDefault.default)("#btn-click-me"); // [btnClearEvents,btnClickMe,btnOffEvent2,btnOffEvent1,btnClearEvents,btnSetEvent].forEach(e=>e.remove());
+const btnClickMe = (0, _jqueryDefault.default)("#btn-click-me");
+// [btnClearEvents,btnClickMe,btnOffEvent2,btnOffEvent1,btnClearEvents,btnSetEvent].forEach(e=>e.remove());
+btnSetEvent.on("click", ()=>{
+    alert("ok");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
