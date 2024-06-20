@@ -27,4 +27,4 @@ $('#list-1'>li).eq(1).before(jQueryHtml);
 
 $("#list-2 > li").first().children("a").on('click',()=>{
     alert('Hello');
-})
+});
