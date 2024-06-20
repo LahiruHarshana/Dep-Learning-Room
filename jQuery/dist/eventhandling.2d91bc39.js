@@ -632,7 +632,7 @@ const liElm = (0, _jqueryDefault.default)("ul>li:first-child").clone();
     if (e.code === "Enter") (0, _jqueryDefault.default)("#btn-validate").trigger("click");
 });
 (0, _jqueryDefault.default)("#btn-validate").on("click", ()=>{
-    alert("Validate");
+    alert("Validated");
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")

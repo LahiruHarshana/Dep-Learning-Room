@@ -71,6 +71,6 @@ $('#txt-number').on('Keyup',(e)=>{
 
 
 $("#btn-validate").on('click',()=>{
-    alert("Validate");
+    alert("Validated");
 })
 
