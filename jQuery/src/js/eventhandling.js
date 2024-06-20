@@ -55,7 +55,7 @@ $('#btn-genarate-more-items').on('click',()=>{
 
 $('#btn-clear-all-items').on('click',()=>{
     $("ul > li").remove();
-})
+});
 
 
 $("ul").on("click","li > button",()=>{
