@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import alert from "bootstrap/js/src/alert";
 
 const btnAppend = $('#btn-append');
 const btnPrepend = $('#btn-prepend');
@@ -24,3 +25,6 @@ $('#list-1'>li).eq(1).before(jQueryHtml);
 });
 
 
+$("#list-2 > li").first().children("a").on('click',()=>{
+    alert('Hello');
+})
