@@ -596,6 +596,8 @@ const btnClickMe = (0, _jqueryDefault.default)("#btn-click-me");
 btnSetEvent.on("click", ()=>{
     alert("ok");
 });
+const fn1 = ()=>console.log("call back fn 1");
+const fn2 = ()=>console.log("call back fn 2");
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
