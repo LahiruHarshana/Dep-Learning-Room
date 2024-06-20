@@ -36,7 +36,7 @@ btnOffEvent1.on('click',()=>{
 btnOffEvent2.on('click',()=>{
     btnClickMe.off('click',fn2);
     event2 = false;
-})
+});
 
 
 
