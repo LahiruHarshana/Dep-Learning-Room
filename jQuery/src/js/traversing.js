@@ -10,3 +10,5 @@ li2Elm.prev().css('background-color','red');
 
 //closets
 li2Elm.parent("body").css('background-color','lightblue');
+
+$(li2Elm.parent().children().get(3)).css('border','2px solid black');
