@@ -1,7 +1,5 @@
 import $ from 'jquery';
 
-
-
 const box = $("#box");
 $("#btn-change-color").on('click',()=>{
     const b1 =Math.random() * 256;
