@@ -38,6 +38,11 @@ btnOffEvent2.on('click',()=>{
     event2 = false;
 });
 
+btnClearEvents.on('click',()=>{
+    btnClickMe.off('click');
+    event2 = false;
+    event1 = false;
+})
 
 
 

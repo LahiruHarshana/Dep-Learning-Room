@@ -613,6 +613,11 @@ btnOffEvent2.on("click", ()=>{
     btnClickMe.off("click", fn2);
     event2 = false;
 });
+btnClearEvents.on("click", ()=>{
+    btnClickMe.off("click");
+    event2 = false;
+    event1 = false;
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
