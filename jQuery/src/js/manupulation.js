@@ -32,3 +32,7 @@ $("#btn-clone").on('click',()=>{
     const cloneLi = $("#list-2 > li").first().clone();
     $('#list-2').append(cloneLi);
 });
+
+$('#btn-remove').on('click',()=>{
+    $("#list-2 li:not(#list-2 li:first-child)").remove();
+});
