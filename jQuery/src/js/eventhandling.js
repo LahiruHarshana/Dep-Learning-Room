@@ -63,4 +63,9 @@ $("ul").on("click","li > button",()=>{
 });
 
 
+$('#txt-number').on('Keyup',(e)=>{
+    if (e.code === "Enter"){
+        $("#btn-validate").trigger('click');
+    }
+});
 
