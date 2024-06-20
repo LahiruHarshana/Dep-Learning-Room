@@ -625,6 +625,9 @@ const liElm = (0, _jqueryDefault.default)("ul>li:first-child").clone();
 (0, _jqueryDefault.default)("#btn-clear-all-items").on("click", ()=>{
     (0, _jqueryDefault.default)("ul > li").remove();
 });
+(0, _jqueryDefault.default)("ul").on("click", "li > button", ()=>{
+    alert("okay");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 

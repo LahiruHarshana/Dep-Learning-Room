@@ -58,5 +58,9 @@ $('#btn-clear-all-items').on('click',()=>{
 })
 
 
+$("ul").on("click","li > button",()=>{
+    alert("okay");
+})
+
 
 
