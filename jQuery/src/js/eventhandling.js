@@ -44,7 +44,12 @@ btnClearEvents.on('click',()=>{
     event1 = false;
 });
 
+const liElm = $("ul>li:first-child").clone();
+
 $('#btn-genarate-more-items').on('click',()=>{
+    for (let i =0;i<5;i++){
+        $("ul").append()
+    }
 
 })
 

@@ -618,7 +618,10 @@ btnClearEvents.on("click", ()=>{
     event2 = false;
     event1 = false;
 });
-(0, _jqueryDefault.default)("#btn-genarate-more-items").on("click", ()=>{});
+const liElm = (0, _jqueryDefault.default)("ul>li:first-child").clone();
+(0, _jqueryDefault.default)("#btn-genarate-more-items").on("click", ()=>{
+    for(let i = 0; i < 5; i++)(0, _jqueryDefault.default)("ul").append();
+});
 (0, _jqueryDefault.default)("#btn-clear-all-items").on("click", ()=>{
     (0, _jqueryDefault.default)("ul > li").remove();
 });
