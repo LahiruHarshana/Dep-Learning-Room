@@ -51,7 +51,7 @@ $('#btn-genarate-more-items').on('click',()=>{
         $("ul").append(liElm.clone())
     }
 
-})
+});
 
 $('#btn-clear-all-items').on('click',()=>{
     $("ul > li").remove();
