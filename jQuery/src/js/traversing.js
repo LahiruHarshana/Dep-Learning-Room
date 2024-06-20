@@ -13,4 +13,4 @@ li2Elm.parent("body").css('background-color','lightblue');
 
 // $(li2Elm.parent().children().get(3)).css('border','2px solid black');
 
-li2Elm.parent().ch
+li2Elm.parent().children().eq(3).css('border','2px solid black');
