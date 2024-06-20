@@ -26,7 +26,7 @@ console.log("Height : ",$("#elm").height(),"100px");
 console.log("InnerWidth : ",$("#elm").innerWidth(),"140px");
 console.log("InnerHeight : ",$("#elm").innerHeight(),"170px");
 console.log("OuterWidth : ",$("#elm").outerWidth(),"170px");
-console.log("OuterHeight : ",$("#elm").outerHeight(true),"170px");
-console.log("MariginHeight : ",$("#elm").outerHeight(true),"170px");
+console.log("OuterHeight : ",$("#elm").outerHeight(true),"210px");
+console.log("MariginHeight : ",$("#elm").outerHeight(true),"210px");
 
 
