@@ -44,12 +44,12 @@ btnClearEvents.on('click',()=>{
     event1 = false;
 });
 
-$('btn-genarate-more-items').on('click',()=>{
+$('#btn-genarate-more-items').on('click',()=>{
 
 })
 
-$('btn-clear-all-items').on('click',()=>{
-
+$('#btn-clear-all-items').on('click',()=>{
+    $("ul > li").remove();
 })
 
 

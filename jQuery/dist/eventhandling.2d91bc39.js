@@ -618,8 +618,10 @@ btnClearEvents.on("click", ()=>{
     event2 = false;
     event1 = false;
 });
-(0, _jqueryDefault.default)("btn-genarate-more-items").on("click", ()=>{});
-(0, _jqueryDefault.default)("btn-clear-all-items").on("click", ()=>{});
+(0, _jqueryDefault.default)("#btn-genarate-more-items").on("click", ()=>{});
+(0, _jqueryDefault.default)("#btn-clear-all-items").on("click", ()=>{
+    (0, _jqueryDefault.default)("ul > li").remove();
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["8iiJ3","hH2Rn"], "hH2Rn", "parcelRequirec9aa")
 
