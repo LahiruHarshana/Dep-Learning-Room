@@ -8,10 +8,11 @@
             width: 100px;
             height: 100px;
             margin-bottom: 10px;
+            border: 1px solid #000000;
         }
     </style>
 
-    <script src="./js/styling.js"></script>
+    <script type="module" src="./js/styling.js"></script>
 </head>
 <body>
 <h1>Styling</h1>
@@ -21,5 +22,39 @@ Go<a href="./index.html">Back</a>
 <button id="btn-change-color"> Change Color</button>
 <button id="btn-get-color"> Get Color</button>
 <button id="btn-get-dimensions"> Get Dimension</button>
+
+
+<hr>
+
+<style>
+
+    #parent{
+        border: 1px solid black;
+        background-color: yellow;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+    #elm{
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        padding: 20px;
+        border: 15px solid blue;
+        margin: 20px;
+        background-color: red;
+        left: 50px;
+        top: 100px;
+        background-clip: content-box;
+    }
+</style>
+
+<div id="parent">
+
+    <div id="elm">
+
+    </div>
+</div>
 </body>
 </html>
