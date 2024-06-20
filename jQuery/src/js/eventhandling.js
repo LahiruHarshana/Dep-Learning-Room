@@ -30,6 +30,14 @@ btnSetEvent.on('click',()=>{
 btnOffEvent1.on('click',()=>{
     btnClickMe.off('click',fn2);
     event1 = false;
+});
+
+
+btnOffEvent2.on('click',()=>{
+    btnClickMe.off('click',fn2);
+    event2 = false;
 })
+
+
 
 
