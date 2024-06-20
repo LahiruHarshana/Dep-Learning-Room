@@ -28,3 +28,8 @@ $('#list-1'>li).eq(1).before(jQueryHtml);
 $("#list-2 > li").first().children("a").on('click',()=>{
     alert('Hello');
 });
+
+$("btn-clone").on('click',()=>{
+    const cloneLi = $("#list-2 > li").first().clone();
+    $('#list-2').append(cloneLi);
+})

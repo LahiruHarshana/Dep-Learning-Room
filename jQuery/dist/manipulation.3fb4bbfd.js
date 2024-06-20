@@ -607,6 +607,10 @@ btnInsertBefore.on("click", ()=>{
 (0, _jqueryDefault.default)("#list-2 > li").first().children("a").on("click", ()=>{
     (0, _alertDefault.default)("Hello");
 });
+(0, _jqueryDefault.default)("btn-clone").on("click", ()=>{
+    const cloneLi = (0, _jqueryDefault.default)("#list-2 > li").first().clone();
+    (0, _jqueryDefault.default)("#list-2").append(cloneLi);
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","bootstrap/js/src/alert":"j2vO3"}],"j2vO3":[function(require,module,exports) {
 /**
