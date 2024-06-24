@@ -4,8 +4,68 @@
     <meta charset="UTF-8">
     <title>jQuery - Miscellaneous</title>
     <script src="/selecting.b40d8efd.js"></script><script src="/misc.4021c163.js" defer=""></script>
+    <style>#overlay {
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+body {
+  overflow: hidden;
+}
+
+#loader {
+  color: #000;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  width: 4px;
+  animation: 2s linear infinite l26;
+  transform: translateX(-38px);
+  box-shadow: 19px -19px, 38px -19px, 57px -19px, 19px 0 0 5px, 38px 0 0 5px, 57px 0 0 5px, 19px 19px, 38px 19px, 57px 19px;
+}
+
+@keyframes l26 {
+  12.5% {
+    box-shadow: 19px -19px, 38px -19px, 57px -19px 0 5px, 19px 0 0 5px, 38px 0, 57px 0 0 5px, 19px 19px, 38px 19px, 57px 19px;
+  }
+
+  25% {
+    box-shadow: 19px -19px 0 5px, 38px -19px, 57px -19px 0 5px, 19px 0, 38px 0, 57px 0, 19px 19px, 38px 19px 0 5px, 57px 19px;
+  }
+
+  50% {
+    box-shadow: 19px -19px 0 5px, 38px -19px 0 5px, 57px -19px, 19px 0, 38px 0, 57px 0, 19px 19px, 38px 19px, 57px 19px 0 5px;
+  }
+
+  62.5% {
+    box-shadow: 19px -19px, 38px -19px, 57px -19px, 19px 0 0 5px, 38px 0, 57px 0, 19px 19px, 38px 19px 0 5px, 57px 19px 0 5px;
+  }
+
+  75% {
+    box-shadow: 19px -19px, 38px -19px 0 5px, 57px -19px, 19px 0, 38px 0, 57px 0 0 5px, 19px 19px, 38px 19px, 57px 19px 0 5px;
+  }
+
+  87.5% {
+    box-shadow: 19px -19px, 38px -19px 0 5px, 57px -19px, 19px 0, 38px 0 0 5px, 57px 0, 19px 19px 0 5px, 38px 19px, 57px 19px;
+  }
+}
+</style>
 </head>
 <body>
+
+<div id="overlay">
+    <h1>Loading</h1>
+    <div id="loader">
+    </div>
+</div>
 <h1>Miscellaneous</h1>
 Go<a href="/index.html"> Back</a>
 <hr>
@@ -28,15 +88,7 @@ Go<a href="/index.html"> Back</a>
 
 </div>
 
-<style>#overlay {
-  background-color: #fff;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-</style>
-<div id="overlay"></div>
+
+
 </body>
 </html>
