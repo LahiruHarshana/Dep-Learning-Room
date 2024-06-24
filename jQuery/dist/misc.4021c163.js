@@ -602,6 +602,12 @@ const target = (0, _jqueryDefault.default)("#target");
         alert("Fade out completed");
     });
 });
+(0, _jqueryDefault.default)("#btn-slide-up").on("click", ()=>{
+    target.slideUp();
+});
+(0, _jqueryDefault.default)("#btn-slide-down").on("click", ()=>{
+    target.slideDown();
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
 

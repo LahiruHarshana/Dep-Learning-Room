@@ -21,3 +21,11 @@ $('#btn-fade-out').on('click',()=>{
         alert("Fade out completed")
     });
 });
+
+$('#btn-slide-up').on('click',()=>{
+    target.slideUp();
+});
+
+$('#btn-slide-down').on('click',()=>{
+    target.slideDown();
+});
