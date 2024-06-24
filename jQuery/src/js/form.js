@@ -13,8 +13,10 @@ $("form").on('submit',(e)=>{
     console.log("Address :",txtAddress.val());
     console.log("MemberShip :",cbMemberShipType.val());
 
-    txtId.val("");
-    txtName.val("");
-    txtAddress.val("");
-    cbMemberShipType.val("silver");
+    // txtId.val("");
+    // txtName.val("");
+    // txtAddress.val("");
+    // cbMemberShipType.val("silver");
+
+    console.log($("form").serialize())
 })
