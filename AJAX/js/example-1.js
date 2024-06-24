@@ -13,7 +13,6 @@ txtId.addEventListener("change", () => {
 
             createTodoItems(todoItems);
 
-
             // createTodoItems(todoItems.filter(
             //     todoItem => todoItem.userId === parseInt(txtId.value)
             //

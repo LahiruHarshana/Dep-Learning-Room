@@ -27,4 +27,7 @@ console.log("OuterWidth : ",$("#elm").outerWidth(),"170px");
 console.log("OuterHeight : ",$("#elm").outerHeight(true),"210px");
 console.log("MariginHeight : ",$("#elm").outerHeight(true),"210px");
 
+console.log($("#elm").offset());
+console.log($("#elm").position());
 
+$("#elm").scroll
