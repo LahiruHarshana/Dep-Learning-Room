@@ -613,7 +613,11 @@ console.log((0, _jqueryDefault.default)("#elm").position());
 (0, _jqueryDefault.default)("#elm").scroll;
 const h1Target = (0, _jqueryDefault.default)("#h1-target");
 (0, _jqueryDefault.default)("#btn-add-class").on("click", ()=>{
-    h1Target.add("red");
+    h1Target.addClass("red");
+    alert("hai");
+});
+(0, _jqueryDefault.default)("#btn-remove-class").on("click", ()=>{
+    h1Target.removeClass("red");
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7iv7o","j6RgZ"], "j6RgZ", "parcelRequirec9aa")
