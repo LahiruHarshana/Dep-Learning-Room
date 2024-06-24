@@ -31,5 +31,6 @@ $('#btn-slide-down').on('click',()=>{
 });
 
 window.addEventListener('load',()=>{
-
+    $('#overlay').hide();
+    $("body").css('overflow','auto');
 });

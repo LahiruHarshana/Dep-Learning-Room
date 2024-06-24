@@ -608,7 +608,10 @@ const target = (0, _jqueryDefault.default)("#target");
 (0, _jqueryDefault.default)("#btn-slide-down").on("click", ()=>{
     target.slideDown();
 });
-window.addEventListener("load", ()=>{});
+window.addEventListener("load", ()=>{
+    (0, _jqueryDefault.default)("#overlay").hide();
+    (0, _jqueryDefault.default)("body").css("overflow", "auto");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
 
