@@ -30,7 +30,8 @@ $('#btn-slide-down').on('click',()=>{
     target.slideDown();
 });
 
-window.addEventListener('load',()=>{
-    $('#overlay').hide();
-    $("body").css('overflow','auto');
+$(window).on('load',()=>{
+    $('#overlay').fadeOut(1000,()=>{
+        $("body").css('overflow','auto');
+    });
 });
