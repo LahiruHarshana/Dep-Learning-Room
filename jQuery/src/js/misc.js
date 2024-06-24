@@ -11,3 +11,11 @@ $('#btn-show').on('click',()=>{
 $('#btn-hide').on('click',()=>{
     target.hide(500);   //display : none
 });
+
+$('#btn-fade-in').on('click',()=>{
+    target.fadeIn(1000);
+});
+
+$('#btn-fade-out').on('click',()=>{
+    target.fadeOut(1000);
+});

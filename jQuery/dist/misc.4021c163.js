@@ -594,6 +594,12 @@ const target = (0, _jqueryDefault.default)("#target");
 (0, _jqueryDefault.default)("#btn-hide").on("click", ()=>{
     target.hide(500); //display : none
 });
+(0, _jqueryDefault.default)("#btn-fade-in").on("click", ()=>{
+    target.fadeIn(1000);
+});
+(0, _jqueryDefault.default)("#btn-fade-out").on("click", ()=>{
+    target.fadeOut(1000);
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
 
