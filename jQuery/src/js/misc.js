@@ -29,3 +29,7 @@ $('#btn-slide-up').on('click',()=>{
 $('#btn-slide-down').on('click',()=>{
     target.slideDown();
 });
+
+window.addEventListener('load',()=>{
+
+});
