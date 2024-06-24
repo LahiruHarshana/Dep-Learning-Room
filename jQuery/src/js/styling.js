@@ -31,3 +31,9 @@ console.log($("#elm").offset());
 console.log($("#elm").position());
 
 $("#elm").scroll
+
+
+const h1Target = $('#h1-target');
+$('#btn-add-class').on('click',()=>{
+    alert("Working")
+});

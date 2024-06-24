@@ -611,6 +611,10 @@ console.log("MariginHeight : ", (0, _jqueryDefault.default)("#elm").outerHeight(
 console.log((0, _jqueryDefault.default)("#elm").offset());
 console.log((0, _jqueryDefault.default)("#elm").position());
 (0, _jqueryDefault.default)("#elm").scroll;
+const h1Target = (0, _jqueryDefault.default)("#h1-target");
+(0, _jqueryDefault.default)("#btn-add-class").on("click", ()=>{
+    alert("Working");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7iv7o","j6RgZ"], "j6RgZ", "parcelRequirec9aa")
 
