@@ -38,5 +38,5 @@ $(window).on('load',()=>{
 
 document.addEventListener('DOMContentLoaded',()=>{
     console.log("DOM Tree is completed");
-})
+});
 
