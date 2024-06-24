@@ -18,5 +18,5 @@ $("form").on('submit',(e)=>{
     // txtAddress.val("");
     // cbMemberShipType.val("silver");
 
-    console.log($("form").serialize())
+    console.log($("form").serialize());
 })
