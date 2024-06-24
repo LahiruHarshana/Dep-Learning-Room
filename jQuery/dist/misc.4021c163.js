@@ -587,6 +587,13 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
+const target = (0, _jqueryDefault.default)("#target");
+(0, _jqueryDefault.default)("#btn-show").on("click", ()=>{
+    target.show();
+});
+(0, _jqueryDefault.default)("#btn-hide").on("click", ()=>{
+    target.hide();
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
 
