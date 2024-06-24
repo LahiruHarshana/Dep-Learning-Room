@@ -35,3 +35,8 @@ $(window).on('load',()=>{
         $("body").css('overflow','auto');
     });
 });
+
+document.addEventListener('DOMContentLoaded',()=>{
+    console.log("DOM Tree is completed");
+})
+

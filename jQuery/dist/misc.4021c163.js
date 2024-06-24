@@ -613,6 +613,9 @@ const target = (0, _jqueryDefault.default)("#target");
         (0, _jqueryDefault.default)("body").css("overflow", "auto");
     });
 });
+document.addEventListener("DOMContentLoaded", ()=>{
+    console.log("DOM Tree is completed");
+});
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
 
