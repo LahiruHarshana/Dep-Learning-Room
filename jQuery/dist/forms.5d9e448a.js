@@ -584,7 +584,21 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 }
 
 },{}],"l9hyy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+var _jquery = require("jquery");
+var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
+const txtId = (0, _jqueryDefault.default)("#txt-id");
+const txtName = (0, _jqueryDefault.default)("#txt-name");
+const txtAddress = (0, _jqueryDefault.default)("#txt-address");
+const cbMemberShipType = (0, _jqueryDefault.default)("#cb-membership-type");
+(0, _jqueryDefault.default)("form").on("submit", (e)=>{
+    e.preventDefault();
+    console.log("ID :", txtId.val());
+    console.log("Name :", txtName.val());
+    console.log("Address :", txtAddress.val());
+    console.log("MemberShip :", cbMemberShipType.val());
+});
 
-},{}]},["JYT3g","l9hyy"], "l9hyy", "parcelRequirec9aa")
+},{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["JYT3g","l9hyy"], "l9hyy", "parcelRequirec9aa")
 
 //# sourceMappingURL=forms.5d9e448a.js.map
