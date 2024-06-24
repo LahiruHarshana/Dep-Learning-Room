@@ -12,4 +12,9 @@ $("form").on('submit',(e)=>{
     console.log("Name :",txtName.val());
     console.log("Address :",txtAddress.val());
     console.log("MemberShip :",cbMemberShipType.val());
+
+    txtId.val("");
+    txtName.val("");
+    txtAddress.val("");
+    cbMemberShipType.val("silver");
 })
