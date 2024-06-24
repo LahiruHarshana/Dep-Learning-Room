@@ -17,5 +17,7 @@ $('#btn-fade-in').on('click',()=>{
 });
 
 $('#btn-fade-out').on('click',()=>{
-    target.fadeOut(1000);
+    target.fadeOut(1000,()=>{
+        alert("Fade out completed")
+    });
 });
