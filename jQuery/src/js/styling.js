@@ -36,9 +36,16 @@ $("#elm").scroll
 const h1Target = $('#h1-target');
 $('#btn-add-class').on('click',()=>{
     h1Target.addClass('red');
-    alert('hai');
 });
 
 $('#btn-remove-class').on('click',()=>{
-    h1Target.removeClass('red');
+    h1Target.removeClass('red bg-orange');
+});
+
+
+$('#btn-has-class').on('click',()=>{
+    alert(`
+    red class? : ${h1Target.hasClass('red')}
+    bg-orange class? : ${h1Target.hasClass('bg-orange')}
+    `);
 })

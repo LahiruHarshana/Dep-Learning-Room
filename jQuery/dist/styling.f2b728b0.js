@@ -614,10 +614,15 @@ console.log((0, _jqueryDefault.default)("#elm").position());
 const h1Target = (0, _jqueryDefault.default)("#h1-target");
 (0, _jqueryDefault.default)("#btn-add-class").on("click", ()=>{
     h1Target.addClass("red");
-    alert("hai");
 });
 (0, _jqueryDefault.default)("#btn-remove-class").on("click", ()=>{
-    h1Target.removeClass("red");
+    h1Target.removeClass("red bg-orange");
+});
+(0, _jqueryDefault.default)("#btn-has-class").on("click", ()=>{
+    alert(`
+    red class? : ${h1Target.hasClass("red")}
+    bg-orange class? : ${h1Target.hasClass("bg-orange")}
+    `);
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["7iv7o","j6RgZ"], "j6RgZ", "parcelRequirec9aa")
