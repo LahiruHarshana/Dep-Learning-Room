@@ -602,6 +602,7 @@ const cbMemberShipType = (0, _jqueryDefault.default)("#cb-membership-type");
     // txtAddress.val("");
     // cbMemberShipType.val("silver");
     console.log((0, _jqueryDefault.default)("form").serialize());
+    console.log((0, _jqueryDefault.default)("form").serializeArray());
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["JYT3g","l9hyy"], "l9hyy", "parcelRequirec9aa")

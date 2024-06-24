@@ -19,4 +19,5 @@ $("form").on('submit',(e)=>{
     // cbMemberShipType.val("silver");
 
     console.log($("form").serialize());
+    console.log($("form").serializeArray());
 })
