@@ -5,9 +5,9 @@ const target = $('#target');
 
 
 $('#btn-show').on('click',()=>{
-    target.show();
+    target.show(1000);
 });
 
 $('#btn-hide').on('click',()=>{
-    target.hide();
+    target.hide(500);   //display : none
 });

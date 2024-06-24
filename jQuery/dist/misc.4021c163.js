@@ -589,10 +589,10 @@ var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
 const target = (0, _jqueryDefault.default)("#target");
 (0, _jqueryDefault.default)("#btn-show").on("click", ()=>{
-    target.show();
+    target.show(1000);
 });
 (0, _jqueryDefault.default)("#btn-hide").on("click", ()=>{
-    target.hide();
+    target.hide(500); //display : none
 });
 
 },{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["6q6WE","jPJyg"], "jPJyg", "parcelRequirec9aa")
