@@ -13,6 +13,7 @@ console.log("axios" in globalThis);
     (config)=>{
         console.log("Now we can intercept the request before" +
             "it send to the server");
+        console.log('RESPONSE:',config);
         return config;
     });
 
