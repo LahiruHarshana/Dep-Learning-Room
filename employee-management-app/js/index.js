@@ -2,7 +2,6 @@ EM_URL ='http://localhost:3000/employee';
 
 loadAllEmployees();
 
-
 $("form").on('submit',(e)=>{
     e.preventDefault();
     $("form").addClass('was-validated');

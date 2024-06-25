@@ -44,9 +44,7 @@
         </div>
         <div class="mt-2">
             <label for="txt-address">Employee Address</label>
-            <textarea id="txt-address" type="text" class="form-control" placeholder="Weligama" required>
-
-            </textarea>
+            <textarea id="txt-address" type="text" class="form-control" placeholder="Weligama" required></textarea>
             <div class="invalid-feedback">Invalid Address</div>
         </div>
 
@@ -55,21 +53,25 @@
 
             Gender :
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" required>
                 <label class="form-check-label" for="inlineRadio1">MALE</label>
             </div>
             <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" required>
                 <label class="form-check-label" for="inlineRadio2">FEMALE</label>
+                <div class="invalid-feedback">Select one</div>
             </div>
+
         </div>
 
         <div class="mt-2">
             <label for="slc-department">Department</label>
-            <select id="slc-department" class="form-select">
+            <select id="slc-department" class="form-select" required>
+                <option value="">Select Department</option>
                 <option value="machanic">Machanic</option>
                 <option value="water">Water</option>
                 <option value="center">Center</option>
+                <div class="invalid-feedback">Example invalid select feedback</div>
             </select>
         </div>
 
