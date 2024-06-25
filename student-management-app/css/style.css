@@ -3,7 +3,9 @@ body{
 }
 
 table {
-    td:first-child , th:first-child{
-        text-align: center;
+    td:first-child , th:first-child,
+    td:nth-child(3),th:nth-child(3),
+    td:last-child{
+
     }
 }
