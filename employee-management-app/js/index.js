@@ -87,7 +87,32 @@ async function loadAllEmployees(){
             `;
             $('#tbl-employee > tbody').append(rowHtml);
         });
-    }
-
-    $
+    }    else{
+    $('#tbl-student>tfoot').show();
 }
+}
+
+$('#tbl-employee >tbody').on('click','td:last-child>i',async (e) =>{
+    const employeeId = $(e.target).parents("tr").children().first().text();
+
+    try {
+        await $.ajax(`${EM_URL}/${employeeId}`,{method:'DELETE'})
+        $(e.target).parents("tr").fadeOut(500, ()=>{
+            $(e.target).parents("tr").remove();
+            if (!$('#tbl-student >tbody>tr').length) $('#tbl-employee > tfoot').show();
+        });
+    }catch (e){
+        alert("failed to delete the employees,try again");
+        console.log(e);
+    }
+});
+
+$('#btn-new-employee').on('click',()=>{
+    $('form').trigger('reset');
+    $('#txt-id').val(genarateNewId());
+    $('#txt-name,#txt-address').val("");
+    $('#inlineRadio1').empty();
+    $('inlineRadio2').empty();
+    $('#txt-name').trigger('focus');
+    console.log(genarateNewId());
+});

@@ -52,8 +52,6 @@ async function saveStudent() {
 $('#tbl-student >tbody').on('click','td:last-child > i',async (e)=>{
     const studentId = $(e.target).parents("tr").children().first().text();
 
-
-
     try {
        await $.ajax(`${API_URL}/${studentId}`,{method:'DELETE'})
         $(e.target).parents("tr").fadeOut(500, ()=>{
