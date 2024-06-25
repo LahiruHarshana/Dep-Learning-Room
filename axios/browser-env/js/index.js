@@ -1,12 +1,19 @@
 console.log("axios" in globalThis);
 
 
-axios.interceptors.request.use(
+    axios.interceptor.request.use(
     (config)=>{
         console.log("Now we can intercept the request before" +
             "it send to the server");
-    }
-)
+        return config;
+    });
+
+    axios.interceptor.response.use(
+    (config)=>{
+        console.log("Now we can intercept the request before" +
+            "it send to the server");
+        return config;
+    });
 
 const btnSendGetRequest = document.getElementById('btn-send-get-request');
 
