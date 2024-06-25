@@ -38,6 +38,7 @@ async function saveStudent() {
     `;
 
         $('#tbl-student > tbody').append(rowHtml);
+        $('#tbl-student > tfoot').hide();
         $("form").trigger('reset');
     } catch (e) {
     }
