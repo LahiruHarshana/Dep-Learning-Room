@@ -40,6 +40,8 @@ async function loadAllStudents(){
 
 $('#btn-new-student').on('click',()=>{
     $('#txt-id').val(genarateNewId());
+    $('#txt-name,#txt-contact').val("");
+    $('#txt-name').trigger('focus');
     console.log(genarateNewId());
 });
 
