@@ -1,7 +1,7 @@
 console.log("axios" in globalThis);
 
 
-    axios.interceptor.request.use(
+    axios.interceptors.request.use(
     (config)=>{
         console.log("Now we can intercept the request before" +
             "it send to the server");
@@ -9,10 +9,10 @@ console.log("axios" in globalThis);
         return config;
     });
 
-    axios.interceptor.response.use(
+    axios.interceptors.response.use(
     (config)=>{
-        console.log("Now we can intercept the request before" +
-            "it send to the server");
+        console.log("Now we can intercept the respose before" +
+            "it send to the client app");
         console.log('RESPONSE:',config);
         return config;
     });
