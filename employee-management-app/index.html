@@ -24,5 +24,80 @@
     <h1>Employee Management System</h1>
 </header>
 
+<main class="row">
+    <form class="col-12 col-lg-4" action="javascript:void(0)" novalidate>
+
+        <div class="mt-2 d-flex justify-content-between border p-2 rounded">
+            <div class="fs-5 fw-bold">EMPLOYEE DETAILS</div>
+            <button type="button" id="btn-new-student" class="btn btn-sm btn-success">+ NEW EMPLOYEE</button>
+        </div>
+
+        <div class="mt-2">
+            <label for="txt-id">Employee ID</label>
+            <input id="txt-id" type="text" class="form-control" placeholder="Generated ID">
+        </div>
+        <div class="mt-2">
+            <label for="txt-name">Employee Name</label>
+            <input id="txt-name" type="text" class="form-control" placeholder="Eg. Kasun Sampath" required pattern="^[A-Za-z\s]+$">
+            <div class="invalid-feedback">Invalid Name</div>
+
+        </div>
+        <div class="mt-2">
+            <label for="txt-contact">Employee Address</label>
+            <input id="txt-contact" type="text" class="form-control" placeholder="Weligama" required>
+<!--            <div class="invalid-feedback">Invalid Contact Number</div>-->
+        </div>
+        <div class="mt-2">
+            <button id="btn-save" class="btn btn-outline-primary btn-sm">SAVE</button>
+            <button id="btn-clear" type="reset" class="btn btn-warning btn-sm">CLEAR</button>
+        </div>
+
+        <div class="mt-2">
+
+            Gender :
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                <label class="form-check-label" for="inlineRadio1">MALE</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                <label class="form-check-label" for="inlineRadio2">FEMALE</label>
+            </div>
+        </div>
+
+        <div class="mt-2">
+            <label for="slc-department">Department</label>
+            <select id="slc-department" class="form-select">
+                <option></option>
+            </select>
+        </div>
+    </form>
+
+    <div class="col-12 col-lg-8">
+        <table  id="tbl-student" class="table table-bordered table-hover mt-3 ">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Contact</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+
+            <tfoot>
+            <tr>
+                <td colspan="4" class="text-center">
+                    No Students Record Found !
+                </td>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+</main>
+
 </body>
 </html>

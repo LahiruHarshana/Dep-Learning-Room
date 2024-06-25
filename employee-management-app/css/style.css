@@ -1,0 +1,21 @@
+body{
+    font-family: Poppins , sans-serif;
+}
+
+table {
+    :is(td,th):first-child,
+    :is(td,th):nth-child(3),
+    td:last-child{
+        text-align: center;
+
+    }
+
+    td:last-child i{
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover{
+            color: red;
+        }
+    }
+}
