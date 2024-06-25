@@ -17,7 +17,7 @@ async function loadAllStudents(){
         $('#tbl-student > tbody').append(rowHtml);
         });
     }else{
-
+        $('#tbl-student>tfoot').show();
     }
     console.log(studentList);
 }
