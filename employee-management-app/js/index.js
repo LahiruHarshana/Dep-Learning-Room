@@ -1,6 +1,65 @@
 EM_URL ='http://localhost:3000/employee';
 
 loadAllEmployees();
+
+
+$("form").on('submit',(e)=>{
+    e.preventDefault();
+    $("form").addClass('was-validated');
+    if (document.querySelector("form").checkValidity()){
+        saveEmployee();
+    }
+}).on('reset',()=>{
+    $("form").removeClass('was-validated')
+});
+
+ async function saveEmployee(){
+
+     try {
+         let genderVal;
+         const selectedGender = $("input[name='inlineRadioOptions']:checked").val();
+         if (selectedGender === 'option1') {
+             genderVal = 'male';
+         } else if (selectedGender === 'option2') {
+             genderVal = 'female';
+         } else {
+             genderVal = 'undefined';
+         }
+         console.log(genderVal);
+         const newEmployee = {
+             id : $("#txt-id").val().trim(),
+             name : $("#txt-name").val().trim(),
+             address : $("#txt-address").val().trim(),
+             department : $("#txt-department").val().trim(),
+             gender : genderVal
+         }
+
+         await $.ajax(EM_URL,{
+             method : 'POST',
+             data: JSON.stringify(newEmployee),
+             headers:{
+                 'Content-Type': 'application/json'
+             }
+         });
+
+         if (newEmployee.gender === 'female') {
+             icon = 'bi bi-person-standing-dress';
+         }else {
+             icon = 'bi bi-person-standing';
+         }
+         const rowHtml = `
+            <tr>
+            <td>${newEmployee.id}</td>
+            <td>${newEmployee.name}</td>
+            <td>${newEmployee.contact}</td>
+            <td><i class="${icon}"></i></td>
+        </tr>
+    `;
+     }catch (e){
+
+     }
+
+}
 async function loadAllEmployees(){
     const EmployeeList = await $.ajax(EM_URL);
 
@@ -25,4 +84,6 @@ async function loadAllEmployees(){
             $('#tbl-employee > tbody').append(rowHtml);
         });
     }
+
+    $
 }

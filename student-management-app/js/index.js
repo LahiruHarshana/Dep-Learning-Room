@@ -14,12 +14,15 @@ $('form').on('submit',(e)=>{
 
 async function saveStudent() {
 
+
     try {
+
         const newStudent = {
             id: $("#txt-id").val().trim(),
             name: $("#txt-name").val().trim(),
             contact: $("#txt-contact").val().trim()
-        }
+
+        }d
         await $.ajax(API_URL, {
             method: 'POST',
             data: JSON.stringify(newStudent),
