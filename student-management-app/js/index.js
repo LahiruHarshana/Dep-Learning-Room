@@ -2,7 +2,8 @@ const API_URL = 'http://localhost:3000/students';
 loadAllStudents();
 
 
-$('form').on('submit',()=>{
+$('form').on('submit',(e)=>{
+    e.preventDefault();
     $("form").addClass('was-validated');
     if (document.querySelector("form").checkValidity()){
         saveStudent();
