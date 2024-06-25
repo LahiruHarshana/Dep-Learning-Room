@@ -12,5 +12,10 @@ table {
 
     td:last-child i{
         font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover{
+            color: red;
+        }
     }
 }
