@@ -2,8 +2,16 @@ const API_URL = 'http://localhost:3000/students';
 loadAllStudents();
 
 
+$('form').on('submit',()=>{
+    $("form").addClass('was-validated');
+}).on('reset',()=>{
+    $('form').removeClass('was-validated');
+});
+
 $('#tbl-student >tbody').on('click','td:last-child > i',async (e)=>{
     const studentId = $(e.target).parents("tr").children().first().text();
+
+
 
     try {
        await $.ajax(`${API_URL}/${studentId}`,{method:'DELETE'})
