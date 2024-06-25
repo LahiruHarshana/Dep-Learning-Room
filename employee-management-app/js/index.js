@@ -125,6 +125,7 @@ function genarateNewId(){
 }
 
 $('#tbl-employee > tbody').on('click', 'td', async (e) => {
+    let depa;
     const employeeId = $(e.target).parents("tr").children().first().text();
     try {
         const employee = await $.ajax(`${EM_URL}/${employeeId}`);
@@ -138,6 +139,14 @@ $('#tbl-employee > tbody').on('click', 'td', async (e) => {
             $('#inlineRadio2').prop('checked',true);
         }
 
+        if ('machanic'===employee.department){
+            depa = 'machanic';
+        }else if('water'===employee.department){
+            depa = 'water';
+        }else if ('center' === employee.department){
+            depa = 'center';
+        }
+        $('#slc-department').val(depa);
     } catch (error) {
         alert("Failed to fetch the employee details, please try again.");
         console.log(error);
