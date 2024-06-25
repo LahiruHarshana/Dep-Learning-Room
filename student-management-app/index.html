@@ -24,7 +24,7 @@
 </header>
 
 <main class="row">
-    <form class="col-12 col-lg-4" action="javascript:void(0)">
+    <form class="col-12 col-lg-4" action="javascript:void(0)" novalidate>
 
         <div class="mt-2 d-flex justify-content-between border p-2 rounded">
             <div class="fs-5 fw-bold">STUDENT DETAILS</div>
@@ -42,6 +42,7 @@
         <div class="mt-2">
             <label for="txt-contact">Contact Number</label>
             <input id="txt-contact" type="text" class="form-control" placeholder="Eg. 071-8334554" required pattern="^\d{3}-\d{7}$">
+            <div class="invalid-feedback">Invalid Contact Number</div>
         </div>
         <div class="mt-2">
             <button id="btn-save" class="btn btn-outline-primary btn-sm">SAVE</button>
