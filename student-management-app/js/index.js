@@ -3,7 +3,7 @@ loadAllStudents();
 
 
 $('#tbl-student >tbody').on('click','td:last-child > i',(e)=>{
-    console.log($(e.target).parents("tr").children().first().text());
+    const studentId = $(e.target).parents("tr").children().first().text();
 });
 async function loadAllStudents(){
     const studentList = await $.ajax(API_URL);
