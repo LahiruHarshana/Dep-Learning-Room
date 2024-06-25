@@ -1,5 +1,10 @@
 const API_URL = 'http://localhost:3000/students';
 loadAllStudents();
+
+
+$('#tbl-student >tbody').on('click','td:last-child > i',()=>{
+    alert("working");
+});
 async function loadAllStudents(){
     const studentList = await $.ajax(API_URL);
 
