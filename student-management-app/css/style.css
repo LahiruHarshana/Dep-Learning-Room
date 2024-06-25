@@ -3,9 +3,9 @@ body{
 }
 
 table {
-    td:first-child , th:first-child,
-    td:nth-child(3),th:nth-child(3),
-    td:last-child{
-
+   :is(td,th):first-child,
+   :is(td,th):nth-child(3),
+   td:last-child{
+        text-align: center;
     }
 }
