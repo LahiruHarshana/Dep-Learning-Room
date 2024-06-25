@@ -26,18 +26,20 @@ async function saveStudent() {
                 'Content-Type': 'application/json'
             }
         });
+
+        const rowHtml = `
+            <tr>
+            <td>${newStudent.id}</td>
+            <td>${newStudent.name}</td>
+            <td>${newStudent.contact}</td>
+            <td><i class="bi bi-trash"></i></td>
+        </tr>
+    `
     } catch (e) {
     }
 
 
-    const rowHtml = `
-            <tr>
-            <td>${studentList.id}</td>
-            <td>${studentList.name}</td>
-            <td>${studentList.contact}</td>
-            <td><i class="bi bi-trash"></i></td>
-        </tr>
-    `
+
 }
 $('#tbl-student >tbody').on('click','td:last-child > i',async (e)=>{
     const studentId = $(e.target).parents("tr").children().first().text();
