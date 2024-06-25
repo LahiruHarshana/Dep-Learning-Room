@@ -34,3 +34,14 @@ async function loadAllStudents(){
     }
     console.log(studentList);
 }
+
+$('#btn-new-student').on('click',()=>{
+    $('#txt-id').val(genarateNewId());
+    console.log(genarateNewId());
+});
+
+function genarateNewId(){
+   const lastStudentId = $('#tbl-student > tbody > tr:last-child > td:first-child').text();
+  const newId =  +lastStudentId.replace('S','')+1
+    return "S"+`${newId}`.padStart(3,'0');
+}
