@@ -4,6 +4,9 @@ loadAllStudents();
 
 $('form').on('submit',()=>{
     $("form").addClass('was-validated');
+    if (document.querySelector("form").checkValidity()){
+        alert("Validated");
+    }
 }).on('reset',()=>{
     $('form').removeClass('was-validated');
 });
