@@ -34,7 +34,10 @@ async function saveStudent() {
             <td>${newStudent.contact}</td>
             <td><i class="bi bi-trash"></i></td>
         </tr>
-    `
+    `;
+
+        $('#tbl-student > tbody').append(rowHtml);
+        $("form").trigger('reset');
     } catch (e) {
     }
 
