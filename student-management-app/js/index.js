@@ -7,7 +7,10 @@ $('#tbl-student >tbody').on('click','td:last-child > i',async (e)=>{
 
     try {
        await $.ajax(`${API_URL}/${studentId}`,{method:'DELETE'})
-        $(e.target).parents("tr").fadeOut(500);
+        $(e.target).parents("tr").fadeOut(500, ()=>{
+           $(e.target).parents("tr").remove();
+           if (!$('#tbl-student >tbody>tr').length) $('#tbl-student > tfoot').show();
+        });
     }catch (e){
         alert("failed to delete the students,try again");
         console.log(e);
