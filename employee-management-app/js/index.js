@@ -14,7 +14,6 @@ $("form").on('submit',(e)=>{
 });
 
  async function saveEmployee(){
-
      try {
          let genderVal;
          const selectedGender = $("input[name='inlineRadioOptions']:checked").val();
@@ -30,7 +29,7 @@ $("form").on('submit',(e)=>{
              id : $("#txt-id").val().trim(),
              name : $("#txt-name").val().trim(),
              address : $("#txt-address").val().trim(),
-             department : $("#txt-department").val().trim(),
+             department : document.getElementById('slc-department').value,
              gender : genderVal
          }
 
@@ -49,14 +48,19 @@ $("form").on('submit',(e)=>{
          }
          const rowHtml = `
             <tr>
-            <td>${newEmployee.id}</td>
-            <td>${newEmployee.name}</td>
+             td>${newEmployee.id}</td>
+            <td> <i class="${icon}"></i>${newEmployee.name}</td>
             <td>${newEmployee.contact}</td>
-            <td><i class="${icon}"></i></td>
+            <td><i class="bi bi-trash"></i></td>
         </tr>
     `;
-     }catch (e){
 
+         $('#tbl-employee > tbody').append(rowHtml);
+         $('#tbl-employee > tfoot').hide();
+         $("form").trigger('reset');
+     }catch (e){
+         alert("not save");
+         console.log(e);
      }
 
 }
@@ -76,9 +80,9 @@ async function loadAllEmployees(){
             const rowHtml = `
                 <tr>
                     <td>${employee.id}</td>
-                    <td>${employee.name}</td>
+                    <td> <i class="${icon}"></i>${employee.name}</td>
                     <td>${employee.department}</td>
-                    <td><i class="${icon}"></i></td>
+                    <td><i class="bi bi-trash"></i></td>
                 </tr>
             `;
             $('#tbl-employee > tbody').append(rowHtml);

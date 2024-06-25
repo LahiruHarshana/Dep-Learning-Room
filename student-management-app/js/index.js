@@ -22,7 +22,7 @@ async function saveStudent() {
             name: $("#txt-name").val().trim(),
             contact: $("#txt-contact").val().trim()
 
-        }d
+        }
         await $.ajax(API_URL, {
             method: 'POST',
             data: JSON.stringify(newStudent),
