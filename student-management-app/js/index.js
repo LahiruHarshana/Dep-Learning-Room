@@ -5,12 +5,40 @@ loadAllStudents();
 $('form').on('submit',()=>{
     $("form").addClass('was-validated');
     if (document.querySelector("form").checkValidity()){
-        alert("Validated");
+        saveStudent();
     }
 }).on('reset',()=>{
     $('form').removeClass('was-validated');
 });
 
+async function saveStudent() {
+
+    try {
+        const newStudent = {
+            id: $("#txt-id").val().trim(),
+            name: $("#txt-name").val().trim(),
+            contact: $("#txt-contact").val().trim()
+        }
+        await $.ajax(API_URL, {
+            method: 'POST',
+            data: JSON.stringify(newStudent),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+    } catch (e) {
+    }
+
+
+    const rowHtml = `
+            <tr>
+            <td>${studentList.id}</td>
+            <td>${studentList.name}</td>
+            <td>${studentList.contact}</td>
+            <td><i class="bi bi-trash"></i></td>
+        </tr>
+    `
+}
 $('#tbl-student >tbody').on('click','td:last-child > i',async (e)=>{
     const studentId = $(e.target).parents("tr").children().first().text();
 
