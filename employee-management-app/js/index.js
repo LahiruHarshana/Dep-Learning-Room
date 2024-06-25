@@ -120,6 +120,6 @@ $('#btn-new-employee').on('click',()=>{
 
 function genarateNewId(){
     const lastEmployeeId = $('#tbl-employee > tbody > tr:last-child > td:first-child').text();
-    const newId =  +lastEmployeeId.replace('E','')+1
+    const newId =  +lastEmployeeId.replace('E-','')+1
     return "E-"+`${newId}`.padStart(3,'0');
 }
