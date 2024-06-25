@@ -99,7 +99,9 @@ $('#tbl-employee >tbody').on('click','td:last-child>i',async (e) =>{
         await $.ajax(`${EM_URL}/${employeeId}`,{method:'DELETE'})
         $(e.target).parents("tr").fadeOut(500, ()=>{
             $(e.target).parents("tr").remove();
-            if (!$('#tbl-student >tbody>tr').length) $('#tbl-employee > tfoot').show();
+            if (!$('#tbl-employee >tbody>tr').length){
+                $('#tbl-employee > tfoot').show();
+            }
         });
     }catch (e){
         alert("failed to delete the employees,try again");
