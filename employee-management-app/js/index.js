@@ -123,3 +123,23 @@ function genarateNewId(){
     const newId =  +lastEmployeeId.replace('E-','')+1
     return "E-"+`${newId}`.padStart(3,'0');
 }
+
+$('#tbl-employee > tbody').on('click', 'td', async (e) => {
+    const employeeId = $(e.target).parents("tr").children().first().text();
+    try {
+        const employee = await $.ajax(`${EM_URL}/${employeeId}`);
+
+        $('#txt-id').val(employee.id);
+        $('#txt-name').val(employee.name);
+        $('#txt-address').val(employee.address);
+        if ('male' === employee.gender){
+            $('#inlineRadio1').prop('checked',true);
+        }else {
+            $('#inlineRadio2').prop('checked',true);
+        }
+
+    } catch (error) {
+        alert("Failed to fetch the employee details, please try again.");
+        console.log(error);
+    }
+});
