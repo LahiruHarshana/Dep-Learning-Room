@@ -47,6 +47,7 @@ async function loadAllStudents(){
 }
 
 $('#btn-new-student').on('click',()=>{
+    $('form').trigger('reset');
     $('#txt-id').val(genarateNewId());
     $('#txt-name,#txt-contact').val("");
     $('#txt-name').trigger('focus');
