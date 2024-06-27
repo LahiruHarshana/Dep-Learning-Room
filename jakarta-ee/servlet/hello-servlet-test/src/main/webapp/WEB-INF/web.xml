@@ -6,14 +6,11 @@
 
     <servlet>
         <servlet-name>ABC</servlet-name>
-        <servlet-class>lk.ijse.dep12.ee.Myservlet</servlet-class>
+        <servlet-class>lk.ijse.dep12.ee.MyServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
         <servlet-name>ABC</servlet-name>
         <url-pattern>/index.html</url-pattern>
     </servlet-mapping>
-
-
-
 </web-app>
