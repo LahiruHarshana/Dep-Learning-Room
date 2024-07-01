@@ -38,8 +38,6 @@ btnSendPostRequest.addEventListener('click',async ()=>{
     const responseBody1 = await response1.json()
     console.log("Fetch RESPONSE BODY :" ,responseBody1);
 
-
-
     const response2 = await axios(API_URL,{
         method: "POST",
         data:{

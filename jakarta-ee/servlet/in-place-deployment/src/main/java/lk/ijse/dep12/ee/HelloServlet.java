@@ -21,6 +21,19 @@ public class HelloServlet extends HttpServlet {
         try (PrintWriter out = resp.getWriter()){
             out.println("""
                 
+                    <!doctype html>
+                
+                <html lang='en'>
+                <head>
+                    <title>Hello Servlet</title>
+                </head>
+                <body>
+                <h1>Hello Servlet - Oyanm maru</h1>
+                </body>
+      
+                             </html>
+                
+                
                 
                 """);
 
