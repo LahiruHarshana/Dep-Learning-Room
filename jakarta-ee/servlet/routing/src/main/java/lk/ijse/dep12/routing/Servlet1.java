@@ -10,6 +10,6 @@ import jakarta.servlet.http.HttpServlet;
  * @created : 2024-07-01, Monday
  **/
 
-@WebServlet(name = "servlet1", urlPatterns = "/hello1")
+@WebServlet(name = "servlet1", urlPatterns = "/hello1",loadOnStartup = 0)
 public class Servlet1 extends HttpServlet {
 }
