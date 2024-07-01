@@ -28,4 +28,8 @@
         <url-pattern>/hello1</url-pattern>
     </filter-mapping>
 
+    <listener>
+        <listener-class>lk.ijse.dep.Listener1</listener-class>
+    </listener>
+
 </web-app>
