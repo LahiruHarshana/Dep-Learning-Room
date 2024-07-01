@@ -19,5 +19,6 @@ public class MyServlet2 extends HttpServlet {
         System.out.println("============================================");
         System.out.println("MyServlet2 class object is being initialized");
         System.out.println("MyServlet2 "+MyServlet2.class.getClassLoader());
+        new Customer();
     }
 }

@@ -4,6 +4,8 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
 
+
+
     <servlet>
         <servlet-name>my-servlet-1</servlet-name>
         <servlet-class>lk.ijse.dep.MyServlet1</servlet-class>
@@ -15,5 +17,15 @@
         <url-pattern>/hello-1</url-pattern>
     </servlet-mapping>
 
+    <filter>
+        <filter-name>my-filter-1</filter-name>
+        <filter-class>lk.ijse.dep.MyFilter1</filter-class>
+    </filter>
+
+
+    <filter-mapping>
+        <filter-name>my-filter-1</filter-name>
+        <url-pattern>/hello1</url-pattern>
+    </filter-mapping>
 
 </web-app>
