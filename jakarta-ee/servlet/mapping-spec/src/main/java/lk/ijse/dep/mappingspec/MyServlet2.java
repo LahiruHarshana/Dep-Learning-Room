@@ -10,17 +10,16 @@ import java.io.IOException;
 
 /**
  * @author : L.H.J
- * @File: MyServlet1
+ * @File: MyServlet2
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-02, Tuesday
  **/
 
-@WebServlet(name = "my-servlet-1",urlPatterns = "/hello/abc")
-public class MyServlet1 extends HttpServlet {
+@WebServlet(name = "my-servlet-2", urlPatterns = "/ijse/se/*")
+public class MyServlet2 extends HttpServlet {
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("<h1>Hello Mapping!</h1>");
+        resp.getWriter().println("<h1>Wildcard Mapping</h1>");
     }
-
-
 }
