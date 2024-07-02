@@ -3,4 +3,16 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+
+    <servlet>
+        <servlet-name>crazy-servlet</servlet-name>
+        <servlet-class>lk.ijse.dep.mappingspec.CrazyServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>crazy-servlet</servlet-name>
+        <url-pattern>/crazy</url-pattern>
+        <url-pattern>/pissu</url-pattern>
+        <url-pattern>*.kachal</url-pattern>
+    </servlet-mapping>
 </web-app>

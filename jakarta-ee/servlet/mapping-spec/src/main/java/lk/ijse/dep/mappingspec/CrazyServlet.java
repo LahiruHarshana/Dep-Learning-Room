@@ -15,9 +15,8 @@ import java.io.IOException;
  * @created : 2024-07-02, Tuesday
  **/
 
-@WebServlet(name = "crazy-servlet", urlPatterns = {"/crazy","/pissu"})
+//@WebServlet(name = "crazy-servlet", urlPatterns = {"/crazy","/pissu","*.kachal"})
 public class CrazyServlet extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("<h1>Crazy Servlet</h1>");
