@@ -19,7 +19,12 @@ import java.io.IOException;
 public class MyServlet1 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        resp.getWriter().println("<h1>Hello Mapping!</h1>");
+        resp.getWriter().println("<h1>Exact Mapping!</h1>");
+        resp.getWriter().println("<h1>URL:%s</h1>".formatted(req.getRequestURL()));
+        resp.getWriter().println("<h1>URL:%s</h1>".formatted(req.getRequestURI()));
+        resp.getWriter().println("<h1>ContextPath:%s</h1>".formatted(req.getContextPath()));
+        resp.getWriter().println("<h1>ServletPath:%s</h1>".formatted(req.getServletPath()));
+        resp.getWriter().println("<h1>PathInfo:%s</h1>".formatted(req.getPathInfo()));
     }
 
 
