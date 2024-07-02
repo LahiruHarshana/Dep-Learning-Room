@@ -15,9 +15,8 @@ import java.io.IOException;
  * @created : 2024-07-02, Tuesday
  **/
 
-@WebServlet(name = "my-servlet-2", urlPatterns = "/ijse/se/*")
+@WebServlet(name = "my-servlet-2", urlPatterns = "/ijse/*/*")
 public class MyServlet2 extends HttpServlet {
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("<h1>Wildcard Mapping</h1>");
