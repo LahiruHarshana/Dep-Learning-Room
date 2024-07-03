@@ -11,17 +11,18 @@ import java.io.IOException;
 
 /**
  * @author : L.H.J
- * @File: StartFilter
+ * @File: EndFilter
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-03, Wednesday
  **/
 
-//@WebFilter(filterName = "start-filer" ,urlPatterns = "/*")
-public class StartFilter extends HttpFilter {
+//@WebFilter(filterName = "end-filter",urlPatterns = "/*")
+public class EndFilter extends HttpFilter {
+
     @Override
     protected void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
-        System.out.println("Start Filter : Incoming Request");
+        System.out.println("EndFilter : Incoming Request");
         chain.doFilter(req,res);
-        System.out.println("Start Filter : Outgoing Filter");
+        System.out.println("EndFilter : Outgoing Filter");
     }
 }
