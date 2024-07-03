@@ -13,7 +13,7 @@ import jakarta.servlet.annotation.WebListener;
  **/
 
 
-@WebListener
+//@WebListener
 public class AppContextListener implements ServletContextListener {
 
     static {

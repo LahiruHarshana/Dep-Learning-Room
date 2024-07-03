@@ -13,4 +13,25 @@
     <listener>
         <listener-class>lk.ijse.dep12.listener.SessionListener</listener-class>
     </listener>
+
+
+    <filter>
+        <filter-name>start-filter</filter-name>
+        <filter-class>lk.ijse.dep12.filter.StartFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>start-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>end-filter</filter-name>
+        <filter-class>lk.ijse.dep12.filter.EndFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>end-filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 </web-app>
