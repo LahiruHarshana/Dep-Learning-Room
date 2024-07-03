@@ -16,10 +16,16 @@ import jakarta.servlet.annotation.WebListener;
 @WebListener
 public class AppContextListener implements ServletContextListener {
 
-
+    static {
+        System.out.println("1.ServletContextListener loaded");
+    }
+    public AppContextListener(){
+        System.out.println("2.ServletContextListener()");
+        System.out.println("Thread :" + Thread.currentThread().getName());
+    }
     @Override
     public void contextInitialized(ServletContextEvent sce) {
-        System.out.println("Servlet context has been just initialized");
+        System.out.println("3.Servlet context has been just initialized");
     }
 
     @Override
