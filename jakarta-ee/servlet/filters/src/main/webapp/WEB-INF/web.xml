@@ -9,8 +9,6 @@
         <filter-name>start-filter</filter-name>
         <filter-class>lk.ijse.dep12.filters.StartFilter</filter-class>
     </filter>
-
-
     <filter-mapping>
         <filter-name>start-filter</filter-name>
         <url-pattern>/*</url-pattern>
@@ -21,20 +19,25 @@
         <filter-name>customer-filter</filter-name>
         <filter-class>lk.ijse.dep12.filters.CustomerFilter</filter-class>
     </filter>
-
-
     <filter-mapping>
         <filter-name>customer-filter</filter-name>
-<!--        <url-pattern>/customers</url-pattern>-->
-        <servlet-name>customer-servlet</servlet-name>
+        <url-pattern>/customers</url-pattern>
+<!--        <servlet-name>customer-servlet</servlet-name>-->
+    </filter-mapping>
+
+    <filter>
+        <filter-name>item-filter</filter-name>
+        <filter-class>lk.ijse.dep12.filters.ItemFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>item-filter</filter-name>
+        <url-pattern>/items</url-pattern>
     </filter-mapping>
 
     <filter>
         <filter-name>end-filter</filter-name>
         <filter-class>lk.ijse.dep12.filters.EndFilter</filter-class>
     </filter>
-
-
     <filter-mapping>
         <filter-name>end-filter</filter-name>
         <url-pattern>/*</url-pattern>
