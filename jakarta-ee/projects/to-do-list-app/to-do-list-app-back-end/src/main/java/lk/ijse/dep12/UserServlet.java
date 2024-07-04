@@ -6,6 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.Part;
 
 import java.io.IOException;
 
@@ -18,7 +19,7 @@ import java.io.IOException;
 
 
 @WebServlet(name = "user-servlet" ,urlPatterns = "/users/*")
-@MultipartConfig(location = "/tmp",maxFileSize = 5 * 1024 * 1024)
+@MultipartConfig(location = "/tmp",maxFileSize = 5 * 1024 * 1024 * 1024)
 public class UserServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -31,6 +32,8 @@ public class UserServlet extends HttpServlet {
         String name = req.getParameter("name");
         String password = req.getParameter("password");
         String email = req.getParameter("email");
+        Part picture = req.getPart("picture");
+        picture.write("/Users/lahiruharshana/Downloads/DEP_IMG");
         resp.getWriter().println("Name : " + name + "<br>");
         resp.getWriter().println("Password : " + password + "<br>");
         resp.getWriter().println("Email : " + email + "<br>");
