@@ -10,11 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa998ef-f6bd-448a-a2fd-a81dceccafc3" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/EmployeeToJson.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/JsonToJavaObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/JavaObjectToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/JavaObjectToJson.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/Student.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
