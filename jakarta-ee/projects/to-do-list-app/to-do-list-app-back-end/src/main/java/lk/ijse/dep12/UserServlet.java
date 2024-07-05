@@ -44,7 +44,6 @@ public class UserServlet extends HttpServlet {
             PreparedStatement stm = connection.prepareStatement("""
                     INSERT INTO `user`(email, password, name, picture) VALUES (?, ?, ?, ?)
                     """, Statement.RETURN_GENERATED_KEYS);
-
             stm.setString(1, email);
             stm.setString(2, password);
             stm.setString(3, name);
@@ -53,8 +52,6 @@ public class UserServlet extends HttpServlet {
             ResultSet rs = stm.getGeneratedKeys();
             rs.next();
             int newUserId = rs.getInt(1);
-
-
             resp.setStatus(HttpServletResponse.SC_CREATED);
 
             resp.getWriter().println(
