@@ -6,5 +6,6 @@ package lk.ijse.dep12.to;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-05, Friday
  **/
-public class User {
+public record User(Integer id,String name , String email) {
+
 }

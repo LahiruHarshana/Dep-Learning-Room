@@ -9,6 +9,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
+import lk.ijse.dep12.to.User;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -54,17 +55,12 @@ public class UserServlet extends HttpServlet {
             ResultSet rs = stm.getGeneratedKeys();
             rs.next();
             int newUserId = rs.getInt(1);
+
+            resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_CREATED);
 
-            resp.getWriter().println(
-                    """
-                    {
-                    "id":"%s",
-                    "name": "%s",
-                    "email":"%s"
-                    }
-                    """.formatted(newUserId,email,name));
-            resp.getWriter().flush();
+            User user = new User(newUserId,name,email);
+            mapper.writeValue(resp.getWriter(),user);
         } catch (SQLException e) {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
