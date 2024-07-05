@@ -1,5 +1,6 @@
 package lk.ijse.dep12;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.annotation.Resource;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.MultipartConfig;
@@ -29,6 +30,7 @@ public class UserServlet extends HttpServlet {
 
     @Resource(lookup = "java:comp/env/jdbc/dep12-todo_app-db")
     DataSource dataSource;
+    private final ObjectMapper mapper = new ObjectMapper();
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("<h1>GET USER</h1>");
