@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7aa998ef-f6bd-448a-a2fd-a81dceccafc3" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/JavaObjectToJson.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../last-phase/jackson/src/main/java/JavaObjectToJson.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,7 +173,7 @@
       <workItem from="1720091160488" duration="151000" />
       <workItem from="1720091321894" duration="6045000" />
       <workItem from="1720097752709" duration="70000" />
-      <workItem from="1720148052362" duration="2261000" />
+      <workItem from="1720148052362" duration="2314000" />
     </task>
     <servers />
   </component>
