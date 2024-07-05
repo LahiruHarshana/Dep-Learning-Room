@@ -1,6 +1,10 @@
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Objects;
+
 /**
  * @author : L.H.J
  * @File: JavaObjectToJson
@@ -21,5 +25,13 @@ public class JavaObjectToJson {
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(customer);
         System.out.println(json);
+
+
+        Map<String, Object> properties = new LinkedHashMap<>();
+        properties.put("id",customer.getId());
+        properties.put("name",customer.getName());
+        properties.put("address",customer.getAddress());
+        String json2 = mapper.writeValueAsString(properties);
+        System.out.println(json2);
     }
 }
