@@ -22,11 +22,14 @@ public class JavaObjectToJson {
 //                }
 //                """.formatted(customer.getId(),customer.getName(),customer.getAddress());
 
+
+
         ObjectMapper mapper = new ObjectMapper();
         String json = mapper.writeValueAsString(customer);
         System.out.println(json);
 
 
+        //
         Map<String, Object> properties = new LinkedHashMap<>();
         properties.put("id",customer.getId());
         properties.put("name",customer.getName());
