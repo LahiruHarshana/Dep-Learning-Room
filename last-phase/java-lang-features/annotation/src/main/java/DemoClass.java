@@ -16,7 +16,7 @@ public class  DemoClass {
     }
 
 
-    @MySingleElementAnnotation()
+    @MySingleElementAnnotation(10)
     @MySingleElementAnnotationFake(myValue = 10)
     public static void myMethod2(){
 
