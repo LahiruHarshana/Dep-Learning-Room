@@ -24,12 +24,12 @@ public class ObjectValidationDemo {
             //ExecutableValidator executableValidator = validator.forExecutables();
             System.out.println(validator);
             //System.out.println(executableValidator);
-            Set<ConstraintViolation<Customer>> validate = validator.validate(customer);
-            if (validate.isEmpty()){
+            Set<ConstraintViolation<Customer>> constraintViolations = validator.validate(customer);
+            if (constraintViolations.isEmpty()){
                 System.out.println("Validation passed");
             }else{
                 System.out.println("Validation failed");
-                validate.forEach(System.out::println);
+                constraintViolations.forEach(System.out::println);
             }
         }
     }
