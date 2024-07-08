@@ -10,7 +10,7 @@ import java.lang.annotation.Target;
 
 
 
-@Target({ElementType.FIELD})
+@Target({ElementType.FIELD,ElementType.PARAMETER,ElementType.LOCAL_VARIABLE})
 public @interface DEP {
     int batch() default 12;
     int studentCount();
