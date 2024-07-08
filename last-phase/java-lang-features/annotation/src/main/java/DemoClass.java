@@ -4,7 +4,8 @@
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-08, Monday
  **/
-public class @MyMarkerAnnotation DemoClass {
+@MyMarkerAnnotation
+public class  DemoClass {
 
     @MyMarkerAnnotation
     int instanceVariable;
