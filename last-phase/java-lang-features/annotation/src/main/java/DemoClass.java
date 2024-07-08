@@ -11,7 +11,14 @@ public class  DemoClass {
     int instanceVariable;
 
     @MyMarkerAnnotation
-    public static void myMethod(){
+    public static void myMethod1(){
+
+    }
+
+
+    @MySingleElementAnnotation()
+    @MySingleElementAnnotationFake(myValue = 10)
+    public static void myMethod2(){
 
     }
 }
