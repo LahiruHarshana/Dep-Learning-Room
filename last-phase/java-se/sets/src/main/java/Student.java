@@ -1,5 +1,7 @@
 import lombok.*;
 
+import java.util.Objects;
+
 /**
  * @author : L.H.J
  * @File: Customer
@@ -23,11 +25,13 @@ public class Student{
 
         @Override
         public int hashCode(){
-                return super.hashCode();
+                System.out.println("hashCode()");
+                return Objects.hash(id,name,totalMarks);
         }
 
         @Override
         public boolean equals(Object obj){
+                System.out.println("equals()");
                 if(obj instanceof Student s){
                         return s.getId() == getId() && s.getName().equals(getName()) && s.getTotalMarks() == getTotalMarks();
                 }else {
