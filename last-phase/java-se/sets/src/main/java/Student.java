@@ -42,7 +42,7 @@ public class Student implements Comparable<Student>{
         @Override
         public int compareTo(Student o) {
                 if (this.totalMarks == o.totalMarks) return 0;
-                else if (this.totalMarks<o.totalMarks) return -1;
+                else if (this.totalMarks>o.totalMarks) return -1;
                 else return 1;
         }
 }
