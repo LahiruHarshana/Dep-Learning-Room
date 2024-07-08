@@ -4,7 +4,7 @@
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-08, Monday
  **/
-public class MySecondAnnotation {
+public @interface MySecondAnnotation {
     public static final int x = 10;
     public static class Customer{}
     public static enum MyEnum{}
