@@ -13,10 +13,25 @@ import lombok.*;
 @Setter
 @EqualsAndHashCode
 @ToString
-    @NoArgsConstructor
-    @AllArgsConstructor
-    public class Student{
+@NoArgsConstructor
+@AllArgsConstructor
+public class Student{
         private int id;
         private String name;
         private int totalMarks;
-    }
+
+
+        @Override
+        public int hashCode(){
+                return super.hashCode();
+        }
+
+        @Override
+        public boolean equals(Object obj){
+                if(obj instanceof Student s){
+                        return s.getId() == getId() && s.getName().equals(getName()) && s.getTotalMarks() == getTotalMarks();
+                }else {
+                        throw new ClassCastException();
+                }
+        }
+}
