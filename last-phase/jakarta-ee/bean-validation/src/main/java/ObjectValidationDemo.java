@@ -1,9 +1,11 @@
+import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import jakarta.validation.executable.ExecutableValidator;
 
 import java.lang.reflect.Executable;
+import java.util.Set;
 
 /**
  * @author : L.H.J
@@ -13,7 +15,7 @@ import java.lang.reflect.Executable;
  **/
 public class ObjectValidationDemo {
     public static void main(String[] args) {
-        Customer customer = new Customer(1,"Kasun","Galle");
+        Customer customer = new Customer(-1,"Kasun1234",null);
         try(ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory()) {
             //To validate objects
             Validator validator = validatorFactory.getValidator();
@@ -22,7 +24,13 @@ public class ObjectValidationDemo {
             //ExecutableValidator executableValidator = validator.forExecutables();
             System.out.println(validator);
             //System.out.println(executableValidator);
-
+            Set<ConstraintViolation<Customer>> validate = validator.validate(customer);
+            if (validate.isEmpty()){
+                System.out.println("Validation passed");
+            }else{
+                System.out.println("Validation failed");
+                validate.forEach(System.out::println);
+            }
         }
     }
 
