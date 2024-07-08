@@ -5,5 +5,8 @@
  * @created : 2024-07-08, Monday
  **/
 public @interface DEP {
-    int batch();
+    int batch() default 12;
+    int studentCount();
+    String [] studentNames() default {};
+
 }
