@@ -1,5 +1,6 @@
 import java.util.HashSet;
 import java.util.Set;
+import java.util.TreeSet;
 
 /**
  * @author : L.H.J
@@ -17,7 +18,7 @@ public class setDemo5 {
         Student s6 = new Student(5, "Kamal", 19);
 
 
-        Set<Student> studentSet = new HashSet<>();
+        Set<Student> studentSet = new TreeSet<>();
         studentSet.add(s1);
         studentSet.add(s2);
         studentSet.add(s3);

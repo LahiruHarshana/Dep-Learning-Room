@@ -17,7 +17,7 @@ import java.util.Objects;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-public class Student{
+public class Student implements Comparable<Student>{
         private int id;
         private String name;
         private int totalMarks;
@@ -37,5 +37,12 @@ public class Student{
                 }else {
                         throw new ClassCastException();
                 }
+        }
+
+        @Override
+        public int compareTo(Student o) {
+                if (this.totalMarks == o.totalMarks) return 0;
+                else if (this.totalMarks<o.totalMarks) return -1;
+                else return 1;
         }
 }
