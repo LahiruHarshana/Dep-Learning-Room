@@ -27,7 +27,7 @@ public class ELOperators {
         ValueExpression ve4 = ef.createValueExpression(context,"${10*59}",int.class);
         int value4 = ve4.getValue(context);
         System.out.println(value4);
-        
+
         ValueExpression ve6 = ef.createValueExpression(context,"${10/3}",int.class);
         int value6 = ve6.getValue(context);
         System.out.println(value6);
@@ -35,8 +35,7 @@ public class ELOperators {
         ValueExpression ve7 = ef.createValueExpression(context,"${10 div 3}",int.class);
         int value7 = ve7.getValue(context);
         System.out.println(value7);
-
-
+        
         ValueExpression ve8 = ef.createValueExpression(context,"${10%3}",int.class);
         int value8 = ve8.getValue(context);
         System.out.println(value8);
