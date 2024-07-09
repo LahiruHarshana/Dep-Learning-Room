@@ -5,6 +5,9 @@
  * @created : 2024-07-09, Tuesday
  **/
 public class ReflectionDemo {
+    public static void main(String[] args) {
+        
+    }
 }
 
 class Student{
