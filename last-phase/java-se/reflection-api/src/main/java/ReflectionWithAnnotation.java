@@ -1,5 +1,6 @@
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Field;
+import java.lang.reflect.Method;
 
 /**
  * @author : L.H.J
@@ -19,7 +20,7 @@ public class ReflectionWithAnnotation {
         System.out.println("Starting Date: "+startingDate);
     }
 
-    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException, NoSuchMethodException {
        Dep12 declaredAnnotations = ReflectionWithAnnotation.class.getDeclaredAnnotation(Dep12.class);
         System.out.println(declaredAnnotations.startingDate());
         System.out.println(declaredAnnotations.duration());
@@ -30,5 +31,9 @@ public class ReflectionWithAnnotation {
         System.out.println(startingDate);
         System.out.println("------------------------------------------");
 
+
+        Method printDep12Details = ReflectionWithAnnotation.class.getDeclaredMethod("printDep12Details", int.class, String.class);
+        Dep12 declaredAnnotation1 = printDep12Details.getDeclaredAnnotation(Dep12.class);
+        
     }
 }
