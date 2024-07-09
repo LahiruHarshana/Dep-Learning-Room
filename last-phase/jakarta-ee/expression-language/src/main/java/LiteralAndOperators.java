@@ -25,8 +25,8 @@ public class LiteralAndOperators {
         System.out.println(value3);
 
 
-        ValueExpression ve4 = ef.createValueExpression(context,"${'hello el literals'}",float.class);
-        float value4 = ve4.getValue(context);
+        ValueExpression ve4 = ef.createValueExpression(context,"${'hello el literals'}",String.class);
+        String value4 = ve4.getValue(context);
         System.out.println(value4);
     }
 }
