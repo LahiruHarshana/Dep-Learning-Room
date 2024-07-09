@@ -28,6 +28,6 @@ public class User {
     @Password
     private String password;
     @NotNull
-    @Dob(message = "${}")
+    @Dob(message = "${java.util.time.Period(validatedValue , java.util.time.LocalDate.now())}")
     private LocalDate dob;
 }
