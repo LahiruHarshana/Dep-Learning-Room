@@ -13,7 +13,6 @@ public class ReflectionDemo {
         for (Field filed : declaredField) {
             System.out.println(filed);
         }
-
         Field addressField = Student.class.getDeclaredField("address");
         addressField.setAccessible(true);
         addressField.set(Student.class,"Panadura");
