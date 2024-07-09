@@ -3,6 +3,8 @@ import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 
+import java.time.LocalDate;
+import java.util.Locale;
 import java.util.Set;
 
 /**
@@ -14,7 +16,7 @@ import java.util.Set;
 public class UserValidationDemo {
 
     public static void main(String[] args) {
-        User user = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12");
+        User user = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12", LocalDate.now());
         try(ValidatorFactory vf = Validation.buildDefaultValidatorFactory()){
             Validator validator = vf.getValidator();
             Set<ConstraintViolation<User>> violationSet = validator.validate(user);

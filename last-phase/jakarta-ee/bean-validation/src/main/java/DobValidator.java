@@ -16,6 +16,5 @@ public class DobValidator implements ConstraintValidator<Dob, LocalDate> {
         LocalDate today = LocalDate.now();
         int years = Period.between(today, birthday).getYears();
         return years >= 18 && years <= 60;
-
     }
 }
