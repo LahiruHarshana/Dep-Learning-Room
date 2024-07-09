@@ -14,14 +14,16 @@ public class ChangeRunItemConstantValueDemo {
         Field myConstant = Demo4.class.getDeclaredField("MY_CONSTANT");
         myConstant.setAccessible(true);
 
+        System.out.println(myConstant.getModifiers());
+
 
         //Only Works up to java 10
-        Field modifiersFields = Field.class.getDeclaredField("modifiers");
-        modifiersFields.setAccessible(true);
-        modifiersFields.setInt(myConstant,myConstant.getModifiers() & ~Modifier.FINAL);
-
-        myConstant.set(null,5);
-        System.out.println(Demo4.MY_CONSTANT);
+//        Field modifiersFields = Field.class.getDeclaredField("modifiers");
+//        modifiersFields.setAccessible(true);
+//        modifiersFields.setInt(myConstant,myConstant.getModifiers() & ~Modifier.FINAL);
+//
+//        myConstant.set(null,5);
+//        System.out.println(Demo4.MY_CONSTANT);
 //        Demo4.MY_CONSTANT = 10;
 //        System.out.println(Demo4.MY_CONSTANT);
     }
