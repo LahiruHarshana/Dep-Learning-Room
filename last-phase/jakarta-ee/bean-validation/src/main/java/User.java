@@ -1,8 +1,11 @@
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.time.LocalDate;
 
 /**
  * @author : L.H.J
@@ -22,4 +25,6 @@ public class User {
     private String email;
     @NotBlank
     private String password;
+    @NotNull
+    private LocalDate birthday;
 }
