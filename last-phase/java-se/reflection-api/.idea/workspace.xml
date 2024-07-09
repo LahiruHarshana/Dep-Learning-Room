@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f441cd5a-3ef8-47b4-9501-b454a137cf41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ChangeRunItemConstantValueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ChangeRunItemConstantValueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ReflectionWithAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReflectionWithAnnotation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,6 +15,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -32,10 +33,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ChangeRunItemConstantValueDemo.executor": "Run",
     "Application.InvokePrivateMethodDemo.executor": "Run",
     "Application.ObtainPrivateVariableValueDemo.executor": "Run",
     "Application.ReflectionDemo.executor": "Run",
     "Application.ReflectionDemo2.executor": "Run",
+    "Application.ReflectionWithAnnotation.executor": "Run",
     "Application.Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -52,7 +55,7 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ChangeRunItemConstantValueDemo">
+  <component name="RunManager" selected="Application.ReflectionWithAnnotation">
     <configuration name="ChangeRunItemConstantValueDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ChangeRunItemConstantValueDemo" />
       <module name="reflection-api" />
@@ -74,13 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReflectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ReflectionDemo" />
-      <module name="reflection-api" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ReflectionDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReflectionDemo2" />
       <module name="reflection-api" />
@@ -88,13 +84,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReflectionWithAnnotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReflectionWithAnnotation" />
+      <module name="reflection-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReflectionWithAnnotation" />
         <item itemvalue="Application.ChangeRunItemConstantValueDemo" />
         <item itemvalue="Application.ObtainPrivateVariableValueDemo" />
         <item itemvalue="Application.InvokePrivateMethodDemo" />
         <item itemvalue="Application.ReflectionDemo2" />
-        <item itemvalue="Application.ReflectionDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -106,11 +109,26 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720504620489</updated>
-      <workItem from="1720504621539" duration="8851000" />
+      <workItem from="1720504621539" duration="11501000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/main/java/ReflectionWithAnnotation.java</url>
+          <line>24</line>
+          <properties class="ReflectionWithAnnotation" method="main">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
