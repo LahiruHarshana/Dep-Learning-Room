@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f441cd5a-3ef8-47b4-9501-b454a137cf41" name="Changes" comment="" />
+    <list default="true" id="f441cd5a-3ef8-47b4-9501-b454a137cf41" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/InvokePrivateMethodDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/InvokePrivateMethodDemo.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,11 +32,13 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.InvokePrivateMethodDemo.executor": "Run",
     "Application.ReflectionDemo.executor": "Run",
     "Application.ReflectionDemo2.executor": "Run",
     "Application.Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
@@ -47,7 +51,14 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ReflectionDemo2">
+  <component name="RunManager" selected="Application.InvokePrivateMethodDemo">
+    <configuration name="InvokePrivateMethodDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="InvokePrivateMethodDemo" />
+      <module name="reflection-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ReflectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReflectionDemo" />
       <module name="reflection-api" />
@@ -71,6 +82,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InvokePrivateMethodDemo" />
         <item itemvalue="Application.ReflectionDemo2" />
         <item itemvalue="Application.ReflectionDemo" />
         <item itemvalue="Application.Test" />
@@ -85,7 +97,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720504620489</updated>
-      <workItem from="1720504621539" duration="6015000" />
+      <workItem from="1720504621539" duration="6388000" />
     </task>
     <servers />
   </component>

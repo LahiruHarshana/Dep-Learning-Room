@@ -10,11 +10,9 @@ import java.lang.reflect.Method;
  **/
 public class InvokePrivateMethodDemo {
     public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-
         Method myMethod = Demo1.class.getDeclaredMethod("myMethod");
         myMethod.setAccessible(true);
         myMethod.invoke(Demo1.class);
-
     }
 }
 class Demo1{
