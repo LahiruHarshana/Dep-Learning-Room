@@ -6,12 +6,24 @@ public class ELOperators3 {
     public static void main(String[] args) {
         ExpressionFactory ef = ExpressionFactory.newInstance();
         StandardELContext context = new StandardELContext(ef);
-        int x =100 , y=20;
-        context.getVariableMapper().setVariable("x", ef.createValueExpression(x,int.class));
-        context.getVariableMapper().setVariable("y", ef.createValueExpression(x,int.class));
-        ValueExpression ve1 = ef.createValueExpression(context,
-                "${not(x gt y) and (x > 5 or y > 2) ? 'ijse' : (x + y ne 120) ? 'dep' : 'dep' +=12}",String.class);
-        String value1 = ve1.getValue(context);
-        System.out.println(value1);
+        Student s1 = new Student(1,"Kasun",95);
+        Student s2 = new Student(1,"Nuwan",66);
+        Student s3 = new Student(1,"Ruwan",55);
+        Student s4 = new Student(1,"Saman",88);
     }
+
+    static class Student{
+        int id;
+        String name;
+        int marks;
+
+        public Student(int id,String name , int marks){
+            this.id = id;
+            this.name = name;
+            this.marks = marks;
+        }
+    }
+
+
 }
+
