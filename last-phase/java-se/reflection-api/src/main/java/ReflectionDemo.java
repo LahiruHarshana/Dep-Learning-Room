@@ -16,6 +16,7 @@ public class ReflectionDemo {
         Field addressField = Student.class.getDeclaredField("address");
         addressField.setAccessible(true);
         addressField.set(Student.class,"Panadura");
+        Student.printAddress();
     }
 }
 
@@ -23,4 +24,8 @@ class Student{
     private String id;
     private String name;
     private static String address;
+
+    public static void printAddress(){
+        System.out.println(address);
+    }
 }
