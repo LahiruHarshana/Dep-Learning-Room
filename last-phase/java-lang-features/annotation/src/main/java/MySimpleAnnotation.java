@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
  **/
 
 
-@Retention(RetentionPolicy.SOURCE)
+@Retention(RetentionPolicy.RUNTIME)
 public @interface MySimpleAnnotation {
 
 }
