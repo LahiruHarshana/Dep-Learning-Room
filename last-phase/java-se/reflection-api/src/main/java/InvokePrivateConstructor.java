@@ -1,3 +1,6 @@
+import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
+
 /**
  * @author : L.H.J
  * @File: InvokePrivateConstructor
@@ -5,8 +8,12 @@
  * @created : 2024-07-09, Tuesday
  **/
 public class InvokePrivateConstructor {
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+//        Constructor<?> declaredConstructor = Demo3.class.getDeclaredConstructors()[0];
+        Constructor<Demo3> noArgsConstructor = Demo3.class.getDeclaredConstructor();
+        noArgsConstructor.setAccessible(true);
+        Demo3 demo3 = noArgsConstructor.newInstance();
+        System.out.println(demo3);
     }
 }
 
