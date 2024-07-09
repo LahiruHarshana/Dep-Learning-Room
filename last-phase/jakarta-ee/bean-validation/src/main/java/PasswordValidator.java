@@ -1,6 +1,9 @@
 import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
+import java.util.Arrays;
+import java.util.HashSet;
+
 /**
  * @author : L.H.J
  * @File: PasswordValidator
@@ -9,7 +12,15 @@ import jakarta.validation.ConstraintValidatorContext;
  **/
 public class PasswordValidator implements ConstraintValidator<Password,String> {
     @Override
-    public boolean isValid(String s, ConstraintValidatorContext constraintValidatorContext) {
-        return false;
+    public boolean isValid(String password, ConstraintValidatorContext constraintValidatorContext) {
+        if (password.matches(".*\\d.*")) return false;
+        if (!password.matches(".*[A-Z].*")) return false;
+        if (!password.matches(".*[a-z].*")) return false;
+        char[] charArray = password.toCharArray();
+        HashSet<Character> characters = new HashSet<>();
+        for (Character c : charArray) {
+            characters.add(c);
+        }
+        return characters.size() >= charArray.length;
     }
 }

@@ -25,9 +25,7 @@ public class User {
     @NotBlank
     @Email
     private String email;
-    @NotBlank
-    @Pattern(regexp = "")
+    @Password
     private String password;
-    @NotNull
-    private LocalDate birthday;
+
 }
