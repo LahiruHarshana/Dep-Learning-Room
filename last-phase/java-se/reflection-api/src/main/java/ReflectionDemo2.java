@@ -8,15 +8,16 @@ import java.lang.reflect.Field;
  **/
 public class ReflectionDemo2 {
     public static void main(String[] args) {
-//        Field[] fields = Child.class.getFields();
-        Field[] declaredFields = Child.class.getDeclaredFields();
-        for (Field field : declaredFields) {
+        Field[] fields = Child.class.getFields();
+//        Field[] fields = Child.class.getDeclaredFields();
+        for (Field field : fields) {
             System.out.println(field);
         }
     }
 }
 class Parent{
-
+    private int x;
+    public int y;
 }
 
 class Child extends Parent{

@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f441cd5a-3ef8-47b4-9501-b454a137cf41" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/ReflectionDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ReflectionDemo.java" afterDir="false" />
-    </list>
+    <list default="true" id="f441cd5a-3ef8-47b4-9501-b454a137cf41" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,6 +31,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ReflectionDemo.executor": "Run",
+    "Application.ReflectionDemo2.executor": "Run",
     "Application.Test.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -48,9 +47,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ReflectionDemo">
+  <component name="RunManager" selected="Application.ReflectionDemo2">
     <configuration name="ReflectionDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ReflectionDemo" />
+      <module name="reflection-api" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectionDemo2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ReflectionDemo2" />
       <module name="reflection-api" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -65,6 +71,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ReflectionDemo2" />
         <item itemvalue="Application.ReflectionDemo" />
         <item itemvalue="Application.Test" />
       </list>
@@ -78,7 +85,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1720504620489</updated>
-      <workItem from="1720504621539" duration="5065000" />
+      <workItem from="1720504621539" duration="6015000" />
     </task>
     <servers />
   </component>
