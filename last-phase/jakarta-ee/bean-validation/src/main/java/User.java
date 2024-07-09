@@ -27,5 +27,7 @@ public class User {
     private String email;
     @Password
     private String password;
+    @Dob
+    private LocalDate dob;
 
 }

@@ -14,7 +14,7 @@ import java.util.Set;
 public class UserValidationDemo {
 
     public static void main(String[] args) {
-        User user = new User("Kasun Sampath", "Kasun@ijse.lk", "kasun");
+        User user = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12");
         try(ValidatorFactory vf = Validation.buildDefaultValidatorFactory()){
             Validator validator = vf.getValidator();
             Set<ConstraintViolation<User>> violationSet = validator.validate(user);
