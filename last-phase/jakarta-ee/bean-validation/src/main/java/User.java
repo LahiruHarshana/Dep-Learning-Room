@@ -30,5 +30,4 @@ public class User {
     @NotNull
     @Dob(message = "${}")
     private LocalDate dob;
-
 }
