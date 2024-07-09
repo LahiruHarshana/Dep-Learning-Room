@@ -10,7 +10,7 @@ public class InstanceMembers {
         context.getVariableMapper().setVariable("c1",ef.createValueExpression(new Customer(1,"Kasun"),Customer.class));
 
         var value = ef.createValueExpression(context,
-                "${c1.name}", String.class).getValue(context);
+                "${c1['name']}", String.class).getValue(context);
         System.out.println(value);
     }
 }
