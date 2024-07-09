@@ -27,7 +27,8 @@ public class User {
     private String email;
     @Password
     private String password;
-    @Dob
+    @NotNull
+    @Dob(message = "${}")
     private LocalDate dob;
 
 }

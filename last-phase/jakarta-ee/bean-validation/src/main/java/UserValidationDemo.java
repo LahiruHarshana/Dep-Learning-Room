@@ -16,10 +16,11 @@ import java.util.Set;
 public class UserValidationDemo {
 
     public static void main(String[] args) {
-        User user = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12", LocalDate.now());
+        User user1 = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12", LocalDate.now());
+        User user2 = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12", LocalDate.of(1999,12,1));
         try(ValidatorFactory vf = Validation.buildDefaultValidatorFactory()){
             Validator validator = vf.getValidator();
-            Set<ConstraintViolation<User>> violationSet = validator.validate(user);
+            Set<ConstraintViolation<User>> violationSet = validator.validate(user2);
             if (violationSet.isEmpty()){
                 System.out.println("Validation Password");
             }else{
