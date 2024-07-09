@@ -1,3 +1,4 @@
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Pattern;
@@ -19,11 +20,13 @@ import java.time.LocalDate;
 @AllArgsConstructor
 public class User {
     @NotBlank
-    @Pattern(regexp = "^[A-Za-z]+$")
+    @Pattern(regexp = "^[A-Za-z]+$" , message = "${validatedValue} is not a valid name")
     private String fullName;
     @NotBlank
+    @Email
     private String email;
     @NotBlank
+    @Pattern(regexp = "")
     private String password;
     @NotNull
     private LocalDate birthday;
