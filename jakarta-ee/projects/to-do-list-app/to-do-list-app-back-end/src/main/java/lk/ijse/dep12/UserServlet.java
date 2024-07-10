@@ -68,7 +68,7 @@ public class UserServlet extends HttpServlet {
                 HashMap<String, String> errors = new HashMap<>();
                 resp.setContentType("application/json");
                 resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                mapper.writeValue(resp.getWriter(),new ErrorResponse(400,
+                mapper.writeValue(resp.getWriter(),new ErrorResponse(req.getRequestURI(),400,
                         "Bad Request",
                         "Validation Failed",
                         violations));

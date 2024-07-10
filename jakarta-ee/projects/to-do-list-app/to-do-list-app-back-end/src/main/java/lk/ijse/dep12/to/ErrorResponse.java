@@ -5,7 +5,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Set;
 
 /**
@@ -19,15 +21,24 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 public class ErrorResponse {
-    private int code;
-    private String status;
-    private String message;
-    private HashMap<String,String> errors = new HashMap<>();
+    private String type;
+    private int status;
+    private String title;
+    private String detail;
+    private List<HashMap<String,String>> errors = new ArrayList<>();
 
-    public ErrorResponse(int code, String status, String message, Set<ConstraintViolation<User>> violations) {
-        this.code = code;
-        this.status = status;
-        this.message = message;
-        violations.forEach(violation -> errors.put(violation.getPropertyPath().toString(),
-                violation.getMessage().toString()));    }
+    public ErrorResponse(String type,int code, String status, String message, Set<ConstraintViolation<User>> violations) {
+        this.type = type;
+        this.status = code;
+        this.title = status;
+        this.detail = message;
+        violations.forEach(violation -> {
+            HashMap<String,String> error = new HashMap<>();
+            error.put("details",violation.getMessage());
+            error.put("pointer",violation.getPropertyPath().toString());
+            errors.add(error);
+        });
+
+        }
+
 }

@@ -19,9 +19,7 @@ import java.lang.annotation.RetentionPolicy;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Password {
     String message() default "Password must contain at least one uppercase letter, one lowercase letter and one digit";
-
     Class<?>[] groups() default {};
-
     Class<? extends Payload>[] payload() default {};
 }
 
