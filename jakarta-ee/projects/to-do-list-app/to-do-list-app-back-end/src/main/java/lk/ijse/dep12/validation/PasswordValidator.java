@@ -4,6 +4,7 @@ import jakarta.validation.ConstraintValidator;
 import jakarta.validation.ConstraintValidatorContext;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author : L.H.J
@@ -13,23 +14,22 @@ import java.util.HashSet;
  **/
 public class PasswordValidator implements ConstraintValidator<Password,String> {
     @Override
-    public boolean isValid(String password, ConstraintValidatorContext constraintValidatorContext) {
-
-
+    public boolean isValid(String password, ConstraintValidatorContext context) {
+        if (password == null) return false;
         if (password.length() < 6) {
-            constraintValidatorContext.disableDefaultConstraintViolation();
-            constraintValidatorContext.buildConstraintViolationWithTemplate("Password must be at least 6 characters")
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Password must be at least 6 characters")
                     .addConstraintViolation();
             return false;
         }
-        if (password.matches(".*[0-9].*")) return false;
-        if (password.matches(".*[A-Z].*")) return false;
-        if (password.matches(".*[a-z].*")) return false;
-        HashSet<Character> charachterSet = new HashSet<>();
-        for (char c : password.toCharArray()) charachterSet.add(c);
-        if (charachterSet.size() != password.length()) {
-            constraintValidatorContext.disableDefaultConstraintViolation();
-            constraintValidatorContext.buildConstraintViolationWithTemplate("Password can't conatin repeat characters")
+        if (!password.matches(".*[0-9].*")) return false;
+        if (!password.matches(".*[A-Z].*")) return false;
+        if (!password.matches(".*[a-z].*")) return false;
+        Set<Character> characterSet = new HashSet<>();
+        for (char c : password.toCharArray()) characterSet.add(c);
+        if (characterSet.size() != password.length()){
+            context.disableDefaultConstraintViolation();
+            context.buildConstraintViolationWithTemplate("Password must not contain repeated characters")
                     .addConstraintViolation();
             return false;
         }

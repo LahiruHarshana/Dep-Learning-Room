@@ -9,6 +9,11 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.Part;
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
+import lk.ijse.dep12.to.ErrorResponse;
 import lk.ijse.dep12.to.User;
 
 import javax.sql.DataSource;
@@ -16,6 +21,8 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Set;
 
 /**
  * @author : L.H.J
@@ -32,6 +39,15 @@ public class UserServlet extends HttpServlet {
     @Resource(lookup = "java:comp/env/jdbc/dep12-todo_app-db")
     DataSource dataSource;
     private final ObjectMapper mapper = new ObjectMapper();
+    private final ValidatorFactory validatorFactory = Validation.buildDefaultValidatorFactory();
+    private final Validator validator = validatorFactory.getValidator();
+
+
+    @Override
+    public void destroy() {
+        validatorFactory.close();
+    }
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.getWriter().println("<h1>GET USER</h1>");
@@ -43,6 +59,22 @@ public class UserServlet extends HttpServlet {
         String password = req.getParameter("password");
         String email = req.getParameter("email");
         Part picture = req.getPart("picture");
+
+
+        User user1 = new User(null, name, email, password, picture);
+            Set<ConstraintViolation<User>> violations = validator.validate(user1);
+
+            if (!violations.isEmpty()){
+                HashMap<String, String> errors = new HashMap<>();
+                resp.setContentType("application/json");
+                resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                mapper.writeValue(resp.getWriter(),new ErrorResponse(400,
+                        "Bad Request",
+                        "Validation Failed",
+                        violations));
+                return;
+            }
+
         try (Connection connection = dataSource.getConnection()) {
             PreparedStatement stm = connection.prepareStatement("""
                     INSERT INTO `user`(email, password, name, picture) VALUES (?, ?, ?, ?)
@@ -59,8 +91,8 @@ public class UserServlet extends HttpServlet {
             resp.setContentType("application/json");
             resp.setStatus(HttpServletResponse.SC_CREATED);
 
-            User user = new User(newUserId,name,email);
-            mapper.writeValue(resp.getWriter(),user);
+//            User user = new User(newUserId,name,email);
+//            mapper.writeValue(resp.getWriter(),user);
         } catch (SQLException e) {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));

@@ -8,20 +8,17 @@ import java.lang.annotation.RetentionPolicy;
 
 /**
  * @author : L.H.J
- * @File: Password
+ * @File: ProfilePicture
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-10, Wednesday
  **/
 
-
-
-@Constraint(validatedBy = PasswordValidator.class)
+@Constraint(validatedBy = ProfilePictureValidator.class)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Password {
-    String message() default "Password must contain at least one uppercase letter, one lowercase letter and one digit";
+public @interface ProfilePicture {
+    String message() default "passowrd must conatain a uoopercase letter , a lowercase letter and a digit";
 
     Class<?>[] groups() default {};
 
     Class<? extends Payload>[] payload() default {};
 }
-
