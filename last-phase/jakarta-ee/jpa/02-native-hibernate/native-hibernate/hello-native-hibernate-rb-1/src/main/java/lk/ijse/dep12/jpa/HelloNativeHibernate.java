@@ -1,5 +1,8 @@
 package lk.ijse.dep12.jpa;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+
 /**
  * @author : L.H.J
  * @File: HelloNativeHibernate
@@ -8,6 +11,9 @@ package lk.ijse.dep12.jpa;
  **/
 public class HelloNativeHibernate {
     public static void main(String[] args) {
-
+        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+        Session session = sessionFactory.openSession();
+        System.out.println("Session Factory :"+sessionFactory);
+        System.out.println("Session :"+session);
     }
 }
