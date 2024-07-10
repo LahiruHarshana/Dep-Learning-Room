@@ -20,7 +20,7 @@ public class UserValidationDemo {
         User user2 = new User("Kasun Sampath", "Kasun@ijse.lk", "Kasun12", LocalDate.of(1999,12,1));
         try(ValidatorFactory vf = Validation.buildDefaultValidatorFactory()){
             Validator validator = vf.getValidator();
-            Set<ConstraintViolation<User>> violationSet = validator.validate(user2);
+            Set<ConstraintViolation<User>> violationSet = validator.validate(user1);
             if (violationSet.isEmpty()){
                 System.out.println("Validation Password");
             }else{

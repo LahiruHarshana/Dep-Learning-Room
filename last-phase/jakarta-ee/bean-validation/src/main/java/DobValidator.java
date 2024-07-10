@@ -14,11 +14,17 @@ import java.time.Period;
 public class DobValidator implements ConstraintValidator<Dob, LocalDate> {
 
     @Override
-    public boolean isValid(LocalDate birthday, ConstraintValidatorContext constraintValidatorContext) {
-        HibernateConstraintValidatorContext elContext = constraintValidatorContext.unwrap(HibernateConstraintValidatorContext.class);
-        elContext.addExpressionVariable("abc", this);
+    public boolean isValid(LocalDate birthday, ConstraintValidatorContext context) {
+//        HibernateConstraintValidatorContext elContext = constraintValidatorContext.unwrap(HibernateConstraintValidatorContext.class);
+//        elContext.addExpressionVariable("abc", this);
+
+
         LocalDate today = LocalDate.now();
         int years = Period.between(birthday, today).getYears();
+
+        context.disableDefaultConstraintViolation();
+        context.buildConstraintViolationWithTemplate(years < 18 ? "18 ata adui" : "60 ata wadi").addConstraintViolation();
+
         return years >= 18 && years <= 60;
     }
 //    public boolean isChild(LocalDate birthday){
