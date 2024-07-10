@@ -13,6 +13,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
  **/
 public class HibernateUtil {
     private static final SessionFactory sessionFactory = buildSessionFactory();
+
     private static SessionFactory buildSessionFactory(){
         StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
                 .configure("/hibernate.cfg.xml")
@@ -23,7 +24,7 @@ public class HibernateUtil {
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
 
-        return metadata.getSessionFactoryBuilder()
+       return metadata.getSessionFactoryBuilder()
                 .build();
     }
     public static SessionFactory getSessionFactory(){
