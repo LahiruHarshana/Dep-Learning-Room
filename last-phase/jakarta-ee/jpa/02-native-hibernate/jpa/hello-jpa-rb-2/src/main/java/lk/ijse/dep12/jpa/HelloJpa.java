@@ -18,4 +18,5 @@ public class HelloJpa {
         }
         System.out.println("Entity Manager :"+em);
     }
+
 }
