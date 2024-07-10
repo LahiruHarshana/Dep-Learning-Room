@@ -13,7 +13,7 @@ public class Employee {
     @Pattern(regexp = "^E-\\d{3}$", message = "Invalid employee id")
     private String id;
     @NotBlank(message = "Employee name can't be null or empty")
-    @Pattern(regexp = "^[A-Za-z ]+$", message = "Invalid employee name")
+    @Pattern(regexp = "^[A-Za-z]+$", message = "Invalid employee name")
     private String name;
     @NotBlank(message = "Employee address can't be null or empty")
     @Length(min = 3, message = "Invalid employee address")

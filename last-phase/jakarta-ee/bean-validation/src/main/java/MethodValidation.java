@@ -28,7 +28,7 @@ public class MethodValidation {
 
             Method method = MethodValidation.class
                     .getDeclaredMethod("printCustomer", int.class, String.class, String.class);
-            Object [] arguments = {-5,"Kasun123","Galle"};
+            Object [] arguments = {1,"Kahuna","Galle"};
 
 
             Set<ConstraintViolation<MethodValidation>> constraintViolations = validator.validateParameters(instance, method, arguments);
@@ -36,7 +36,7 @@ public class MethodValidation {
             if (constraintViolations.isEmpty()){
                 method.invoke(instance,arguments);
             }else{
-                System.out.println("Validaion failed");
+                System.out.println("Validation failed");
                 constraintViolations.forEach(System.out::println);
             }
             method.invoke(instance,arguments);
@@ -45,7 +45,7 @@ public class MethodValidation {
 
     private void printCustomer(@Positive int id,
                                @NotBlank(message = "Customer name can't be empty or null")
-                               @Pattern(regexp = "^[A-Za-z]+$}",message = "Invalid customer name")
+                               @Pattern(regexp = "^[A-Za-z]+$",message = "Invalid customer name")
                                String name,
                                @NotBlank(message = "Customer address can't be empty or null")
                                @Length(min = 3,message = "Invalid customer adddress")
