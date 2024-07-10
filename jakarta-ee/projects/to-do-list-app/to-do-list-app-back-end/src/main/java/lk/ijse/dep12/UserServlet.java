@@ -35,7 +35,6 @@ import java.util.Set;
 @WebServlet(name = "user-servlet" ,urlPatterns = "/users/*")
 @MultipartConfig(location = "/tmp",maxFileSize = 5 * 1024 * 1024 * 1024)
 public class UserServlet extends HttpServlet {
-
     @Resource(lookup = "java:comp/env/jdbc/dep12-todo_app-db")
     DataSource dataSource;
     private final ObjectMapper mapper = new ObjectMapper();
