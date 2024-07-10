@@ -1,5 +1,6 @@
 package lk.ijse.dep12.validation;
 
+import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
 import java.lang.annotation.Retention;
@@ -13,6 +14,8 @@ import java.lang.annotation.RetentionPolicy;
  **/
 
 
+
+@Constraint(validatedBy = PasswordValidator.class)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Password {
     String message() default "passowrd must conatain a uoopercase letter , a lowercase letter and a digit";
