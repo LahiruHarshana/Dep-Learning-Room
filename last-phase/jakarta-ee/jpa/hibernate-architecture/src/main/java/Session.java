@@ -5,4 +5,7 @@
  * @created : 2024-07-10, Wednesday
  **/
 public interface Session extends EntityManager{
+    void save();
+    void saveAndUpdate();
+    void delete();
 }
