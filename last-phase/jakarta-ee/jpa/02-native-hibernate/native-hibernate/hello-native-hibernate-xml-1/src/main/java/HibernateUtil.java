@@ -25,10 +25,8 @@ public class HibernateUtil {
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)
                 .build();
 
-        SessionFactory sessionFactory = metadata.getSessionFactoryBuilder()
+        return metadata.getSessionFactoryBuilder()
                 .build();
-
-        return sessionFactory;
     }
 
 
