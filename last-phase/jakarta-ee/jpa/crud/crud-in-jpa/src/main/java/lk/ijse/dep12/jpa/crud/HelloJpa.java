@@ -1,6 +1,8 @@
+package lk.ijse.dep12.jpa.crud;
+
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
-import util.JpaUtil;
+import lk.ijse.dep12.jpa.crud.util.JpaUtil;
 
 /**
  * @author : L.H.J
@@ -14,7 +16,16 @@ public class HelloJpa {
             EntityManager em = emf.createEntityManager();
             System.out.println("EntityManagerFactory : "+emf);
             System.out.println("EntityManager : "+em);
+
+            em.getTransaction().begin();
+            try {
+                em.getTransaction().commit();
+            }catch (Throwable t){
+                em.getTransaction().rollback();
+                t.printStackTrace();
+            }
         }
+
 
     }
 }

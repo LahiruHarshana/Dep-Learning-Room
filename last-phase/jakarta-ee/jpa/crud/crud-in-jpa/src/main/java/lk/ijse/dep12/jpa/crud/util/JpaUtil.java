@@ -1,4 +1,4 @@
-package util;
+package lk.ijse.dep12.jpa.crud.util;
 
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
