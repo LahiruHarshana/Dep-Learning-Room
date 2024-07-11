@@ -16,9 +16,8 @@ public class DeleteDemo {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory()) {
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
-
             try {
-                Student student = em.find(Student.class, "S001");
+                Student student = em.find(Student.class, "S002");
                 em.remove(student);
 
                 em.getTransaction().commit();

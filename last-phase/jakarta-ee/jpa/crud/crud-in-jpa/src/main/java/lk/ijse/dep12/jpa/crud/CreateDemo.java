@@ -5,6 +5,8 @@ import jakarta.persistence.EntityManagerFactory;
 import lk.ijse.dep12.jpa.crud.entity.Student;
 import lk.ijse.dep12.jpa.crud.util.JpaUtil;
 
+import java.util.List;
+
 /**
  * @author : L.H.J
  * @File: HelloJpa
@@ -18,8 +20,10 @@ public class CreateDemo {
             em.getTransaction().begin();
             try {
 
-                Student S002 = new Student("S002", "Nuwan Machan", "071-8334554");
-                em.persist(S002);
+                Student S001 = new Student("S001", "Lahiru Machan", "071-8334554");
+                Student S002 = new Student("S002", "Senaka Machan", "071-3432232");
+                Student S003 = new Student("S003", "Saman Machan", "071-3232323");
+                List.of(S001,S002,S003).forEach(em::persist);
                 em.getTransaction().commit();
             }catch (Throwable t){
                 em.getTransaction().rollback();
