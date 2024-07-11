@@ -7,19 +7,25 @@ import lk.ijse.dep12.jpa.crud.util.JpaUtil;
 
 /**
  * @author : L.H.J
- * @File: HelloJpa
+ * @File: ReadDemo
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-11, Thursday
  **/
-public class CreateDemo {
+public class ReadDemo {
     public static void main(String[] args) {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory()) {
             EntityManager em = emf.createEntityManager();
+
+            try {
+                Student student1 = em.find(Student.class, "S001");
+                Student student2 = em.find(Student.class, "S005");
+                System.out.println(student2);
+            }catch (Throwable t){
+
+            }
+
             em.getTransaction().begin();
             try {
-
-                Student S002 = new Student("S002", "Nuwan Machan", "071-8334554");
-                em.persist(S002);
                 em.getTransaction().commit();
             }catch (Throwable t){
                 em.getTransaction().rollback();
