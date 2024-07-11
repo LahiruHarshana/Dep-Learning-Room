@@ -19,14 +19,11 @@ public class DeleteDemo {
             try {
                 Student student = em.find(Student.class, "S002");
                 em.remove(student);
-
                 em.getTransaction().commit();
             }catch (Throwable t){
                 em.getTransaction().rollback();
                 t.printStackTrace();
             }
         }
-
-
     }
 }
