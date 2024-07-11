@@ -11,20 +11,19 @@ import lk.ijse.dep12.jpa.crud.util.JpaUtil;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-11, Thursday
  **/
-public class CacheDemo {
+public class MergeDemo5 {
     public static void main(String[] args) {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory()) {
             EntityManager em = emf.createEntityManager();
             em.getTransaction().begin();
             try {
-                Student s001 = em.find(Student.class, "S001");
-                System.out.println("------------------");
-                Student s002 = em.find(Student.class, "S001");
-                Student s003 = em.find(Student.class, "S001");
-                Student s004 = em.find(Student.class, "S001");
-                System.out.println(s001 == s002);
-                System.out.println(s002 == s003);
-                System.out.println(s003 == s004);
+                System.out.println("Searching!");
+                Student student = em.find(Student.class, "S001");
+                System.out.println("Found");
+                System.out.println("Detaching....");
+                em.detach(student);
+                System.out.println("Detached....");
+                System.out.println("Merging....");
                 em.getTransaction().commit();
             }catch (Throwable t){
                 em.getTransaction().rollback();
