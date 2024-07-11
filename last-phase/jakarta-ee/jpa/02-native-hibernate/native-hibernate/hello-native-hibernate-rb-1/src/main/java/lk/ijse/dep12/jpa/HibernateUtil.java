@@ -18,9 +18,8 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory(){
         StandardServiceRegistry standardRegistry = new StandardServiceRegistryBuilder()
-                .configure("/application.properties")
+                .loadProperties("/application.properties")
                 .build();
-
         Metadata metadata = new MetadataSources(standardRegistry)
                 .getMetadataBuilder()
                 .applyImplicitNamingStrategy(ImplicitNamingStrategyJpaCompliantImpl.INSTANCE)

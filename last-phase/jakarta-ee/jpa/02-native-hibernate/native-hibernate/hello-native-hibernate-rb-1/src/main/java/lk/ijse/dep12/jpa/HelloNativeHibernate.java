@@ -11,9 +11,10 @@ import org.hibernate.SessionFactory;
  **/
 public class HelloNativeHibernate {
     public static void main(String[] args) {
-        SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
-        Session session = sessionFactory.openSession();
-        System.out.println("Session Factory :"+sessionFactory);
-        System.out.println("Session :"+session);
+        try (SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
+                     Session session = sessionFactory.openSession()) {
+            System.out.println("Session Factory :" + sessionFactory);
+            System.out.println("Session :" + session);
+        }
     }
 }
