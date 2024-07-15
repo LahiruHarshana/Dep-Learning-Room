@@ -4,10 +4,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.Serializable;
 
@@ -31,6 +28,7 @@ public class Employee implements Serializable {
     private String address;
     private String contact;
     @OneToOne(mappedBy = "employee")
+    @Setter(AccessLevel.NONE)
     private Spouse spouse;
 
     public Employee(String id, String name, String address, String contact) {
@@ -48,4 +46,10 @@ public class Employee implements Serializable {
         this.contact = contact;
         this.spouse = spouse;
     }
+
+//    public void setSpouse(Spouse spouse) {
+//        spouse.setEmployee(this);
+//        this.spouse = spouse;
+//    }
+
 }
