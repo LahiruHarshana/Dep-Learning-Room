@@ -27,6 +27,7 @@ public class OneToOneDemo2 {
 
                 Spouse sumana = em.find(Spouse.class,"S001");
                 System.out.println(sumana);
+                System.out.println(sumana.getEmployee());
 
 
                 em.getTransaction().commit();
