@@ -1,9 +1,6 @@
 package lk.ijse.dep12.jpa.relationship.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,12 +17,13 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "employee_id")
+@Table(name = "spouse")
 public class Spouse implements Serializable {
     @Id
     private String id;
     private  String name;
     private String contact;
-    @Column(name = "employee_id")
-    private String employeeId;
+    @OneToOne
+    @JoinColumn(name = "employee_id",referencedColumnName = "id")
+    private Employee employee;
 }
