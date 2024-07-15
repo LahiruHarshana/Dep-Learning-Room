@@ -22,7 +22,6 @@ import java.io.Serializable;
 @ToString(exclude = "spouse")
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "employee")
 public class Employee implements Serializable {
@@ -39,5 +38,14 @@ public class Employee implements Serializable {
         this.name = name;
         this.address = address;
         this.contact = contact;
+    }
+
+    public Employee(String id, String name, String address, String contact, Spouse spouse) {
+        if (spouse != null && spouse.getEmployee() != this) throw new IllegalStateException("Spouse is already associated with another employee");
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.contact = contact;
+        this.spouse = spouse;
     }
 }
