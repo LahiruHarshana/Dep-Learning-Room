@@ -29,6 +29,8 @@ public class OneToOneDemo2 {
                 System.out.println(sumana);
                 System.out.println(sumana.getEmployee());
 
+                Employee imantha = em.find(Employee.class,"E002");
+                System.out.println(imantha);
 
                 em.getTransaction().commit();
             }catch (Throwable e){
