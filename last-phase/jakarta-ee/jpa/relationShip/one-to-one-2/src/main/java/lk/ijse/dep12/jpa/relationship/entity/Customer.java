@@ -28,11 +28,12 @@ public class Customer {
     private String address;
     private String contact;
     private Date dob;
-    @OneToOne(mappedBy = "customer")
+    @OneToOne(mappedBy = "customer",cascade = {CascadeType.PERSIST})
     @Setter(AccessLevel.NONE)
     private Account account;
 
     public Customer(String nic, String firstName, String lastName, String address, String contact, Date dob, Account account) {
+        if (account != null && account.getCustomer() == null) account.setCustomer(this);
         if (account != null && account.getCustomer() != this)
             throw new IllegalStateException("Account is already associated with another customer");
         this.nic = nic;

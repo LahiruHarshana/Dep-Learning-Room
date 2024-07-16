@@ -16,7 +16,7 @@ import java.time.LocalDate;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-15, Monday
  **/
-public class OneToOneDemo7 {
+public class OneToOneDemo8 {
     public static void main(String[] args) {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
         EntityManager em = emf.createEntityManager()) {
@@ -26,8 +26,10 @@ public class OneToOneDemo7 {
             em.getTransaction().begin();
 
             try {
-                Customer customer = new Customer("123442235V", "kasun", "Sampath", "Panadura", "011-221212", Date.valueOf("1980-10-08"),new Account("12-12121-12", "Savings", new BigDecimal("10000.00"), null, Date.valueOf(LocalDate.now()), "Tharindu"));
+                Customer customer = new Customer("1142235V", "Saman", "Lakshan", "Panadura", "011-221212", Date.valueOf("1980-10-08"));
+                Account account = new Account("12-133-12", "Savings", new BigDecimal("10990.00"), customer, Date.valueOf(LocalDate.now()), "Lakshan");
                 em.persist(customer);
+                em.persist(account);
 
                 em.getTransaction().commit();
             }catch (Throwable e){
