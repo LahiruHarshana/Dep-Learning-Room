@@ -21,13 +21,13 @@ import java.sql.Date;
 @Table(name = "account")
 public class Account {
     @Id
-    String number;
-    String type;
-    BigDecimal balance;
+    private String number;
+    private String type;
+    private BigDecimal balance;
     @OneToOne
     @JoinColumn(name = "customer_nic",referencedColumnName = "nic")
-    Customer customer;
+    private Customer customer;
     @Column(name = "open_date")
-    private Date openDate;
-    String username;
+    private  Date openDate;
+    private String username;
 }
