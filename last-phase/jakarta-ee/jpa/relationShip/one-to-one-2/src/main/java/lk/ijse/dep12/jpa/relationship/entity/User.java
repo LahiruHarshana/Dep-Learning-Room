@@ -1,9 +1,6 @@
 package lk.ijse.dep12.jpa.relationship.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,12 +24,24 @@ public class User implements Serializable {
     private String nic;
     private String name;
     private String address;
+    private Date dob;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
-    @Column(name = "partner_nic")
-    private String partnerNic;
+
+    @JoinColumn(name = "partner_nic",referencedColumnName = "nic")
+    @OneToOne
+    private User partnerNic;
     private Date date;
 
-    enum Gender {
+   public enum Gender {
         MALE,FEMALE
+    }
+
+    public User(String nic, String name, String address, Date dob, Gender gender) {
+        this.nic = nic;
+        this.name = name;
+        this.address = address;
+        this.dob = dob;
+        this.gender = gender;
     }
 }
