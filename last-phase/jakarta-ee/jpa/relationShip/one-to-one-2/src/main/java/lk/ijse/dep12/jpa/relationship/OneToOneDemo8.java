@@ -27,8 +27,7 @@ public class OneToOneDemo8 {
 
             try {
                 Customer customer = new Customer("1142235V", "Saman", "Lakshan", "Panadura", "011-221212", Date.valueOf("1980-10-08"));
-                Account account = new Account("12-133-12", "Savings", new BigDecimal("10990.00"), customer, Date.valueOf(LocalDate.now()), "Lakshan");
-                em.persist(customer);
+                Account account = new Account("12-133-12", "Savings", new BigDecimal("10990.00"), customer,Date.valueOf("2024-07-08"), "Lakshan");
                 em.persist(account);
 
                 em.getTransaction().commit();
