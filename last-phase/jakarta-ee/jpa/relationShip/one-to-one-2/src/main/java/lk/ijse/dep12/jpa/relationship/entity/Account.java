@@ -1,9 +1,6 @@
 package lk.ijse.dep12.jpa.relationship.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,8 +24,9 @@ public class Account {
     String number;
     String type;
     BigDecimal balance;
-    @Column(name = "customer_nic")
-    String customerNic;
+    @OneToOne
+    @JoinColumn(name = "customer_nic",referencedColumnName = "nic")
+    Customer customer;
     @Column(name = "open_date")
     private Date openDate;
     String username;
