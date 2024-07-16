@@ -24,7 +24,7 @@ public class Account {
     private String number;
     private String type;
     private BigDecimal balance;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "customer_nic",referencedColumnName = "nic")
     private Customer customer;
     @Column(name = "open_date")
