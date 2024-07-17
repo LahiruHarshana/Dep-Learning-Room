@@ -1,13 +1,7 @@
 package lk.ijse.dep12.jpa.relationship.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.ToString;
+import jakarta.persistence.*;
+import lombok.*;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -31,7 +25,8 @@ public class Customer implements Serializable {
     private String contact;
     private String name;
     private String address;
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer", cascade = {CascadeType.DETACH,CascadeType.MERGE} )
+    @Setter (AccessLevel.NONE)
     private List<Order> orders = new ArrayList<>();//persistence bag
 
 
@@ -56,5 +51,23 @@ public class Customer implements Serializable {
         this.contact = contact;
         this.name = name;
         this.address = address;
+    }
+
+    @PrePersist
+    public void beforePersist(){
+        System.out.println("Before Persist");
+    }
+
+    @PostPersist
+    public void afterPersist(){
+        System.out.println("After Persist");
+    }
+    @PreUpdate
+    public void beforeUpdate(){
+        System.out.println("Before Update");
+    }
+    @PostUpdate
+    public void afterUpdate(){
+        System.out.println("After Updated");
     }
 }

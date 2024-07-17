@@ -27,6 +27,9 @@ public class OneToManyDemo2 {
                 out.println(o0232.getCustomer());
                 Customer kajja = em.find(Customer.class, "01112223");
                 out.println();
+                kajja.getOrders().forEach(out::println);
+                out.println("------------");
+
                 tx.commit();
             }catch (Throwable t){
                 tx.rollback();
