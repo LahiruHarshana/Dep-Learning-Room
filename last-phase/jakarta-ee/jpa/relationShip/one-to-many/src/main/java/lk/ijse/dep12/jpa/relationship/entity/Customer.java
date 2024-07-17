@@ -36,6 +36,16 @@ public class Customer implements Serializable {
 
 
     public Customer(String contact, String name, String address, List<Order> orders) {
+        if (orders != null && !orders.isEmpty()){
+            orders.stream().filter(order -> order.getCustomer() == null).forEach((order -> order.setCustomer(this)));
+        }
+
+        if (orders != null && ! orders.isEmpty()){
+            orders.forEach(order -> {
+                if (order.getCustomer() != this)
+                    throw new IllegalStateException("An order :%s is already associated with another customer".formatted(order.getId()));
+            });
+        }
         this.contact = contact;
         this.name = name;
         this.address = address;
