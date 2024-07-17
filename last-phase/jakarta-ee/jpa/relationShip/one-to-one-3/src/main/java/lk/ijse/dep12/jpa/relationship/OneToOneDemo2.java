@@ -28,7 +28,7 @@ public class OneToOneDemo2 {
                 User tharindu = em.find(User.class,"1231232");
                 User piumi = em.find(User.class,"1245232");
 
-                Partner partner = new Partner(tharindu, piumi, Date.valueOf(LocalDate.now()));
+                Partner partner = new Partner(tharindu, piumi);
                 em.persist(partner);
                 tx.commit();
             }catch (Throwable t){

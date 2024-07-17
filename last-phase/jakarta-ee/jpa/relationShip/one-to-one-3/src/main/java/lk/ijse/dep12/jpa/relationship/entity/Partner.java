@@ -17,7 +17,7 @@ import java.sql.Date;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
+//@Entity
 @Table(name = "partner")
 public class Partner {
     @Id
@@ -27,5 +27,5 @@ public class Partner {
     @OneToOne
     @JoinColumn(name = "user2_nic",referencedColumnName = "nic")
     private User user2Nic;
-    private Date date;
+    //private Date date;
 }

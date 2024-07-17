@@ -6,7 +6,7 @@
   <persistence-unit name="dep-12">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
     <class>lk.ijse.dep12.jpa.relationship.entity.User</class>
-    <class>lk.ijse.dep12.jpa.relationship.entity.Partner</class>
+<!--    <class>lk.ijse.dep12.jpa.relationship.entity.Partner</class>-->
     <properties>
       <property name="jakarta.persistence.jdbc.user" value="root"/>
       <property name="jakarta.persistence.jdbc.password" value="12345678"/>

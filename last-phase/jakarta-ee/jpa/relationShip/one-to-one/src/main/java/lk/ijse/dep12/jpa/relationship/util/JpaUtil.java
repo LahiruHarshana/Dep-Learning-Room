@@ -15,7 +15,6 @@ public class JpaUtil {
     private static EntityManagerFactory buildEntityManagerFactory(){
         return Persistence.createEntityManagerFactory("dep-12");
     }
-
     public static EntityManagerFactory getEntityManagerFactory(){
         return emf;
     }

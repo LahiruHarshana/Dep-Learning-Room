@@ -15,3 +15,6 @@ CREATE TABLE spouse(
 
 DROP TABLE employee;
 DROP TABLE spouse;
+
+
+ALTER TABLE
