@@ -22,7 +22,8 @@ import java.sql.Date;
 public class Partner {
     @Id
     @JoinColumn(name = "user1_nic",referencedColumnName = "nic")
-    private String user1Nic;
+    @OneToOne
+    private User user1Nic;
     @OneToOne
     @JoinColumn(name = "user2_nic",referencedColumnName = "nic")
     private User user2Nic;
