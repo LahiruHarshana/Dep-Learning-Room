@@ -33,6 +33,7 @@ public class OneToManyDemo3 {
                 tx.begin();
 
 
+                Customer yasiya = em.find(Customer.class, "0332323");
                 Customer kajja = em.find(Customer.class, "01112223");
                 kajja.getOrders().forEach(out::println);
                 out.println("---------------");
@@ -40,7 +41,7 @@ public class OneToManyDemo3 {
                 out.println(session.isDirty());
                 printPersistentBagStatus(kajja.getOrders());
 //                kajja.getOrders().remove(1);
-                kajja.getOrders().add(new Order("OD005", Date.valueOf(LocalDate.now()),new BigDecimal("1800"),kajja));
+                kajja.getOrders().add(new Order("OD006", Date.valueOf(LocalDate.now()),new BigDecimal("1800"),yasiya));
                 out.println(session.isDirty());
                 printPersistentBagStatus(kajja.getOrders());
                 out.println("-----------------");
@@ -57,6 +58,5 @@ public class OneToManyDemo3 {
 
     private static void printPersistentBagStatus(List<Order> persistentBag){
         out.println("PersistentBag Dirty :"+((PersistentBag<Order>) persistentBag).isDirty());
-
     }
 }
