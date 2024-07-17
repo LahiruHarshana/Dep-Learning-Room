@@ -1,9 +1,6 @@
 package lk.ijse.dep12.jpa.relationship.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,9 +21,10 @@ import java.sql.Date;
 @Table(name = "partner")
 public class Partner {
     @Id
-    @Column(name = "user1_nic")
-    String user1Nic;
-    @Column(name = "user2_nic")
-    String user2Nic;
-    Date date;
+    @JoinColumn(name = "user1_nic",referencedColumnName = "nic")
+    private String user1Nic;
+    @OneToOne
+    @JoinColumn(name = "user2_nic",referencedColumnName = "nic")
+    private User user2Nic;
+    private Date date;
 }
