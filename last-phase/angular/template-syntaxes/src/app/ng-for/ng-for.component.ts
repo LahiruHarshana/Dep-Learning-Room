@@ -53,15 +53,15 @@ import {CommonModule} from "@angular/common";
       </table>
 
       <button (click)="updateItems()" class="btn btn-sm btn-danger">Updated</button>
-      <ul *ngFor="let item of items;trackBy:trackItemFn">
-          <li>{{item}}</li>
+      <ul>
+          <li class="p-2" *ngFor="let item of items;trackBy:trackItemFn">{{item}}</li>
       </ul>
 
       <hr>
 
       <button (click)="updateItems2()" class="btn btn-sm btn-danger">Update</button>
-      <ul *ngFor="let item of items2;trackBy:trackItemFn">
-          <li>{{item.value}} - {{item.name}}</li>
+      <ul >
+          <li class="p-2" *ngFor="let item of items2;trackBy:trackItemFn">{{item.value}}</li>
       </ul>
 
   `,
@@ -79,10 +79,6 @@ export class NgForComponent {
     {value:'Fourth',name:'Sahan'},
     {value:'Fifth',name:'Akasa'}
   ]
-
-
-
-
   array1 = ['Kasun','Nuwan','Supun','Lahiru','Chamaru','Thisaru']
   customers:{id:string, name:string, address:string}[] = [
     {id:"C001",name:"Lahiru Samopath",address:"Galle"},
@@ -111,9 +107,9 @@ export class NgForComponent {
     this.items2 = [
       {value:'First',name:'Kasun'},
       {value:'Second',name:'Saman'},
-      {value:'Third',name:'Lahiru'},
+      {value:'Third',name:'Akasa'},
       {value:'Fourth',name:'Sahan'},
-      {value:'Fifth',name:'Akasa'}
+      {value:'Fifth',name:'Lahiru'}
     ]
   }
 }
