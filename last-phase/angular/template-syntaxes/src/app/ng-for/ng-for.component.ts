@@ -52,10 +52,20 @@ import {CommonModule} from "@angular/common";
           </tfoot>
       </table>
 
-      <ul *ngFor="let item of items">
+      <button (click)="updateItems()" class="btn btn-sm btn-danger">Updated</button>
+
+      <ul *ngFor="let item of items;trackBy:trackItemFn">
           <li>{{item}}</li>
       </ul>
-      <button (click)="items.pop()" class="btn btn-sm btn-danger">DELETE</button>
+
+      <hr>
+
+      <button (click)="updateItems2()" class="btn btn-sm btn-danger">Update</button>
+
+      <ul *ngFor="let item of items2;trackBy:trackItemFn">
+          <li>{{item.value}}</li>
+      </ul>
+
   `,
   styles: [`
 
@@ -63,7 +73,14 @@ import {CommonModule} from "@angular/common";
 })
 export class NgForComponent {
 
-  items = ['First','Second','Third','Fouth','Fifth']
+  items = ['First','Second','Third','Fourth','Fifth']
+  items2 = [
+    {value:'First'},
+    {value:'Second'},
+    {value:'Third'},
+    {value:'Fourth'},
+    {value:'Fifth'}
+  ]
 
 
 
@@ -82,5 +99,23 @@ export class NgForComponent {
 
   deleteCustomer(customerId: String) {
     this.customers = this.customers.filter(c => c.id!= customerId);
+  }
+
+  updateItems(){
+    this.items.unshift('New Item')
+  }
+
+  trackItemFn(index:number,item:any){
+    return item;
+  }
+
+  updateItems2() {
+    this.items2 = [
+      {value:'First'},
+      {value:'Second'},
+      {value:'Third'},
+      {value:'Fourth'},
+      {value:'Fifth'}
+    ]
   }
 }
