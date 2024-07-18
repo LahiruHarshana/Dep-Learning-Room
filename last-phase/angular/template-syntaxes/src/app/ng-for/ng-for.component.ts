@@ -7,12 +7,21 @@ import {CommonModule} from "@angular/common";
   imports: [CommonModule],
   template: `
       <ul>
-          <li *ngFor="let item of [1,2,3,4,5]; let i = index">
-              List Item {{i}}</li>
+          <li *ngFor="let item of array1; let i = index">
+               {{i}}</li>
+      </ul>
+      <hr>
+      <ul>
+          <li *ngFor="let item of array1;let isOdd = odd;
+          let isFirst = first;let isLast=last;">
+              {{item}}              <span *ngIf="isFirst" class="text-danger"> FIRST</span>
+              <span *ngIf="isLast" class="text-danger"> LAST</span> <span *ngIf="isOdd">- ODD</span><span *ngIf="!isOdd">- EVEN</span>
+
+          </li>
       </ul>
   `,
   styles: ``
 })
 export class NgForComponent {
-
+array1 = ['Kasun','Nuwan','Supun','Lahiru','Chamaru','Thisaru']
 }
