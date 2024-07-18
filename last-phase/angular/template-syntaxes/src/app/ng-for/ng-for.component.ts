@@ -64,6 +64,14 @@ import {CommonModule} from "@angular/common";
           <li class="p-2" *ngFor="let item of items2;trackBy:trackItemFn">{{item.value}}</li>
       </ul>
 
+      <hr>
+      <h2 class="text-center">Angular 18+</h2>
+
+      @for (customer of customers; track customer.id){
+          <li class="p-2 border-top ">{{customer.id}} - {{customer.name}} - {{customer.address}}</li>
+      } @empty {
+          No Customer Found
+      }
   `,
   styles: [`
 
@@ -80,13 +88,7 @@ export class NgForComponent {
     {value:'Fifth',name:'Akasa'}
   ]
   array1 = ['Kasun','Nuwan','Supun','Lahiru','Chamaru','Thisaru']
-  customers:{id:string, name:string, address:string}[] = [
-    {id:"C001",name:"Lahiru Samopath",address:"Galle"},
-    {id:"C002",name:"Lahiru harshana",address:"Matara"},
-    {id:"C003",name:"Saman harshana",address:"Gampaha"},
-    {id:"C004",name:"Menaka Kasun",address:"panadura"},
-    {id:"C005",name:"Kakshan harshana",address:"Matara"}
-  ];
+  customers:{id:string, name:string, address:string}[] = [];
   trackCustomerFn(index: number, customer: { id: String, name: String, address: String }) {
     return customer.id;
   }
