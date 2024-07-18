@@ -1,12 +1,32 @@
-<div *ngIf="loading" class="d-flex justify-content-center vh-100 align-items-center">
-  <div class="loader"></div>
-</div>
+@if (!loading){
+  @for (item of todoItems;track item.id){
+    <div class="container">
+      <label class="p-2">
+        <input type="checkbox" class="form-check-input" [checked]="item.completed">
+<!--        @switch (findUser(item.userId)?.name){-->
+<!--          @case ('Kasun'){-->
+<!--            <span class="text-danger">Kasun</span>-->
+<!--          }-->
+<!--          @case ('Nuwan'){-->
+<!--            <span class="text-warning">Nuwan</span>-->
+<!--          }-->
+<!--          @case ('Upul'){-->
+<!--            <span class="text-success fs-4">Upul</span>-->
+<!--          }-->
+<!--        }-->
+<!--        {{item.title}}-->
 
-<div *ngIf="!loading">
-  <div *ngFor="let item of todoItems" class="p-2">
-    <label>
-      <input type="checkbox" class="form-check-input" [checked]="item.completed">
-      {{item.title}}
-    </label>
+        <ng-container [ngSwitch]="findUser(item.userId)?.name" >
+          <span *ngSwitchCase="'Kasun'" class="text-danger">Kasun</span>
+          <span *ngSwitchCase="'Upul'" class="text-danger">Upul</span>
+          <span *ngSwitchCase="'Nuwan'" class="text-danger fs-4">Upul</span>
+        </ng-container>
+      </label>
+    </div>
+  }
+} @else {
+  <div class="d-flex justify-content-center vh-100 align-items-center">
+    <div class="loader"></div>
   </div>
-</div>
+}
+
