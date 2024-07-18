@@ -31,7 +31,7 @@ import {CommonModule} from "@angular/common";
           </thead>
           <tbody>
           <tr *ngFor="let customer of customers">
-              <td>{{customer.id}}</td>
+              <td class="text-center">{{customer.id}}</td>
               <td>{{customer.name}}</td>
               <td>{{customer.address}}</td>
           </tr>
@@ -49,15 +49,11 @@ import {CommonModule} from "@angular/common";
 })
 export class NgForComponent {
 array1 = ['Kasun','Nuwan','Supun','Lahiru','Chamaru','Thisaru']
-  customers = [
+  customers:{id:string, name:string, address:string}[] = [
     {id:"C001",name:"Lahiru Samopath",address:"Galle"},
-    {id:"C001",name:"Lahiru harshana",address:"Matara"},
-    {id:"C001",name:"Saman harshana",address:"Gampaha"},
-    {id:"C001",name:"Menaka Kasun",address:"panadura"},
-    {id:"C001",name:"Kakshan harshana",address:"Matara"}
+    {id:"C002",name:"Lahiru harshana",address:"Matara"},
+    {id:"C003",name:"Saman harshana",address:"Gampaha"},
+    {id:"C004",name:"Menaka Kasun",address:"panadura"},
+    {id:"C005",name:"Kakshan harshana",address:"Matara"}
   ];
-static x = 10;
-static {
-  
-}
 }
