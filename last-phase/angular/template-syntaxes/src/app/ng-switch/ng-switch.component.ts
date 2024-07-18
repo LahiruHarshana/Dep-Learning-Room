@@ -9,16 +9,16 @@ import {NgSwitch, NgSwitchCase} from "@angular/common";
     NgSwitchCase
   ],
   template: `
-    <div [ngSwitch]="'Tuesday'">
+    <div [ngSwitch]="day">
         <div *ngSwitchCase="'Monday'">Monday is awesome</div>
         <div *ngSwitchCase="'Tuesday'">Tuesday is kinda okay</div>
         <div *ngSwitchCase="'Wednesday'">Wednes is not bad</div>
         <div *ngSwitchCase="'Thursday'">Thursday is tikak amaruyi</div>
-        <div *ngSwitchCase="'Friday'">Friday Gedr yann ona/div>
+        <div *ngSwitchCase="'Friday'">Friday Gedr yann ona </div>
     </div>
   `,
   styles: ``
 })
 export class NgSwitchComponent {
-
+day = 'Friday'
 }
