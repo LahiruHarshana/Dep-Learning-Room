@@ -14,9 +14,10 @@ import {CommonModule} from "@angular/common";
       <ul>
           <li *ngFor="let item of array1;let isOdd = odd;
           let isFirst = first;let isLast=last;">
-              {{item}}              <span *ngIf="isFirst" class="text-danger"> FIRST</span>
-              <span *ngIf="isLast" class="text-danger"> LAST</span> <span *ngIf="isOdd">- ODD</span><span *ngIf="!isOdd">- EVEN</span>
-
+              {{item}} <span *ngIf="isFirst" class="text-danger"> FIRST</span>
+                       <span *ngIf="isLast" class="text-danger"> LAST</span>
+                       <span *ngIf="isOdd">- ODD</span>
+                       <span *ngIf="!isOdd">- EVEN</span>
           </li>
       </ul>
   `,
