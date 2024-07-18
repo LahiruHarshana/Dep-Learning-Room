@@ -36,7 +36,7 @@ import {CommonModule} from "@angular/common";
               <td>{{customer.address}}</td>
           </tr>
           </tbody>
-          <tfoot>
+          <tfoot *ngIf="!customers.length">
           <tr>
               <td colspan="3" class="text-center">
                   No Customer Record Found
@@ -55,5 +55,9 @@ array1 = ['Kasun','Nuwan','Supun','Lahiru','Chamaru','Thisaru']
     {id:"C001",name:"Saman harshana",address:"Gampaha"},
     {id:"C001",name:"Menaka Kasun",address:"panadura"},
     {id:"C001",name:"Kakshan harshana",address:"Matara"}
-  ]
+  ];
+static x = 10;
+static {
+  
+}
 }
