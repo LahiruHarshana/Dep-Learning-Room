@@ -63,7 +63,7 @@ import {CommonModule} from "@angular/common";
       <button (click)="updateItems2()" class="btn btn-sm btn-danger">Update</button>
 
       <ul *ngFor="let item of items2;trackBy:trackItemFn">
-          <li>{{item.value}}</li>
+          <li>{{item.value}} - {{item.name}}</li>
       </ul>
 
   `,
@@ -75,11 +75,11 @@ export class NgForComponent {
 
   items = ['First','Second','Third','Fourth','Fifth']
   items2 = [
-    {value:'First'},
-    {value:'Second'},
-    {value:'Third'},
-    {value:'Fourth'},
-    {value:'Fifth'}
+    {value:'First',name:'Kasun'},
+    {value:'Second',name:'Saman'},
+    {value:'Third',name:'Lahiru'},
+    {value:'Fourth',name:'Sahan'},
+    {value:'Fifth',name:'Akasa'}
   ]
 
 
@@ -106,16 +106,16 @@ export class NgForComponent {
   }
 
   trackItemFn(index:number,item:any){
-    return item;
+    return ;
   }
 
   updateItems2() {
     this.items2 = [
-      {value:'First'},
-      {value:'Second'},
-      {value:'Third'},
-      {value:'Fourth'},
-      {value:'Fifth'}
+      {value:'First',name:'Kasun'},
+      {value:'Second',name:'sena'},
+      {value:'Third++',name:'Lahiru'},
+      {value:'Fourth',name:'maru meka'},
+      {value:'Fifth',name:'sandaru'}
     ]
   }
 }
