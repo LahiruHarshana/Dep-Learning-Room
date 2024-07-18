@@ -27,6 +27,7 @@ import {CommonModule} from "@angular/common";
               <th class="text-center">ID</th>
               <th>NAME</th>
               <th>ADDRESS</th>
+              <th></th>
           </tr>
           </thead>
           <tbody>
@@ -34,6 +35,7 @@ import {CommonModule} from "@angular/common";
               <td class="text-center">{{customer.id}}</td>
               <td>{{customer.name}}</td>
               <td>{{customer.address}}</td>
+              <td class="text-center"><i class="bi bi-trash"></i></td>
           </tr>
           </tbody>
           <tfoot *ngIf="!customers.length">
