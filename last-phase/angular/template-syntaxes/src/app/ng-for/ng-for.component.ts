@@ -53,7 +53,6 @@ import {CommonModule} from "@angular/common";
       </table>
 
       <button (click)="updateItems()" class="btn btn-sm btn-danger">Updated</button>
-
       <ul *ngFor="let item of items;trackBy:trackItemFn">
           <li>{{item}}</li>
       </ul>
@@ -61,7 +60,6 @@ import {CommonModule} from "@angular/common";
       <hr>
 
       <button (click)="updateItems2()" class="btn btn-sm btn-danger">Update</button>
-
       <ul *ngFor="let item of items2;trackBy:trackItemFn">
           <li>{{item.value}} - {{item.name}}</li>
       </ul>
@@ -112,10 +110,10 @@ export class NgForComponent {
   updateItems2() {
     this.items2 = [
       {value:'First',name:'Kasun'},
-      {value:'Second',name:'sena'},
-      {value:'Third++',name:'Lahiru'},
-      {value:'Fourth',name:'maru meka'},
-      {value:'Fifth',name:'sandaru'}
+      {value:'Second',name:'Saman'},
+      {value:'Third',name:'Lahiru'},
+      {value:'Fourth',name:'Sahan'},
+      {value:'Fifth',name:'Akasa'}
     ]
   }
 }
