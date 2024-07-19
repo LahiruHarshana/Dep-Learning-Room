@@ -36,10 +36,25 @@ import {CommonModule} from "@angular/common";
     <h1 [attr.title]="strTooltip">Hover me</h1>
     <button (click)="changeTooltipText()">Change Tooltip Text</button>
     <h1 [attr.class] = "'first'">Do not do this</h1>
+
+    <hr>
+<!--    <p ngNonBindable>-->
+<!--        {{str}}-->
+<!--        <button>{{str}}</button>-->
+<!--    </p>-->
   `,
-  styles: ``
+  styles: `
+
+  .first{
+  color:red;
+  }
+  .second{
+  border:10px solid black;
+  }
+  `
 })
 export class NgStyleComponent {
+  str = "hello";
 strStyles = 'color:white; background-color:blue;';
 strTooltip = 'Hello Tooltip Text';
 
