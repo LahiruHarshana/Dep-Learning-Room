@@ -17,16 +17,31 @@ import {CommonModule} from "@angular/common";
     <hr>
 
     <p class="text-center" [style]="styleObject">
-        Let's see how ngStyle works with an object
+        Let's see how ngStyle works with an object <br>
+        <button (click)="colorFlag = !colorFlag; updateStyleObg()">Color</button>
+        <button (click)="bgColorFlag = !bgColorFlag; updateStyleObg()">Background Color</button>
     </p>
   `,
   styles: ``
 })
 export class NgStyleComponent {
 strStyles = 'color:white; background-color:blue;';
+
+
+colorFlag = true;
+bgColorFlag = false;
+
 styleObject={
-  color:'red',
-  backgroundColor:'yellow'
+  color:this.colorFlag ? 'red':'initial',
+  backgroundColor:this.bgColorFlag ?'yellow':'initial'
+}
+
+updateStyleObg(){
+  this.styleObject={
+    color:this.colorFlag ? 'red':'initial',
+    backgroundColor:this.bgColorFlag ?'yellow':'initial'
+  }
+
 }
 
   updateStyle() {
