@@ -35,6 +35,7 @@ import {CommonModule} from "@angular/common";
     <p style="{{strStyles}}">Don't do this</p>
     <h1 [attr.title]="strTooltip">Hover me</h1>
     <button (click)="changeTooltipText()">Change Tooltip Text</button>
+    <h1 [attr.class] = "'first'">Do not do this</h1>
   `,
   styles: ``
 })
@@ -49,7 +50,6 @@ styleObject={
   color:this.colorFlag ? 'red':'initial',
   backgroundColor:this.bgColorFlag ?'yellow':'initial'
 }
-
 updateStyleObg(){
   this.styleObject={
     color:this.colorFlag ? 'red':'initial',
