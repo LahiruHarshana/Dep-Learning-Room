@@ -6,12 +6,34 @@ import {CommonModule} from "@angular/common";
   standalone: true,
   imports: [CommonModule],
   template: `
-    <p>
-      ng-style works!
+    <p class="text-center"
+       style="border: 10px solid black"
+       [style]="strStyles">
+        Let's see how ngStyle<br>
+        <button (click)="updateStyle()">Update Style</button>
+        <button (click)="resetStyles()">Reset Style</button>
+    </p>
+
+    <hr>
+
+    <p class="text-center" [style]="styleObject">
+        Let's see how ngStyle works with an object
     </p>
   `,
   styles: ``
 })
 export class NgStyleComponent {
+strStyles = 'color:white; background-color:blue;';
+styleObject={
+  color:'red',
+  backgroundColor:'yellow'
+}
 
+  updateStyle() {
+    this.strStyles = 'border:2px solid black';
+  }
+
+  resetStyles() {
+    this.strStyles = 'color :white; background-color:blue'
+  }
 }
