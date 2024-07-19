@@ -20,7 +20,7 @@ import { CommonModule } from "@angular/common";
 
       <hr>
 
-      <p class="text-center">
+      <p class="text-center" [ngClass]="classesObj">
           Let's see how ngClass work with an object
       </p>
 
@@ -34,9 +34,10 @@ import { CommonModule } from "@angular/common";
 export class NgClassComponent {
   strClasses = 'first second third'; // Define the classes to be applied here
   classesArray:string[] = ['first','second','third'];
+  flagFirst  =true; flagSecond = false;flagThird = true;
   classesObj ={
-    first:true,
-    second : false,
-    third : true
+    first:this.flagFirst,
+    second : this.flagSecond,
+    third : this.flagThird
   };
 }
