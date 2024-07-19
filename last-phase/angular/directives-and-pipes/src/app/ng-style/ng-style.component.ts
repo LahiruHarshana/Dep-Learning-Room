@@ -21,6 +21,18 @@ import {CommonModule} from "@angular/common";
         <button (click)="colorFlag = !colorFlag; updateStyleObg()">Color</button>
         <button (click)="bgColorFlag = !bgColorFlag; updateStyleObg()">Background Color</button>
     </p>
+
+    <hr>
+
+    <p [style.fontSize]="(100+20) + 'px'"
+        [style.background-color]="bgColorFlag ? 'yellow':'green'">
+        Let's see how to deal with a single style <br>
+        <button (click)="bgColorFlag = !bgColorFlag">Background Color</button>
+    </p>
+
+    <hr>
+
+    <p style="{{strStyles}}">Don't do this</p>
   `,
   styles: ``
 })
