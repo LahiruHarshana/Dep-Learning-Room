@@ -33,12 +33,14 @@ import {CommonModule} from "@angular/common";
     <hr>
 
     <p style="{{strStyles}}">Don't do this</p>
+    <h1 [attr.title]="strTooltip">Hover me</h1>
+    <button (click)="changeTooltipText()">Change Tooltip Text</button>
   `,
   styles: ``
 })
 export class NgStyleComponent {
 strStyles = 'color:white; background-color:blue;';
-
+strTooltip = 'Hello Tooltip Text';
 
 colorFlag = true;
 bgColorFlag = false;
@@ -53,7 +55,6 @@ updateStyleObg(){
     color:this.colorFlag ? 'red':'initial',
     backgroundColor:this.bgColorFlag ?'yellow':'initial'
   }
-
 }
 
   updateStyle() {
@@ -62,5 +63,9 @@ updateStyleObg(){
 
   resetStyles() {
     this.strStyles = 'color :white; background-color:blue'
+  }
+
+  changeTooltipText() {
+  this.strTooltip = 'I changed the text';
   }
 }
