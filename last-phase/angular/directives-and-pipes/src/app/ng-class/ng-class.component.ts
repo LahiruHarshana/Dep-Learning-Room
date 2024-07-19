@@ -21,7 +21,19 @@ import { CommonModule } from "@angular/common";
       <hr>
 
       <p class="text-center" [ngClass]="classesObj">
-          Let's see how ngClass work with an object
+          Let's see how ngClass work with an object<br>
+          <button (click)="flagFirst = !flagFirst;updateClassesObj()">First</button>
+          <button (click)="flagSecond = !flagSecond;updateClassesObj()">Second</button>
+          <button (click)="flagThird = !flagThird;updateClassesObj()">Third</button>
+      </p>
+
+      <hr>
+      <p [class.text-center]="true" [class.first] = "flagFirst"
+      [class.second]="flagSecond" [class.third]="flagThird">
+          Let's see how ngClass work with single class <br>
+          <button (click)="flagFirst = !flagFirst">First</button>
+          <button (click)="flagSecond = !flagSecond">First</button>
+          <button (click)="flagThird = !flagThird">First</button>
       </p>
 
   `,
@@ -40,4 +52,12 @@ export class NgClassComponent {
     second : this.flagSecond,
     third : this.flagThird
   };
+
+  updateClassesObj() {
+    this.classesObj = {
+      first: this.flagFirst,
+      second: this.flagSecond,
+      third: this.flagThird
+    }
+  }
 }
