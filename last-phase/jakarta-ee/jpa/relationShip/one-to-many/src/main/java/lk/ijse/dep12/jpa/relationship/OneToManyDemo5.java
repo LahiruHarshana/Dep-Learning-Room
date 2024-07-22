@@ -28,16 +28,7 @@ public class OneToManyDemo5 {
             EntityTransaction tx = em.getTransaction();
             try {
                 tx.begin();
-
-                Order o001 = new Order("O001", Date.valueOf(LocalDate.now()),
-                        new BigDecimal("1250.00"), null);
-                Order o002 = new Order("O002", Date.valueOf(LocalDate.now()),
-                        new BigDecimal("100.00"), null);
-                Order o003 = new Order("O003", Date.valueOf(LocalDate.now()),
-                        new BigDecimal("1000.00"), null);
-                Customer tharindu = new Customer("071-8334554", "Tharindu", "Galle",List.of(o001,o002,o003));
-
-                em.persist(tharindu);
+                
 
                 tx.commit();
             }catch (Throwable t){
