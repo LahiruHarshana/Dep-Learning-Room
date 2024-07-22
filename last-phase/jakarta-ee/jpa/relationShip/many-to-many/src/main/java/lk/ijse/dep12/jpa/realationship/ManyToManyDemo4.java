@@ -7,6 +7,8 @@ import lk.ijse.dep12.jpa.realationship.entity.Actor;
 import lk.ijse.dep12.jpa.realationship.entity.Movie;
 import lk.ijse.dep12.jpa.realationship.util.JpaUtil;
 
+import java.util.List;
+
 /**
  * @author : L.H.J
  * @File: HelloJpa
@@ -24,7 +26,12 @@ public class ManyToManyDemo4 {
 
 
                 Actor tharindu = em.find(Actor.class, "A001");
-                tharindu.
+//                tharindu.getMovies().forEach(System.out::println);
+//                tharindu.getMovies().remove(0);  // This does not work (inverse end)
+
+
+//                Movie m003 = em.find(Movie.class, "M003");
+//                m003.getActors().remove(tharindu); // This works (owner end)
 
                 transaction.commit();
             }catch (Throwable t){
