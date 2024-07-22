@@ -23,8 +23,18 @@ public class LawSuite {
     private String id;
     private String type;
     private String description;
-    @Column(name = "filed_date")
+    @Column(name = "field_date")
     private Date filedDate;
+    @JoinTable(name = "lawyer_law_suite",
+    joinColumns = @JoinColumn(name = "law_suite_id",referencedColumnName = "id"),
+    inverseJoinColumns = @JoinColumn(name = "lawyer_reg_number",referencedColumnName = "reg_number"))
     @ManyToOne
     private Lawyer lawyer;
+
+    public LawSuite(String id, String type, String description, Date filedDate) {
+        this.id = id;
+        this.type = type;
+        this.description = description;
+        this.filedDate = filedDate;
+    }
 }
