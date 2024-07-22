@@ -13,7 +13,7 @@ import lk.ijse.dep12.jpa.relationship.util.JpaUtil;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-22, Monday
  **/
-public class OneToManyDemo3 {
+public class OneToManyDemo4 {
     public static void main(String[] args) {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
              EntityManager em = emf.createEntityManager()) {
@@ -23,11 +23,8 @@ public class OneToManyDemo3 {
             try {
                 transaction.begin();
 
-                Lawyer buddhika = em.find(Lawyer.class, "L002");
-                LawSuite ls002 = em.find(LawSuite.class, "Ls-002");
-                System.out.println(ls002.getLawyer()); // Lawyer = Tharindu
-                ls002.setLawyer(buddhika); //Update
                 LawSuite ls001 = em.find(LawSuite.class, "Ls-001");
+                ls001.setLawyer(null);// DELETE
 
                 transaction.commit();
             }catch (Throwable t){
