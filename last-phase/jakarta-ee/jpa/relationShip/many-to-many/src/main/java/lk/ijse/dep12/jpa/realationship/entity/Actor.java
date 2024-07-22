@@ -1,8 +1,6 @@
 package lk.ijse.dep12.jpa.realationship.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -25,6 +23,7 @@ public class Actor {
     @Id
     private String id;
     private String name;
+    @Enumerated(EnumType.STRING)
     private Gender gender;
     private Date dob;
 
