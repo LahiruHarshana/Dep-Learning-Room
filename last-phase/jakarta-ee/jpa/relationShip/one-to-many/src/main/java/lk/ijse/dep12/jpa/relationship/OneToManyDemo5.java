@@ -7,7 +7,6 @@ import lk.ijse.dep12.jpa.relationship.entity.Customer;
 import lk.ijse.dep12.jpa.relationship.entity.Order;
 import lk.ijse.dep12.jpa.relationship.util.JpaUtil;
 import org.hibernate.collection.spi.PersistentBag;
-import org.hibernate.internal.SessionImpl;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -22,7 +21,7 @@ import static java.lang.System.out;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-17, Wednesday
  **/
-public class OneToManyDemo4 {
+public class OneToManyDemo5 {
     public static void main(String[] args) {
         try (EntityManagerFactory emf = JpaUtil.getEntityManagerFactory();
              EntityManager em = emf.createEntityManager()) {
