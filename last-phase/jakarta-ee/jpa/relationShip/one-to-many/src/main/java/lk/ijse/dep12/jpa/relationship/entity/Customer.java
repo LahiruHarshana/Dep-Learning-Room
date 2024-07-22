@@ -25,7 +25,7 @@ public class Customer implements Serializable {
     private String contact;
     private String name;
     private String address;
-    @OneToMany(mappedBy = "customer", cascade = {CascadeType.DETACH,CascadeType.MERGE} )
+    @OneToMany(mappedBy = "customer", cascade = {CascadeType.DETACH,CascadeType.MERGE,CascadeType.PERSIST} )
     @Setter (AccessLevel.NONE)
     private List<Order> orders = new ArrayList<>();//persistence bag
 
