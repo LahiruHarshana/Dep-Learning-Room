@@ -31,7 +31,7 @@ public class LawSuite implements Serializable {
     @JoinColumn(name = "lawyer_reg_number", referencedColumnName = "reg_number")
     private Lawyer lawyer;
     @Column(name = "lawyer_retainer_date")
-    private String lawyerRetainerDate;
+    private Date lawyerRetainerDate;
     @Column(name = "lawyer_fee")
     private BigDecimal lawyerFee;
 

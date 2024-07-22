@@ -35,10 +35,12 @@ public class OneToManyDemo5 {
                 Lawyer tharindu = new Lawyer("L002", "Tharindu");
                 Lawyer chamika = new Lawyer("L003", "Chamika");
 
-                LawSuite ls001 = new LawSuite("LS-001", "Criminal", "Panadura shooting", Date.valueOf(LocalDate.now()));
+                LawSuite ls001 = new LawSuite("LS-001", "Criminal", "Panadura shooting", Date.valueOf(LocalDate.now()),imantha,Date.valueOf(LocalDate.now()),new BigDecimal("25000.00"));
                 LawSuite ls002 = new LawSuite("LS-002", "Criminal", "Sappa ge sapa kema", Date.valueOf(LocalDate.now()));
-                LawSuite ls003 = new LawSuite("LS-003", "Criminal", "", Date.valueOf(LocalDate.now()));
+                LawSuite ls003 = new LawSuite("LS-003", "Criminal", "BoralasGamuwa shooting", Date.valueOf(LocalDate.now()),imantha,Date.valueOf(LocalDate.now()),new BigDecimal("15000.00"));
+                LawSuite ls004 = new LawSuite("LS-004", "Family", "Divorce shooting", Date.valueOf(LocalDate.now()),tharindu,Date.valueOf(LocalDate.now()),new BigDecimal("45000.00"));
 
+                List.of(chamika,tharindu,imantha,ls001,ls002,ls003,ls004).forEach(em::persist);
 
                 tx.commit();
             }catch (Throwable t){
@@ -46,9 +48,5 @@ public class OneToManyDemo5 {
                 t.printStackTrace();
             }
         }
-    }
-
-    private static void printPersistentBagStatus(List<Order> persistentBag){
-        out.println("PersistentBag Dirty :"+((PersistentBag<Order>) persistentBag).isDirty());
     }
 }
