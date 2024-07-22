@@ -22,16 +22,23 @@ import java.sql.Date;
 @Table(name = "law_suite")
 public class LawSuite implements Serializable {
     @Id
-    private String id ;
+    private String id;
     private String type;
     private String description;
     @Column(name = "filed_date")
     private Date filedDate;
     @ManyToOne
-    @JoinColumn(name = "lawyer_reg_number",referencedColumnName = "reg_number")
+    @JoinColumn(name = "lawyer_reg_number", referencedColumnName = "reg_number")
     private Lawyer lawyer;
     @Column(name = "lawyer_retainer_date")
     private String lawyerRetainerDate;
     @Column(name = "lawyer_fee")
     private BigDecimal lawyerFee;
+
+    public LawSuite(String id, String type, String description, Date filedDate) {
+        this.id = id;
+        this.type = type;
+        this.description = description;
+        this.filedDate = filedDate;
+    }
 }
