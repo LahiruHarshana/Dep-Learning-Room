@@ -11,10 +11,10 @@
                 value="jdbc:mysql://localhost:3307/dep12_many2many?createDatabaseIfNotExist=true"/>
       <property name="jakarta.persistence.jdbc.user" value="root"/>
       <property name="jakarta.persistence.jdbc.password" value="mysql"/>
-      
-      <property name="hibernate.format_sql" value="true"/>
+
       <property name="hibernate.show_sql" value="true"/>
-      <property name="" value=""/>
+      <property name="hibernate.format_sql" value="true"/>
+      <property name="hibernate.highlight_sql" value="true"/>
     </properties>
   </persistence-unit>
 </persistence>
