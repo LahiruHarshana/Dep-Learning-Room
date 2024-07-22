@@ -25,8 +25,8 @@ public class OneToManyDemo3 {
 
                 Lawyer buddhika = em.find(Lawyer.class, "L002");
                 LawSuite ls002 = em.find(LawSuite.class, "Ls-002");
-                System.out.println(ls002.getLawyer()); // Lawyer = Tharindu
-                ls002.setLawyer(buddhika); //Update
+//                System.out.println(ls002.getLawyer()); // Lawyer = Tharindu
+//                ls002.setLawyer(buddhika); //Update
                 LawSuite ls001 = em.find(LawSuite.class, "Ls-001");
 
                 transaction.commit();

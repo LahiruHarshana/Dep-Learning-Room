@@ -24,7 +24,7 @@ public class OneToManyDemo4 {
                 transaction.begin();
 
                 LawSuite ls001 = em.find(LawSuite.class, "Ls-001");
-                ls001.setLawyer(null);// DELETE
+//                ls001.setLawyer(null);// DELETE
 
                 transaction.commit();
             }catch (Throwable t){

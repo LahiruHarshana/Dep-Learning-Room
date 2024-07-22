@@ -29,7 +29,7 @@ public class OneToManyDemo2 {
 
                 Lawyer tharindu = em.find(Lawyer.class, "L001");
                 LawSuite ls002 = em.find(LawSuite.class, "Ls-002");
-                ls002.setLawyer(tharindu);
+//                ls002.setLawyer(tharindu);
 
                 transaction.commit();
             }catch (Throwable t){
