@@ -18,7 +18,7 @@ import java.util.List;
  * @mailto : lharshana2002@gmail.com
  * @created : 2024-07-22, Monday
  **/
-public class ManyToManyDemo4 {
+public class ManyToManyDemo5 {
     public static void main(String[] args) {
         try (EntityManagerFactory entityManagerFactory = JpaUtil.getEntityManagerFactory();
              EntityManager entityManager = entityManagerFactory.createEntityManager()) {
@@ -33,7 +33,7 @@ public class ManyToManyDemo4 {
                 OrderDetail orderDetail1 = new OrderDetail(null, i001, 2, i001.getPrice());
                 OrderDetail orderDetail2 = new OrderDetail(null, i002, 1, i002.getPrice());
                 OrderDetail orderDetail3 = new OrderDetail(null, i003, 1, i003.getPrice());
-                List<OrderDetail> orderDetailList = List.of(orderDetail1);
+                List<OrderDetail> orderDetailList = List.of();
 
 
                 Order o003 = new Order("O003", Date.valueOf(LocalDate.now()), "Imantha",orderDetailList);
