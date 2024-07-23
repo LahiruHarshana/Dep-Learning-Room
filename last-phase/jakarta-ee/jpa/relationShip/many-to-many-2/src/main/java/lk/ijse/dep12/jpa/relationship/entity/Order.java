@@ -14,7 +14,6 @@ import java.util.List;
  * @created : 2024-07-23, Tuesday
  **/
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
 @Entity
 @Table(name = "`order`")
@@ -28,4 +27,28 @@ public class Order {
     @OneToMany(mappedBy = "order", cascade = {CascadeType.PERSIST,CascadeType.DETACH})
     @Setter(AccessLevel.NONE)
     private List<OrderDetail> orderDetailList = new ArrayList<>();
+
+    public Order(String id, Date date, String customerName) {
+        this.id = id;
+        this.date = date;
+        this.customerName = customerName;
+    }
+    public Order(String id, Date date, String customerName, List<OrderDetail> orderDetailList) {
+        if (orderDetailList != null && !orderDetailList.isEmpty()){
+            orderDetailList.stream().filter(od -> od.getOrder() == null).forEach(od -> od.setOrder(this));
+            orderDetailList.forEach( od -> {
+                if (od.getOrder() != this) throw new IllegalStateException("The order %s is already associate with another order".formatted(od.getOrder().getId()));
+            });
+        }
+        this.id = id;
+        this.date = date;
+        this.customerName = customerName;
+        this.orderDetailList = orderDetailList;
+    }
+
+    @PrePersist
+    public void beforePersist(){
+        if(getOrderDetailList().isEmpty())
+            throw new IllegalStateException("The order does not have any order details");
+    }
 }
