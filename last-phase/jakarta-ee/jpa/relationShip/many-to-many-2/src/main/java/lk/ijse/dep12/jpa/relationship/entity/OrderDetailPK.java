@@ -18,7 +18,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 public class OrderDetailPK implements Serializable {
     @Column(name = "order_id")
-    private String orderId;
+    private String order;
     @Column(name = "item_code")
-    private String itemCode;
+    private String item;
 }
