@@ -18,6 +18,7 @@ import java.sql.Date;
 @NoArgsConstructor
 @Entity
 @Table(name = "enroll")
+@IdClass(EnrollPK.class)
 public class Enroll {
     @Id
     @ManyToOne

@@ -1,0 +1,11 @@
+#name: student-management-system-dep
+services:
+  mysql:
+    image: mysql:latest
+    container_name: student-management-system-dep
+    environment:
+      - MYSQL_ROOT_PASSWORD = mysql
+    ports:
+      - 3308:3306
+    volumes:
+      - /Users/lahiruharshana/project:/var/lib/mysql:rw

@@ -33,9 +33,10 @@ public class StudentM3 {
 
                 Course c001 = em.find(Course.class, "C001");
                 Course c002 = em.find(Course.class, "C002");
+                Course c003 = em.find(Course.class, "C003");
 
 
-                Enroll lahiru = new Enroll(s001, c002, "Lahiru", Date.valueOf(LocalDate.now()));
+                Enroll lahiru = new Enroll(s001, c003, "Lahiru", Date.valueOf(LocalDate.now()));
 
                 em.persist(lahiru);
                 transaction.commit();
