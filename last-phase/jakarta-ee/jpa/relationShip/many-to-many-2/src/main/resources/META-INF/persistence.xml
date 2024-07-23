@@ -5,6 +5,10 @@
              version="3.0">
   <persistence-unit name="dep-12">
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <class>lk.ijse.dep12.jpa.relationship.entity.Item</class>
+    <class>lk.ijse.dep12.jpa.relationship.entity.Order</class>
+    <class>lk.ijse.dep12.jpa.relationship.entity.OrderDetail</class>
     <properties>
       <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="jakarta.persistence.jdbc.url"
