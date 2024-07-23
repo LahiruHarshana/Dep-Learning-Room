@@ -17,8 +17,6 @@ import java.io.Serializable;
 @AllArgsConstructor
 @NoArgsConstructor
 public class OrderDetailPK implements Serializable {
-    @Column(name = "order_id")
-    private String order;
-    @Column(name = "item_code")
-    private String item;
+    private Order order;
+    private Item item;
 }

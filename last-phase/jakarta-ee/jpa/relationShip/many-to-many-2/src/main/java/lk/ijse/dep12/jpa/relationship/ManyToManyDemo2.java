@@ -32,7 +32,7 @@ public class ManyToManyDemo2 {
                 Item i002 = entityManager.find(Item.class, "I002");
                 Order O001 = new Order("O001", Date.valueOf(LocalDate.now()), "Tharindu");
                 OrderDetail orderDetail1 = new OrderDetail(O001, i001, 2, i001.getPrice());
-                OrderDetail orderDetail2 = new OrderDetail(O001, i001, 1, i002.getPrice());
+                OrderDetail orderDetail2 = new OrderDetail(O001, i002, 1, i002.getPrice());
 
                 entityManager.persist(O001);
                 entityManager.persist(orderDetail1);
