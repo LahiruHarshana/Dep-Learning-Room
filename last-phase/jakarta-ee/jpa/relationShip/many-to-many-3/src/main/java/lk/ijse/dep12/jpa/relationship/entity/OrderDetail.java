@@ -19,23 +19,25 @@ public class OrderDetail implements Serializable {
     private BigDecimal price;
 
     @ManyToOne
-    @JoinColumn(name = "order_id",referencedColumnName = "id",insertable = false,updatable = false)
+    @MapsId("orderId")
+//    @JoinColumn(name = "order_id",referencedColumnName = "id",insertable = false,updatable = false)
     private Order order;
 
     @ManyToOne
-    @JoinColumn(name = "item_code",referencedColumnName = "code" ,insertable = false,updatable = false)
+    @MapsId("itemCode")
+//    @JoinColumn(name = "item_code",referencedColumnName = "code" ,insertable = false,updatable = false)
     private Item item;
 
-    public OrderDetail(OrderDetailPK orderDetailPk, int qty, BigDecimal price) {
-        this.orderDetailPk = orderDetailPk;
-        this.qty = qty;
-        this.price = price;
-    }
-    public OrderDetail(String orderId,String itemCode, int qty, BigDecimal price) {
-        this.orderDetailPk = new OrderDetailPK(orderId,itemCode);
-        this.qty = qty;
-        this.price = price;
-    }
+//    public OrderDetail(OrderDetailPK orderDetailPk, int qty, BigDecimal price) {
+//        this.orderDetailPk = orderDetailPk;
+//        this.qty = qty;
+//        this.price = price;
+//    }
+//    public OrderDetail(String orderId,String itemCode, int qty, BigDecimal price) {
+//        this.orderDetailPk = new OrderDetailPK(orderId,itemCode);
+//        this.qty = qty;
+//        this.price = price;
+//    }
     public OrderDetail(Order order,Item item, int qty, BigDecimal price) {
         this.orderDetailPk = new OrderDetailPK(order.getId(),item.getCode());
         this.qty = qty;
