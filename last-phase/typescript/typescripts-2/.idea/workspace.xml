@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4eff08e-dbff-456b-b1a8-38ea5f8f7618" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../typescript-lang-2/dist/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../typescript-lang-2/dist/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../typescript-lang-2/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../typescript-lang-2/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../typescript-lang-2/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../typescript-lang-2/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../typescript-lang-2/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../typescript-lang-2/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,7 +115,7 @@
       <updated>1721810910461</updated>
       <workItem from="1721810911487" duration="66000" />
       <workItem from="1721810982640" duration="4617000" />
-      <workItem from="1721819043602" duration="8758000" />
+      <workItem from="1721819043602" duration="8927000" />
     </task>
     <servers />
   </component>
