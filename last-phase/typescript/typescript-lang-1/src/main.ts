@@ -4,7 +4,7 @@
 // x ="ABC"
 //
 //
-// //2. Type Shape
+//2. Type Shape
 // const customer = {
 //     id : 'C001',
 //     name : 'Kasun Sampath',
@@ -126,5 +126,6 @@ let sappa: string | null = getValue();
 console.log(sappa?.toUpperCase());
 
 function getValue(): string | null {
-    return Math.random() < 0.5 ? "Direct Entry Programm" : null;
+    return Math.random() < 0.5 ? "Direct Entry Program" : null;
 }
+
