@@ -35,3 +35,18 @@ employee = {
 let a  : 'dep' | 'cmjd ' | true | 10;
 a = "dep"
 a = "cmjd "
+
+
+let myObj :{
+    id:string,
+    name:string
+    print:()=> void
+}
+
+myObj ={
+    id : "C001",
+    name : "Kasun Sampath",
+    print(){
+        console.log(this.id,this.name)
+    }
+}
