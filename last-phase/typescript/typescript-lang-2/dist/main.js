@@ -61,3 +61,24 @@ class MyConcreteClass extends MyAcstractClass {
     myMethod() {
     }
 }
+var MyEnum1;
+(function (MyEnum1) {
+    MyEnum1[MyEnum1["CONST1"] = 0] = "CONST1";
+    MyEnum1[MyEnum1["CONST2"] = 1] = "CONST2";
+    MyEnum1[MyEnum1["CONST3"] = 2] = "CONST3";
+})(MyEnum1 || (MyEnum1 = {}));
+var MyEnum2;
+(function (MyEnum2) {
+    MyEnum2["CONST1"] = "CONSTANT 1";
+    MyEnum2["CONST2"] = "CONSTANT 2";
+    MyEnum2["CONST3"] = "CONSTANT 3";
+})(MyEnum2 || (MyEnum2 = {}));
+let myVariable = MyEnum2.CONST1;
+console.log(myVariable);
+class MyClass {
+    method1() {
+    }
+    method2(num1, num2) {
+        return 0;
+    }
+}

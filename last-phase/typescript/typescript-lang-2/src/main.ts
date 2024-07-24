@@ -63,5 +63,35 @@ abstract class MyAcstractClass{
 class MyConcreteClass extends MyAcstractClass{
     myMethod(): void {
     }
+}
 
+enum MyEnum1{
+    CONST1,
+    CONST2,
+    CONST3,
+}
+
+enum MyEnum2{
+    CONST1 ="CONSTANT 1",
+    CONST2 ="CONSTANT 2",
+    CONST3 ="CONSTANT 3"
+}
+
+let myVariable:MyEnum2 = MyEnum2.CONST1;
+console.log(myVariable);
+
+
+interface MyInterface {
+    method1 () : void;
+    method2(num1:number,num2:number) : number;
+}
+
+class MyClass implements MyInterface{
+    method1(): void {
+    }
+
+    method2(num1: number, num2: number): number {
+        return 0;
+    }
+    
 }
