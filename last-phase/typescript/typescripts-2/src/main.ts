@@ -74,7 +74,6 @@ let myVar : number | undefined;
 
 function myFunction(param1 : string , param2 :string) : string{
     return param1 + param2;
-
 }
 
 type Student = {
@@ -83,11 +82,15 @@ type Student = {
     print : () => void
 }
 
-let myStudent;
-myStudent.id = 'C001';
-myStudent.name = 'Kasun';
-myStudent.print = myPrint;
-
-function myPrint(){
-    
+let myStudent: Student = {
+    id : 'C001',
+    name : 'Kasun',
+    print : myPrint
 }
+
+
+function myPrint(this:Student){
+    console.log(this.id , this.name);
+}
+
+myStudent.print();
