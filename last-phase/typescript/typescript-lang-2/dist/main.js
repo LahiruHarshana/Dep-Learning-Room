@@ -44,11 +44,20 @@ console.log(employee.id, employee.name, employee.address, employee.contact);
 class Teacher {
     id;
     name;
-    institute = 'Ijse';
+    institute = 'Ijse'; // instance
     constructor(id, name) {
         this.id = id;
         this.name = name;
     }
+    print() {
+        const x = 10; // local
+    }
 }
 var t001 = new Teacher("T001", "Imantha");
 console.log(t001.id, t001.name, t001.institute);
+class MyAcstractClass {
+}
+class MyConcreteClass extends MyAcstractClass {
+    myMethod() {
+    }
+}
