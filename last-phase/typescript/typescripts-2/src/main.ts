@@ -72,25 +72,59 @@ let myVar : number | undefined;
 // myVar = null;
 
 
-function myFunction(param1 : string , param2 :string) : string{
-    return param1 + param2;
+// function myFunction(param1 : string , param2 :string) : string{
+//     return param1 + param2;
+// }
+//
+// type Student = {
+//     id : string,
+//     name : string,
+//     print : () => void
+// }
+//
+// let myStudent: Student = {
+//     id : 'C001',
+//     name : 'Kasun',
+//     print : myPrint
+// }
+//
+//
+// function myPrint(this:Student){
+//     console.log(this.id , this.name);
+// }
+//
+// myStudent.print();
+//
+//
+// type MyCrazyType = {
+//     code : string,
+//     description : string,
+//     [key : string]:string   //index signature
+// }
+//
+// const myCrazyObject : MyCrazyType = {
+//     code : "I001",
+//     description : "Crazy Item"
+// };
+//
+// let myUnknown : unknown;
+// myUnknown = "ijse";
+//
+// if (typeof myUnknown === 'string'){
+//     console.log(myUnknown.toUpperCase());
+// }
+//
+// myUnknown = 10;
+//
+// if (typeof myUnknown === 'number'){
+//     console.log(myUnknown + 20)
+//
+// }
+
+
+let sappa: string | null = getValue();
+console.log(sappa?.toUpperCase());
+
+function getValue(): string | null {
+    return Math.random() < 0.5 ? "Direct Entry Programm" : null;
 }
-
-type Student = {
-    id : string,
-    name : string,
-    print : () => void
-}
-
-let myStudent: Student = {
-    id : 'C001',
-    name : 'Kasun',
-    print : myPrint
-}
-
-
-function myPrint(this:Student){
-    console.log(this.id , this.name);
-}
-
-myStudent.print();
