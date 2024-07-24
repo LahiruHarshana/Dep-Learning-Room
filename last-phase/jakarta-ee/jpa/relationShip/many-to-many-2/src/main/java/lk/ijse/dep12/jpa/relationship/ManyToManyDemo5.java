@@ -35,7 +35,6 @@ public class ManyToManyDemo5 {
                 OrderDetail orderDetail3 = new OrderDetail(null, i003, 1, i003.getPrice());
                 List<OrderDetail> orderDetailList = List.of();
 
-
                 Order o003 = new Order("O003", Date.valueOf(LocalDate.now()), "Imantha",orderDetailList);
 
                 entityManager.persist(o003);
