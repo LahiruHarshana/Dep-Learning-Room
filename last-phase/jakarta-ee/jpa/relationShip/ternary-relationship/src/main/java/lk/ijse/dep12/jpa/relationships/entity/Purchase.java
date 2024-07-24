@@ -26,15 +26,15 @@ import java.math.BigDecimal;
 public class Purchase implements Serializable {
     @Id
     @ManyToOne
-    @Column(name = "supplier_id")
+    @JoinColumn(name = "customer_id")
     private Customer customer;
     @Id
     @ManyToOne
-    @Column(name = "product_code")
+    @JoinColumn(name = "product_code")
     private Product product;
     @Id
     @ManyToOne
-    @Column(name = "supplier_id")
+    @JoinColumn(name = "supplier_id")
     private Supplier supplier;
     private int discount;
     private BigDecimal price;
