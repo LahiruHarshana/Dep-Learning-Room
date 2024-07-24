@@ -42,6 +42,13 @@ var employee = new Employee("E001", "Kasun Sampath", "Galle", "07178234");
 console.log(employee);
 console.log(employee.id, employee.name, employee.address, employee.contact);
 class Teacher {
-    id = '';
-    name = '';
+    id;
+    name;
+    institute = 'Ijse';
+    constructor(id, name) {
+        this.id = id;
+        this.name = name;
+    }
 }
+var t001 = new Teacher("T001", "Imantha");
+console.log(t001.id, t001.name, t001.institute);

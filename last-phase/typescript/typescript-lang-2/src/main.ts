@@ -44,6 +44,9 @@ console.log(employee);
 console.log(employee.id,employee.name,employee.address,employee.contact);
 
 class Teacher{
-    id:string = '';
-    name:string = '';
+    readonly institute:string = 'Ijse'
+    constructor(public id: string, public name: string) {
+    }
 }
+var t001 = new Teacher("T001","Imantha");
+console.log(t001.id,t001.name,t001.institute);
