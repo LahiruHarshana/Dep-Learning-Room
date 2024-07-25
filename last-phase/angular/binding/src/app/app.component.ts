@@ -11,4 +11,6 @@ import {FirstComponent} from "./first/first.component";
 })
 export class AppComponent {
   flag:boolean = true;
+  str1:string = "Hello";
+  str2:string = "world";
 }
