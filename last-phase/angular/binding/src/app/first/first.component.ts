@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './first.component.css'
 })
 export class FirstComponent {
-
+  firstInput:string = '';
+  secondInput:string = '';
 }
