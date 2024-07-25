@@ -122,6 +122,7 @@ System.print({id: " S001", name : "Lahiru"});
 type MyType1 = {
     id : string,
     name : string
+    print() : void
 }
 
 type MyNewType = MyType1 & {address : string}
@@ -129,5 +130,18 @@ type MyNewType = MyType1 & {address : string}
 let obj : MyNewType = {
     id : "C001",
     name : "Kasun",
-    address : 'Galle'
+    address : 'Galle',
+    print() {
+        console.log("Print Method")
+    }
+}
+
+class Item {
+    myMethod(){
+        console.log("myMethod");
+    }
+}
+
+function MyDecorator(){
+
 }
