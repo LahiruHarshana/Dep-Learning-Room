@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "bindings": {
+    "binding": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/bindings",
+            "outputPath": "dist/binding",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -84,10 +84,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "bindings:build:production"
+              "buildTarget": "binding:build:production"
             },
             "development": {
-              "buildTarget": "bindings:build:development"
+              "buildTarget": "binding:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -119,6 +119,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "fdf65990-ceec-488f-8acf-9ee4bc7712b4"
   }
 }
