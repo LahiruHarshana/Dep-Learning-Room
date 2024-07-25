@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, EventEmitter, Input, Output} from '@angular/core';
 
 @Component({
   selector: 'app-third',
@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './third.component.css'
 })
 export class ThirdComponent {
+  @Input("value")
+  value: number = 20;
+  @Output("valueChange")
+  emitter:EventEmitter<number> = new EventEmitter<number>()
 
+  updateValue(value:number){
+    this.emitter.emit(value);
+  }
 }

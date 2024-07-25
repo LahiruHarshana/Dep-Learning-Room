@@ -22,6 +22,8 @@
 <hr class="mt-2">
 
 <div class="p-2 flex justify-between">
-  <input class="rotate-90 origin-top-left translate-x-10"
-         type="range" value="20">
+  <input #range class="rotate-90 origin-top-left translate-x-10"
+         type="range" [value]="value" (input)="updateValue(range.valueAsNumber)">
+<!--  <app-third [value]="value" (update)="value = $event"/>-->
+  <app-third [(value)]="value"/>
 </div>
