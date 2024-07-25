@@ -15,6 +15,6 @@
   </div>
 </div>
 <div class="text-center mt-2">
-  <app-second (update)="childInput = $event"/>
-  <br> {{childInput}}
+  <app-second [(ngModel)]="twoWayBinding"/>
+  <br> {{twoWayBinding}}
 </div>

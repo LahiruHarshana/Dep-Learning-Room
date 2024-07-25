@@ -3,10 +3,11 @@ import { RouterOutlet } from '@angular/router';
 import {FirstComponent} from "./first/first.component";
 import {getXHRResponse} from "rxjs/internal/ajax/getXHRResponse";
 import {SecondComponent} from "./second/second.component";
+import {FormsModule} from "@angular/forms";
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FirstComponent, SecondComponent],
+  imports: [RouterOutlet, FirstComponent, SecondComponent, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
@@ -16,6 +17,7 @@ export class AppComponent {
   str2:string = "world";
   inputStr:string = " Enter something"
   childInput:string ='';
+  twoWayBinding:string = "";
 
   protected readonly getXHRResponse = getXHRResponse;
   updateInputText(e:Event){
