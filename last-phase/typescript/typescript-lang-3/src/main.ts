@@ -74,6 +74,9 @@ interface Customer{
 //Interfaces as an Abstraction
 
 interface CustomerService {
+    // static y : number;
+    // static staticMethod() : void
+
     saveCustomer(): void;
     updateCustomer() : void;
     /*public abstract*/ deleteCustomer( customerId : number): void;
@@ -93,5 +96,38 @@ class CustomerServiceImpl implements CustomerService{
     updateCustomer(): void {
         console.log("Delete Customer");
     }
+}
 
+interface MyIn1{}
+interface MyIn2{}
+interface MyIn3 extends MyIn1,MyIn2{}
+class System{
+    static print (num:number) : void;
+    static print (str:String) : void;
+    static print (flag : boolean) : void;
+    static print (obj:object) : void;
+
+    static print(arg : number | string | boolean | object): void{
+        console.log(arg)
+    }
+}
+
+console.log("-----------------");
+System.print(10);
+System.print("Ijse");
+System.print(true);
+System.print({id: " S001", name : "Lahiru"});
+
+
+type MyType1 = {
+    id : string,
+    name : string
+}
+
+type MyNewType = MyType1 & {address : string}
+
+let obj : MyNewType = {
+    id : "C001",
+    name : "Kasun",
+    address : 'Galle'
 }
