@@ -17,7 +17,7 @@ export class AppComponent {
   str2:string = "world";
   inputStr:string = " Enter something"
   childInput:string ='';
-  twoWayBinding:string = "";
+  twoWayBinding:string = "Hello";
 
   protected readonly getXHRResponse = getXHRResponse;
   updateInputText(e:Event){
