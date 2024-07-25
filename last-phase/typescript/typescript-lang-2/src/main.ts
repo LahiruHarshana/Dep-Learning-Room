@@ -95,3 +95,4 @@ class MyClass implements MyInterface{
     }
     
 }
+

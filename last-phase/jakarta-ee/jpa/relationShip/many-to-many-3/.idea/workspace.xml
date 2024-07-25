@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ce594a-86fb-4232-bfcc-d69e7ff28661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/HelloJpa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/StudentM1.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/entity/Course.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/entity/Enroll.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/entity/EnrollPK.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/entity/Student.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/java/lk/ijse/dep12/jpa/relationship/util/JpaUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../student-management-system-dep/src/main/resources/db-scripts/studen-m.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../typescript/typescript-lang-3/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../typescript/typescript-lang-2/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../typescript/typescript-lang-2/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../typescript/typescripts-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../typescript/typescripts-2/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,6 +74,7 @@
       <workItem from="1721719529265" duration="28000" />
       <workItem from="1721719573305" duration="158000" />
       <workItem from="1721720044704" duration="3169000" />
+      <workItem from="1721889034919" duration="10000" />
     </task>
     <servers />
   </component>
