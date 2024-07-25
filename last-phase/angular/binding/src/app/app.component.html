@@ -14,7 +14,7 @@
     <br> {{inputStr}}
   </div>
 </div>
-
 <div class="text-center mt-2">
-  <app-second/>
+  <app-second (update)="childInput = $event"/>
+  <br> {{childInput}}
 </div>

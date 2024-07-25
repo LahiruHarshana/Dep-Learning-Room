@@ -15,6 +15,7 @@ export class AppComponent {
   str1:string = "Hello";
   str2:string = "world";
   inputStr:string = " Enter something"
+  childInput:string ='';
 
   protected readonly getXHRResponse = getXHRResponse;
   updateInputText(e:Event){
