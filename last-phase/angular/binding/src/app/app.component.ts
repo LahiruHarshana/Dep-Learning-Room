@@ -13,4 +13,5 @@ export class AppComponent {
   flag:boolean = true;
   str1:string = "Hello";
   str2:string = "world";
+  protected readonly alert = alert;
 }
