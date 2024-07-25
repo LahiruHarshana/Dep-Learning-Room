@@ -14,4 +14,5 @@ export class AppComponent {
   str1:string = "Hello";
   str2:string = "world";
   protected readonly alert = alert;
+  protected readonly console = console;
 }
