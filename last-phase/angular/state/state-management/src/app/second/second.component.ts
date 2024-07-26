@@ -1,5 +1,6 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, inject, Input, Output} from '@angular/core';
 import {ThirdComponent} from "./third/third.component";
+import {ValueService} from "../service/value.service";
 
 @Component({
   selector: 'app-second',
@@ -11,6 +12,6 @@ import {ThirdComponent} from "./third/third.component";
   styleUrl: './second.component.css'
 })
 export class SecondComponent {
-  @Input()
   value = 50;
+  valueService:ValueService = inject(ValueService)
 }

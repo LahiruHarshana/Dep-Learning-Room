@@ -1,4 +1,5 @@
-import {Component, Input} from '@angular/core';
+import {Component, EventEmitter, Input, output} from '@angular/core';
+import {ValueService} from "../service/value.service";
 
 @Component({
   selector: 'app-first',
@@ -8,7 +9,11 @@ import {Component, Input} from '@angular/core';
   styleUrl: './first.component.css'
 })
 export class FirstComponent {
-  @Input()
   value:number = 100;
 
+constructor(private valueService : ValueService) {
+}
+  updateValue(value:number){
+    this.value = value;
+  }
 }

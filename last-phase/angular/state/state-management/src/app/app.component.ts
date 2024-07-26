@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {PercentPipe} from "@angular/common";
+import {ValueService} from "./service/value.service";
 
 @Component({
   selector: 'app-root',
@@ -13,5 +14,9 @@ import {PercentPipe} from "@angular/common";
 })
 export class AppComponent {
   title = 'state-management';
+  @Input()
   value = 100;
+
+  constructor(private valueService : ValueService) {
+  }
 }
