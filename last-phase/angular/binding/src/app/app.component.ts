@@ -25,8 +25,6 @@ export class AppComponent {
     this.inputStr = (e.target as HTMLInputElement).value
     this.inputStr = (<HTMLInputElement>(e.target!)).value
   }
-
-
   value: number = 20;
   updateValue(value: number) {
     this.value = value;
