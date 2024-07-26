@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {ThirdComponent} from "./third/third.component";
 
 @Component({
@@ -11,5 +11,6 @@ import {ThirdComponent} from "./third/third.component";
   styleUrl: './second.component.css'
 })
 export class SecondComponent {
-
+  @Input()
+  value = 50;
 }

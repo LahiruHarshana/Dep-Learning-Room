@@ -1,15 +1,14 @@
 <h2 class="text-center mt-2">
   State Management Angular
 </h2>
-
 <div class="text-center">
-  10.00%
+  {{value /100 }}
 </div>
 <div class="d-flex justify-content-center gap-2 p-3">
   <div class="flex-grow-1 border p-2">
-    <app-first/>
+    <app-first [value]="value"/>
   </div>
   <div class="flex-grow-1 border p-2">
-    <app-second/>
+    <app-second [value]="value"/>
   </div>
 </div>
