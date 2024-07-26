@@ -13,5 +13,10 @@ export class ThirdComponent {
   valueService = inject(ValueService)
   updateValue(value : number){
     this.value = value
+    this.valueService.updateValue(value);
+  }
+
+  constructor() {
+    this.valueService.getValue().subscribe(value=> this.value)
   }
 }

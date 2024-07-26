@@ -18,5 +18,6 @@ export class AppComponent {
   value = 100;
 
   constructor(private valueService : ValueService) {
+    this.valueService.getValue().subscribe(value=> this.value)
   }
 }

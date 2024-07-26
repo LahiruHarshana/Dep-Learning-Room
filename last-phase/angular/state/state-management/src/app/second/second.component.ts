@@ -13,5 +13,9 @@ import {ValueService} from "../service/value.service";
 })
 export class SecondComponent {
   value = 50;
-  valueService:ValueService = inject(ValueService)
+  valueService:ValueService = inject(ValueService);
+
+  constructor() {
+    this.valueService.getValue().subscribe(value=> this.value)
+  }
 }
