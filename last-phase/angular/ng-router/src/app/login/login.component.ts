@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterLink} from "@angular/router";
+import {Component, inject} from '@angular/core';
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -12,7 +12,19 @@ import {RouterLink} from "@angular/router";
 })
 export class LoginComponent {
 
+  private routerService:Router = inject(Router);
+
   login(txtUsername: HTMLInputElement, txtPassword: HTMLInputElement) {
-    
+    const username = txtUsername.value;
+    const password = txtPassword.value;
+
+    if (username === 'admin' &&
+    password === 'admin'){
+      this.routerService.navigateByUrl('/main');
+    }else{
+      alert("Invalid username or password");
+      txtUsername.focus();
+      txtUsername.select();
+    }
   }
 }
