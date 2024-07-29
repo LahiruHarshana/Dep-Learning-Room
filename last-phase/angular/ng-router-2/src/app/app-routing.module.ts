@@ -40,6 +40,11 @@ const routes:Routes = [
         component:ThirdComponent
       }
     ]
+  },
+  {
+    path:'**',
+    pathMatch:'full',
+    redirectTo:'/main'
   }
 ];
 @NgModule({

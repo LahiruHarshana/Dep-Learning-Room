@@ -7,13 +7,13 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li class="nav-item m-3">Home</li>
-          <li class="nav-item m-3">First</li>
-          <li class="nav-item m-3">Second</li>
-          <li class="nav-item m-3">Third</li>
+          <li routerLink="home" routerLinkActive="active" class="nav-item m-3">Home</li>
+          <li routerLink="fist" routerLinkActive="active" class="nav-item m-3">First</li>
+          <li routerLink="second" routerLinkActive="active" class="nav-item m-3">Second</li>
+          <li  routerLink="third" routerLinkActive="active" class="nav-item m-3">Third</li>
         </ul>
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">Log Out</li>
+          <li (click)="logout()" class="nav-item">Log Out</li>
         </ul>
       </div>
     </div>

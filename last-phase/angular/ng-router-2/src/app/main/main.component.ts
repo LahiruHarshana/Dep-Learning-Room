@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject, signal} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -7,4 +8,10 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  private routerService = Router = inject(Router);
+
+  logout(){
+    localStorage.removeItem("logged");
+    this.routerService.navigateByUrl('/login');
+  }
 }
