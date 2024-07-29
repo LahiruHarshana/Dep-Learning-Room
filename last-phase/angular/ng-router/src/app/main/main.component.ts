@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
+import {Component, inject, signal} from '@angular/core';
+import {Router, RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
 
 @Component({
   selector: 'app-main',
@@ -13,5 +13,10 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from "@angular/router";
   styleUrl: './main.component.css'
 })
 export class MainComponent {
+  private routerService:Router = inject(Router);
 
+  logout(){
+    localStorage.removeItem('logged');
+    this.routerService.navigateByUrl('/login')
+  }
 }

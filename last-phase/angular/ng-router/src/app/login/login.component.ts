@@ -20,8 +20,10 @@ export class LoginComponent {
 
     if (username === 'admin' &&
     password === 'admin'){
+      sessionStorage.setItem("logged","true");
       this.routerService.navigateByUrl('/main');
     }else{
+      sessionStorage.removeItem("logged")
       alert("Invalid username or password");
       txtUsername.focus();
       txtUsername.select();
