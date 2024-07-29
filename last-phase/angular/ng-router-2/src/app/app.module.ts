@@ -9,7 +9,24 @@ import { MainComponent } from './main/main.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
+import {RouterModule, Routes} from "@angular/router";
+import {main} from "@angular/compiler-cli/src/main";
 
+const routes:Routes = [
+  {
+    path:'',
+    pathMatch:'full',
+    redirectTo:'/main'
+  },
+  {
+    path:'login',
+    component:LoginComponent
+  },
+  {
+    path:'main',
+    component:MainComponent
+  }
+];
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +39,7 @@ import { ThirdComponent } from './third/third.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
