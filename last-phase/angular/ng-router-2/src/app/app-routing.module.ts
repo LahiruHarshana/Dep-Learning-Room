@@ -7,6 +7,7 @@ import {FirstComponent} from "./first/first.component";
 import {SecondComponent} from "./second/second.component";
 import {ThirdComponent} from "./third/third.component";
 import {authGuard} from "./auth.guard";
+import {NotFoundComponent} from "./not-found/not-found.component";
 
 const routes:Routes = [
   {
@@ -43,8 +44,7 @@ const routes:Routes = [
   },
   {
     path:'**',
-    pathMatch:'full',
-    redirectTo:'/main'
+    component:NotFoundComponent
   }
 ];
 @NgModule({

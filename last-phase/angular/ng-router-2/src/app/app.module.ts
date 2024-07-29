@@ -10,6 +10,7 @@ import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
 import {RouterModule, Routes} from "@angular/router";
 import {AppRoutingModule} from "./app-routing.module";
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {AppRoutingModule} from "./app-routing.module";
     MainComponent,
     FirstComponent,
     SecondComponent,
-    ThirdComponent
+    ThirdComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
