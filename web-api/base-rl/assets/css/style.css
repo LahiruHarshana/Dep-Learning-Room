@@ -1,0 +1,17 @@
+h1{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+}
+
+img{
+  width: 150px;
+}
+
+body{
+  text-align: center;
+}
+
+.hide{
+  display: none;
+}

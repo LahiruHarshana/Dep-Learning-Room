@@ -1,0 +1,19 @@
+<main class="vh-100 d-flex justify-content-center align-items-center">
+  <section class="text-center border p-5 rounded shadow-lg bg-white">
+    <h2 class="mb-4 fw-bold">Welcome Back!</h2>
+    <div class="mb-4">
+      <label class="form-label fw-bold" for="txt-username">Username</label>
+      <input #txtUsername class="form-control text-center border-primary border-2 rounded-pill"
+             placeholder="Enter your username"
+             type="text" id="txt-username" required>
+    </div>
+
+    <div class="mb-4">
+      <label class="form-label fw-bold" for="txt-password">Password</label>
+      <input #txtPassword class="form-control text-center border-primary border-2 rounded-pill"
+             placeholder="Enter your password"
+             type="password" id="txt-password" required>
+    </div>
+    <button (click)="login(txtUsername,txtPassword)" class="btn btn-primary rounded-pill px-4 py-2 fw-bold">Login</button>
+  </section>
+</main>
