@@ -6,6 +6,6 @@ btnBack.addEventListener('click',()=>{
     history.back();
 });
 
-btnBack.addEventListener('click',()=>{
+btnForward.addEventListener('click',()=>{
     history.forward();
 });
