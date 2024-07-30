@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import {FormsModule} from "@angular/forms";
-
+import {FormsModule, NgModel} from "@angular/forms";
 @Component({
   selector: 'app-template-form',
   standalone: true,
@@ -9,5 +8,14 @@ import {FormsModule} from "@angular/forms";
   styleUrl: './template-form.component.css'
 })
 export class TemplateFormComponent {
-  myInput = 'Direct Entry Program - 12';
+  myInput = '';
+
+  validate(inputNgModel: NgModel) {
+    inputNgModel.control.markAsDirty();
+    if(inputNgModel.invalid){
+      alert("Invalid");
+    }else{
+      alert("Valid");
+    }
+  }
 }
