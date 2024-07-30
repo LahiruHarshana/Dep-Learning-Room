@@ -1,19 +1,21 @@
 <h1 class="text-center p-2">Reactive Forms</h1>
-<div class="d-flex justify-content-between justify-content-center gap-3">
-
-  <input [formControl]="myInputController"
+<div class="p-2 d-flex gap-1">
+  <input [formControl]="myInputControl"
          class="form-control"
          placeholder="Enter something here"
          type="text">
-  <button
-    (click)="validate()"
-    class="btn btn-primary">Validate</button>
+  <button (click)="validate()"
+          class="btn btn-primary">Validate
+  </button>
 </div>
-
 <small class="px-3 py-1">
-  <strong>Entered : </strong>{{myInputController.value}}
+  <strong>Entered: </strong> {{ myInputControl.value }}
 </small>
 <hr>
 <div class="p-2">
-  <app-reactive-form/>
+  <app-reactive-form />
+</div>
+<hr>
+<div class="p-2">
+  <app-dan-amarui/>
 </div>
