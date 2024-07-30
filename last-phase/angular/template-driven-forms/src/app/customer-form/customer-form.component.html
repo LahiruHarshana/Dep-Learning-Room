@@ -3,23 +3,23 @@
     <h3 class="mb-4 mb-3 d-flex justify-content-between align-items-center">Customer Details
     <button class="btn btn-success"> + New Customer</button>
     </h3>
-    <div>
+    <form>
       <div class="mb-3">
         <label for="txt-id" class="form-label">Customer ID</label>
-        <input type="text" id="txt-id" class="form-control" placeholder="Eg. C001">
+        <input [ngModelOptions] = "{standalone:true}" [(ngModel)]="customer.id"  type="text" id="txt-id" class="form-control" placeholder="Eg. C001">
       </div>
       <div class="mb-3">
         <label for="txt-name" class="form-label">Customer Name</label>
-        <input type="text" id="txt-name" class="form-control" placeholder="Eg. Kasun Sampath">
+        <input [(ngModel)]="customer.name" name="name" type="text" id="txt-name" class="form-control" placeholder="Eg. Kasun Sampath">
       </div>
       <div class="mb-3">
         <label for="txt-contact" class="form-label">Customer Contact</label>
-        <input type="text" id="txt-contact" class="form-control" placeholder="Eg. 843-4359834">
+        <input [(ngModel)]="customer.contact" name="contact" type="text" id="txt-contact" class="form-control" placeholder="Eg. 843-4359834">
       </div>
 
       <div>
         <button class="btn btn-primary">Save</button>
       </div>
-    </div>
+    </form>
   </div>
 </div>
