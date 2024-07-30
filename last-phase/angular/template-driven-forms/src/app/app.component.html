@@ -4,10 +4,19 @@
 <div class="p-2">
 
   <div class="d-flex">
-    <input #txt (input)="myInput = txt.value" [value]="myInput" class="form-control" type='text'placeholder="Enter Something here" [class.input-valid] = "isInputValid()" [class.input-invalid] = "!isInputValid()">
+    <input #txt (input)="myInput = txt.value ; isInputDirty = true" [value]="myInput" class="form-control" type='text'placeholder="Enter Something here" [class.input-valid] = "isInputDirty  && isInputValid()" [class.input-invalid] = "isInputDirty  && !isInputValid()">
     <button (click)="validate()" class="btn btn-primary">Validate</button>
   </div>
+  @if (isInputDirty && !isInputValid()){
+    <div>
+      <small class="text-danger">Input Can't be blank and only allow letters and digits </small>
+    </div>
+  }
   <div class="mt-2 text-center">
     <strong>Entered :</strong>{{myInput}}
   </div>
+</div>
+
+<div class="p-2">
+  <app-template-form/>
 </div>
