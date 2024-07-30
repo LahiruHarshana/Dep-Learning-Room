@@ -8,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrl: './template-form.component.css'
 })
 export class TemplateFormComponent {
-
+  myInput = 'Direct Entry Program - 12';
 }
