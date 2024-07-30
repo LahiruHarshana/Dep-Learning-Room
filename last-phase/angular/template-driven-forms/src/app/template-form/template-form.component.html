@@ -1,5 +1,8 @@
 <div class="d-flex align-items-center">
-  <input [value]="myInput" type="text" placeholder="Enter something here" class="form-control form-control-lg me-3 shadow-sm">
+  <input [ngModel]="myInput" type="text"
+         pattern="^[A-Za-z0-9 ]+$"
+         placeholder="Enter something here"
+         class="form-control form-control-lg me-3 shadow-sm">
   <button class="btn btn-primary btn-lg shadow">Validate</button>
 </div>
 
