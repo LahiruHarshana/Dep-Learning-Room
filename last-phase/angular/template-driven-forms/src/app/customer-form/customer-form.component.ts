@@ -1,5 +1,5 @@
 import {Component, isStandalone} from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, NgForm} from "@angular/forms";
 
 
 type Customer = {
@@ -25,4 +25,16 @@ export class CustomerFormComponent {
   }
   protected readonly isStandalone = isStandalone;
   protected readonly name = name;
+
+  saveCustomer(frmModel: NgForm) {
+    frmModel.control.markAllAsTouched();
+    if (frmModel.invalid){
+      alert('Invalid');
+
+    }else{
+      alert('Valid');
+      console.log(frmModel.value)
+      frmModel.resetForm();
+    }
+  }
 }

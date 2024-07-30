@@ -2,38 +2,60 @@
   <div class="card p-4">
     <h3 class="mb-4 mb-3 d-flex justify-content-between align-items-center">Customer Details
     </h3>
-    <form>
+    <form (ngSubmit)="saveCustomer(frmModel)" #frmModel='ngForm'>
       <div class="mb-3">
         <label for="txt-id" class="form-label">Customer ID</label>
-        <input #idModel='ngModel' [(ngModel)]="customer.id"
-               [class.is-invalid]="idModel.dirty && idModel.invalid"
-               [class.is-valid]="idModel.dirty && idModel.valid"
-               name="id"  type="text" id="txt-id" class="form-control is-invalid" placeholder="Eg. C001">
-        <small class="invalid-feedback">Customer Id is invalod</small>
+        <input #idNgModel='ngModel' [(ngModel)]="customer.id"
+               [class.is-invalid]="idNgModel.touched && idNgModel.invalid"
+               [class.is-valid]="idNgModel.touched && idNgModel.valid"
+               required pattern="^C\d{3}$"
+               name="id" type="text" id="txt-id" class="form-control is-invalid" placeholder="Eg. C001">
+        @if (idNgModel.hasError('pattern')){
+          <small class="invalid-feedback">Customer Id is invalid</small>
+        } @else {
+          <small class="invalid-feedback">Customer Id can't be empty</small>
+
+        }
       </div>
       <div class="mb-3">
         <label for="txt-name" class="form-label">Customer Name</label>
         <input #nameModel = 'ngModel'
-               [class.is-invalid] = "nameModel.dirty && nameModel.invalid"
-               [class.is-valid] = "nameModel.dirty && nameModel.valid"
+               [class.is-invalid] = "nameModel.touched && nameModel.invalid"
+               [class.is-valid] = "nameModel.touched && nameModel.valid"
                [(ngModel)]="customer.name"
-               required pattern="[A-Za-z ]+$"
+               required pattern="[A-Za-z ]+$" minlength="3"
                name="name" type="text"
                id="txt-name" class="form-control is-invalid" placeholder="Eg. Kasun Sampath">
-        <small class="invalid-feedback">Customer Name is invalod</small>
+        <small class="invalid-feedback">
+          @if (nameModel.hasError('pattern')){
+            Name can only contain letters and digits
+          } @else if (nameModel.hasError('minlength')){
+            Name should be at least 3 characters long
+          } @else {
+            Name can't be empty
+          }
+        </small>
+
+
       </div>
       <div class="mb-3">
         <label for="txt-contact" class="form-label">Customer Contact</label>
         <input #contactModel='ngModel'
-               [class.is-invalid] = "contactModel.dirty && contactModel.invalid"
-               [class.is-valid] = "contactModel.dirty && contactModel.valid"
+               [class.is-invalid] = "contactModel.touched && contactModel.invalid"
+               [class.is-valid] = "contactModel.touched && contactModel.valid"
                [(ngModel)]="customer.contact"
                name="contact" type="text"
                required pattern="^\d{3}-\d{7}$"
                id="txt-contact"
                class="form-control is-invalid"
                placeholder="Eg. 843-4359834">
-        <small class="invalid-feedback">Customer Contact is invalod</small>
+        <small class="invalid-feedback">
+          @if(contactModel.hasError('pattern')){
+            Customer Contact is invalid
+          } @else {
+            Contact number can't be empty
+          }
+        </small>
 
       </div>
 
