@@ -19,9 +19,10 @@ type Customer = {
 })
 export class CustomerFormComponent {
   customer : Customer = {
-    id:'C001',
-    name:'Tharindu',
-    contact:'234-3421341'
+    id:'',
+    name:'',
+    contact:''
   }
   protected readonly isStandalone = isStandalone;
+  protected readonly name = name;
 }
