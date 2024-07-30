@@ -1,1 +1,13 @@
-<h1 class="text-center mt-2">Template Driven Forms</h1>
+<h1 class="text-center mt-2">
+  Template Driven Forms
+</h1>
+<div class="p-2">
+
+  <div class="d-flex">
+    <input #txt (input)="myInput = txt.value" [value]="myInput" class="form-control" type='text'placeholder="Enter Something here" [class.input-valid] = "isInputValid()" [class.input-invalid] = "!isInputValid()">
+    <button (click)="validate()" class="btn btn-primary">Validate</button>
+  </div>
+  <div class="mt-2 text-center">
+    <strong>Entered :</strong>{{myInput}}
+  </div>
+</div>

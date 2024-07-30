@@ -9,5 +9,17 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'template-driven-forms';
+  myInput = '';
+
+  isInputValid():boolean {
+    return /^[A-Za-z0-9 ]+$/.test(this.myInput)
+  }
+
+  validate() {
+    if (this.isInputValid()){
+      alert("Validated");
+    }else {
+      alert("Invalidated")
+    }
+  }
 }
