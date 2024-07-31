@@ -1,1 +1,28 @@
-<p>sign-up works!</p>
+<div class="h-screen flex justify-center items-center bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">
+  <div class="grid bg-white rounded-lg shadow-xl p-10 w-96">
+    <h1 class="text-4xl font-extrabold mb-4 text-center text-gray-800">Sign Up</h1>
+    <p class="text-gray-600 mb-8 text-center">Create an account to get started</p>
+    <mat-form-field appearance="outline" class="mb-6 w-full">
+      <mat-label>User Name</mat-label>
+      <input matInput placeholder="Enter User Name" class="w-full">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mb-6 w-full">
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="Enter Your Password" class="w-full">
+    </mat-form-field>
+
+    <mat-form-field appearance="outline" class="mb-6 w-full">
+      <mat-label>Confirm Password</mat-label>
+      <input type="password" matInput placeholder="Confirm Your Password" class="w-full">
+    </mat-form-field>
+
+    <div class="flex justify-center mb-6">
+      <button mat-button class="bg-gradient-to-r from-green-400 to-blue-500 hover:from-green-500 hover:to-blue-600 text-white font-bold py-2 px-6 rounded-lg shadow-md">Sign Up</button>
+    </div>
+
+    <div class="text-center text-gray-600">
+      <p>Already have an account? <a routerLink="/sign-in" class="text-blue-500 hover:text-blue-700 font-semibold">Sign In</a></p>
+    </div>
+  </div>
+</div>
