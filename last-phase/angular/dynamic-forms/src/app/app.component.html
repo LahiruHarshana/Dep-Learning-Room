@@ -1,9 +1,10 @@
 <h1 class="text-center p-2 border-bottom"> Dynamic Forms </h1>
 
-<form class="px-3">
+<form class="px-3" [formGroup]="form">
   <div class="p-2">
     <label for="txt-nic" class="form-label fw-bold">Student NIC</label>
     <input type="text"
+           formControlName = nic
            class="form-control"
            id="txt-nic"
            placeholder="Enter the student nic">
@@ -12,6 +13,7 @@
   <div class="p-2">
     <label for="txt-name" class="form-label fw-bold">Student Name</label>
     <input type="text"
+           formArrayName = "name"
            class="form-control"
            id="txt-name"
            placeholder="Enter the student name">
@@ -21,6 +23,7 @@
     <label for="rd-gender-male" class="form-label fw-bold">Student Gender</label>
     <div class="d-flex gap-2">
       <input type="radio"
+             formControlName = "gender"
              class="form-check-input"
              id="rd-gender-male"
              name="gender"
@@ -28,6 +31,7 @@
       <label for="rd-gender-male">Male</label>
 
       <input type="radio"
+             formControlName="gender"
              class="form-check-input"
              id="rd-gender-female"
              name="gender"
@@ -41,6 +45,8 @@
       Student Mark Sheet
     </label>
     <table>
+
+      @for (subject of form.controls.subjects.controls; track $index){
       <tr>
         <td>
           <input type="text" class="form-control "
@@ -56,6 +62,7 @@
           <button class="btn btn-primary">+</button>
         </td>
       </tr>
+      }
     </table>
   </div>
   <div class="p-2">
