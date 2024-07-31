@@ -1,75 +1,72 @@
-<h1 class="text-center p-2 border-bottom"> Dynamic Forms </h1>
-
-<form class="px-3" [formGroup]="form">
+<h1 class="text-center p-2 border-bottom">
+  Dynamic Forms
+</h1>
+<form (ngSubmit)="generateReportCard()" class="px-2" [formGroup]="form">
   <div class="p-2">
     <label for="txt-nic" class="form-label fw-bold">Student NIC</label>
-    <input type="text"
-           formControlName = nic
+    <input type="text" id="txt-nic"
+           [class]="getCssClasses('nic')"
+           formControlName="nic"
            class="form-control"
-           id="txt-nic"
            placeholder="Enter the student nic">
   </div>
-
   <div class="p-2">
     <label for="txt-name" class="form-label fw-bold">Student Name</label>
-    <input type="text"
-           formArrayName = "name"
+    <input type="text" id="txt-name"
+           [class]="getCssClasses('name')"
+           formControlName="name"
            class="form-control"
-           id="txt-name"
            placeholder="Enter the student name">
   </div>
-
   <div class="p-2">
     <label for="rd-gender-male" class="form-label fw-bold">Student Gender</label>
     <div class="d-flex gap-2">
-      <input type="radio"
-             formControlName = "gender"
-             class="form-check-input"
-             id="rd-gender-male"
-             name="gender"
-             placeholder="Enter the student name">
-      <label for="rd-gender-male">Male</label>
-
-      <input type="radio"
+      <input type="radio" id="rd-gender-male" name="gender"
+             value="male"
+             [class]="getCssClasses('gender')"
              formControlName="gender"
-             class="form-check-input"
-             id="rd-gender-female"
-             name="gender"
-             placeholder="Enter the student name">
-      <label for="rd-gender-female">FeMale</label>
+             class="form-check-input">
+      <label for="rd-gender-male">Male</label>
+      <input type="radio" id="rd-gender-female" name="gender"
+             value="female"
+             [class]="getCssClasses('gender')"
+             formControlName="gender"
+             class="form-check-input">
+      <label for="rd-gender-female">Female</label>
     </div>
   </div>
-
   <div class="p-2">
     <label for="rd-gender-male" class="form-label fw-bold">
       Student Mark Sheet
     </label>
-    <table>
-
-      @for (subject of form.controls.subjects.controls; track $index){
-      <tr [formGroup]= "subject">
-        <td>
-          <input type="text" class="form-control "
-                 formControlName = 'name'
-          placeholder="Enter subject {{$index + 1}}">
-        </td>
-
-        <td>
-          <input type="number" class="form-control "
-                 placeholder="Enter subject {{$index + 1}} marks"
-                 formControlName="marks">
-        </td>
-
-        <td>
-          @if ($first){
-            <button (click)="addNewSubject()"
-                    class="btn btn-primary">+</button>
-          } @else {
-            <button (click)="form.controls.subjects.removeAt($index)"
-                    class="p-2 btn btn-danger w-100">-</button>
-          }
-        </td>
-      </tr>
+    <table class="w-100">
+      @for (subject of form.controls.subjects.controls; track $index) {
+        <tr [formGroup]="subject">
+          <td>
+            <input type="text" class="form-control"
+                   [class]="getCssClasses('name', subject)"
+                   formControlName="name"
+                   placeholder="Enter subject {{$index + 1}}">
+          </td>
+          <td>
+            <input type="number" class="form-control text-center"
+                   min="0" max="100"
+                   [class]="getCssClasses('marks', subject)"
+                   formControlName="marks"
+                   placeholder="Marks">
+          </td>
+          <td>
+            @if ($first) {
+              <button (click)="addNewSubject()"
+                      class="btn btn-primary w-100">+
+              </button>
+            } @else {
+              <button (click)="form.controls.subjects.removeAt($index)"
+                      class="btn btn-danger w-100">-
+              </button>
+            }
+          </td>
+        </tr>
       }
     </table>
   </div>
@@ -77,3 +74,6 @@
     <button class="btn btn-success">Generate Report Card</button>
   </div>
 </form>
+@if (displayReportCard){
+  <app-report-card/>
+}
