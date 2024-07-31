@@ -2,11 +2,11 @@ import {
   AfterContentChecked,
   AfterContentInit, AfterViewChecked,
   AfterViewInit,
-  Component,
-  DoCheck,
+  Component, ContentChild,
+  DoCheck, ElementRef,
   Input,
   OnChanges, OnDestroy,
-  OnInit, SimpleChanges
+  OnInit, SimpleChanges, ViewChild
 } from '@angular/core';
 
 @Component({
@@ -20,31 +20,46 @@ export class ChildComponent implements OnChanges, OnInit ,DoCheck,AfterContentIn
   @Input()
   value : string = '';
 
+  @ViewChild("h1")
+  h1ElmRef! = ElementRef;
+  @ContentChild("crazy")
+  crazyRef! = ElementRef;
+
+  static {
+    console.log("0 . static Initializer")
+  }
   constructor(value: string) {
-    this.value = value;
+    console.log("1 : Constructor")
   }
-
-  ngAfterContentChecked(): void {
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(" 2 : ngOnChanges")
   }
+  ngOnInit(): void {
+    console.log("3 : ngOnInit")
+  }
+  ngDoCheck(): void {
+    console.log("4 : ngDoCheck")
+    console.log(this.h1ElmRef,this.crazyRef);
 
+  }
   ngAfterContentInit(): void {
+    console.log("5 : ngAfterContentInit")
+    console.log(this.h1ElmRef,this.crazyRef);
+
+  }
+  ngAfterContentChecked(): void {
+    console.log("6 ; ngAfterContentChecked")
+  }
+  ngAfterViewInit(): void {
+    console.log("7.AfterViewInit")
+    console.log(this.h1ElmRef,this.crazyRef);
   }
 
   ngAfterViewChecked(): void {
+    console.log("8.AfterViewChecked")
   }
-
-  ngAfterViewInit(): void {
-  }
-
-  ngDoCheck(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-  }
-
   ngOnDestroy(): void {
+    console.log(" 9 . Destroy")
   }
 
-  ngOnInit(): void {
-  }
 }
