@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-material": {
+    "angular-material-2": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/angular-material",
+            "outputPath": "dist/angular-material-2",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -85,10 +85,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-material:build:production"
+              "buildTarget": "angular-material-2:build:production"
             },
             "development": {
-              "buildTarget": "angular-material:build:development"
+              "buildTarget": "angular-material-2:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -111,8 +111,8 @@
               }
             ],
             "styles": [
-              "src/styles.css",
-              "node_modules/@angular/material/prebuilt-themes/indigo-pink.css"
+              "@angular/material/prebuilt-themes/azure-blue.css",
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -121,6 +121,6 @@
     }
   },
   "cli": {
-    "analytics": "af76b335-92f2-4b36-b24a-d0b0a5f7363e"
+    "analytics": "6336ecf6-0e4a-4fa3-ae91-897219663097"
   }
 }
