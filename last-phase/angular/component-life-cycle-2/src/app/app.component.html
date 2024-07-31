@@ -1,3 +1,18 @@
 <h1 class="text-center p-2">
   Angular Component Life Cycle -2
 </h1>
+<div class="text-center">
+  <button class="btn btn-primary"
+            (click)=child.myInputProperty="ijse"></button>
+  <button class="btn btn-primary" (click)="updateText()">Update Text</button>
+  <button class="btn btn-primary" (click)="flag = !flag">Update Text</button>
+</div>
+<hr>
+<app-child #child [myInputProperty]="'ijse'">
+  <h1 #h1 class="text-center">Projected Content (h1)</h1>
+</app-child>
+<app-first>
+  <h2 class="text-center" #h2>Projected Content (h2)</h2>
+  <h2 class="text-center" #h2>Projected Content (h2)</h2>
+  <h2 class="text-center" #h2>Projected Content (h2)</h2>
+</app-first>

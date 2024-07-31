@@ -1,20 +1,14 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import {ChildComponent} from "./child/child.component";
-import {FirstComponent} from "./first/first.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ChildComponent, FirstComponent],
+  imports: [RouterOutlet, ChildComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  text = Math.random().toFixed(2)+"";
-  flag: boolean;
-
-  updateText(){
-    this.text = Math.random().toFixed(2)+"";
-  }
+  title = 'angular-material';
 }
