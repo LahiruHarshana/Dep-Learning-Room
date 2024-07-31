@@ -1,0 +1,9 @@
+#overlay{
+  background-color: rgba(0, 0, 0, 0.51);
+}
+
+#report-container{
+  width: 80%;
+  height: 80%;
+  background-color: white;
+}
