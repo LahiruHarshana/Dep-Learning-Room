@@ -2,7 +2,7 @@ import {Component, inject} from '@angular/core';
 import {RouterOutlet} from '@angular/router';
 import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 import {CustomValidators} from "./custom-validators";
-import {ReportCardComponent} from "./report-card/report-card.component";
+import {ReportCardComponent, Student} from "./report-card/report-card.component";
 
 @Component({
   selector: 'app-root',
@@ -14,11 +14,11 @@ import {ReportCardComponent} from "./report-card/report-card.component";
 export class AppComponent {
   private fb = inject(FormBuilder);
   form = this.fb.group({
-    nic: ['123456789v', [Validators.required,
+    nic: ['', [Validators.required,
       Validators.pattern(/^\d{9}[Vv]$/)]],
-    name: ['kasun Sampath', [CustomValidators.isBlank,
+    name: ['', [CustomValidators.isBlank,
       Validators.pattern(/^[A-Za-z ]+$/)]],
-    gender: ['male', [Validators.required]],
+    gender: ['', [Validators.required]],
     subjects: this.fb.array([
       this.createSubjectGroup(),
       this.createSubjectGroup(),
@@ -28,8 +28,8 @@ export class AppComponent {
 
   createSubjectGroup(){
     return this.fb.group({
-      name: ['Subject', [CustomValidators.isBlank]],
-      marks: ['50', [Validators.required]]
+      name: ['', [CustomValidators.isBlank]],
+      marks: ['', [Validators.required]]
     });
   }
 
@@ -44,6 +44,9 @@ export class AppComponent {
   }
 
   displayReportCard = false;
+  get student() : Student{
+    return this.form.value as unknown as Student;
+  }
   addNewSubject() {
     this.form.controls.subjects.push(this.createSubjectGroup());
   }

@@ -2,11 +2,11 @@
   <div id="report-container" class="bg-white rounded p-3">
     <h3 class="text-center">Report Card</h3>
     <div>
-      <strong>Name : </strong> Kasun Sampath
+      <strong>Name : </strong> {{ student.name }}
     </div>
 
     <div>
-      <strong>Nic : </strong> 123456789v
+      <strong>Nic : </strong> {{student.nic}}
     </div>
 
     <table class="table table-bordered">
@@ -17,29 +17,33 @@
       </tr>
       </thead>
       <tbody>
-        @for (subject of [1,2,3,4,5];track $index){
+        @for (subject of student.subjects;track $index){
           <tr>
-            <td>Database Management System</td>
-            <td class="text-center">85</td>
+            <td>{{subject.name}}</td>
+            <td class="text-center">{{subject.marks }}</td>
           </tr>
         }
       </tbody>
       <tfoot>
       <tr>
         <th>Total Marks</th>
-        <th class="text-center">1250</th>
+        <th class="text-center">{{ getTotalMarks() }}</th>
       </tr>
 
       <tr>
         <th>Avg. Marks</th>
-        <th class="text-center">85</th>
+        <th class="text-center">{{ getAvgMarks() }}</th>
       </tr>
 
       <tr>
         <th>Grade</th>
-        <th class="text-center">A+</th>
+        <th class="text-center">{{getGrade()}}</th>
       </tr>
       </tfoot>
     </table>
   </div>
+</div>
+<div id="button-container"  class="position-fixed fixed-top gap-3 p-3 d-flex justify-content-center p-3">
+<button class="btn btn-primary" (click)="printReportCard()">Print Report</button>
+<button class="btn btn-warning" (click)="close.emit()">Print Close</button>
 </div>

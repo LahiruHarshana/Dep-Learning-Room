@@ -57,11 +57,11 @@
           </td>
           <td>
             @if ($first) {
-              <button (click)="addNewSubject()"
+              <button type="button" (click)="addNewSubject()"
                       class="btn btn-primary w-100">+
               </button>
             } @else {
-              <button (click)="form.controls.subjects.removeAt($index)"
+              <button type="button" (click)="form.controls.subjects.removeAt($index)"
                       class="btn btn-danger w-100">-
               </button>
             }
@@ -74,6 +74,6 @@
     <button class="btn btn-success">Generate Report Card</button>
   </div>
 </form>
-<!--@if (displayReportCard){-->
-  <app-report-card/>
-<!--}-->
+@if (displayReportCard){
+  <app-report-card [student]="student" (close)="displayReportCard = !displayReportCard; form.reset()"/>
+}

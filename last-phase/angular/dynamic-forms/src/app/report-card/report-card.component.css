@@ -7,3 +7,9 @@
   height: 80%;
   background-color: white;
 }
+
+@media print {
+  #button-container {
+    display: none !important;
+  }
+}
