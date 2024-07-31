@@ -47,19 +47,27 @@
     <table>
 
       @for (subject of form.controls.subjects.controls; track $index){
-      <tr>
+      <tr [formGroup]= "subject">
         <td>
           <input type="text" class="form-control "
-          placeholder="Enter subject 1">
+                 formControlName = 'name'
+          placeholder="Enter subject {{$index + 1}}">
         </td>
 
         <td>
-          <input type="text" class="form-control "
-                 placeholder="Enter subject 1 marks">
+          <input type="number" class="form-control "
+                 placeholder="Enter subject {{$index + 1}} marks"
+                 formControlName="marks">
         </td>
 
         <td>
-          <button class="btn btn-primary">+</button>
+          @if ($first){
+            <button (click)="addNewSubject()"
+                    class="btn btn-primary">+</button>
+          } @else {
+            <button (click)="form.controls.subjects.removeAt($index)"
+                    class="p-2 btn btn-danger w-100">-</button>
+          }
         </td>
       </tr>
       }

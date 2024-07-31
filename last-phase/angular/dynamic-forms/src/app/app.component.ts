@@ -17,16 +17,30 @@ export class AppComponent {
     gender:[],
     subjects:this.fb.array([
       this.fb.group({
-        name :['Operating System'],
-        marks:['80']
+        name :[''],
+        marks:['']
       }),
       this.fb.group({
-        name :['DBMS'],
-        marks:['95']
+        name :[''],
+        marks:['']
+      }),
+      this.fb.group({
+        name :[''],
+        marks:['']
+      }),
+      this.fb.group({
+        name :[''],
+        marks:['']
       })
     ])
     // subjects:this.fb.array([[]]),
     // marks:this.fb.array([[]])
   });
 
+  addNewSubject() {
+    this.form.controls.subjects.push(this.fb.group({
+      name : [''],
+      marks: ['']
+    }))
+  }
 }
