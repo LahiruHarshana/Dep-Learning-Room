@@ -1,8 +1,8 @@
-import {CanActivateFn, Router, UrlTree} from '@angular/router';
+import {CanActivateFn, Router} from '@angular/router';
 import {inject} from "@angular/core";
 import {AuthService} from "./service/auth.service";
 
-export const authGuard: CanActivateFn = (route) => {
+export const authGuard: CanActivateFn = (route, state) => {
   const authService = inject(AuthService);
   const routerService = inject(Router);
 
@@ -11,5 +11,4 @@ export const authGuard: CanActivateFn = (route) => {
   }else{
     return routerService.parseUrl("/sign-in");
   }
-
 };

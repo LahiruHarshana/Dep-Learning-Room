@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ng-firebase-todo-list": {
+    "my-notes": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:class": {
@@ -38,7 +38,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/ng-firebase-todo-list",
+            "outputPath": "dist/my-notes",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -88,10 +88,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "ng-firebase-todo-list:build:production"
+              "buildTarget": "my-notes:build:production"
             },
             "development": {
-              "buildTarget": "ng-firebase-todo-list:build:development"
+              "buildTarget": "my-notes:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -124,6 +124,6 @@
     }
   },
   "cli": {
-    "analytics": "864b4635-7f95-4765-8068-71a57fa9448b"
+    "analytics": "476b954b-affe-4c2d-a335-cc89484891c7"
   }
 }

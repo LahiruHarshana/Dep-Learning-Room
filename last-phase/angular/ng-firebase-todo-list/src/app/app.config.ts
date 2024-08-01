@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getAuth, provideAuth } from '@angular/fire/auth';
+import {getFirestore, provideFirestore} from "@angular/fire/firestore";
 
 export const appConfig: ApplicationConfig = {
   providers: [provideZoneChangeDetection({ eventCoalescing: true }), provideRouter(routes), provideAnimationsAsync(), provideFirebaseApp(() => initializeApp(
@@ -14,5 +15,8 @@ export const appConfig: ApplicationConfig = {
       "apiKey":"AIzaSyDOmf-5Rn_v2rS8cipAMViTuPO6eGqEUTI",
       "authDomain":"ng-firebase-todo-list-8c9a1.firebaseapp.com",
       "messagingSenderId":"322297135233"
-    })), provideAuth(() => getAuth())]
+    })), provideAuth(() => getAuth()),
+  provideFirestore((()=> getFirestore()))]
+
+
 };

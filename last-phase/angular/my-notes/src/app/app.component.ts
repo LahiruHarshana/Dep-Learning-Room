@@ -1,18 +1,15 @@
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import {LoaderComponent} from "./loader/loader.component";
+import {SignInComponent} from "./sign-in/sign-in.component";
+import {authGuard} from "./auth.guard";
 import {AuthService} from "./service/auth.service";
 import {Title} from "@angular/platform-browser";
-import {SignInComponent} from "./sign-in/sign-in.component";
+import {LoaderComponent} from "./loader/loader.component";
 
-
-export interface Fruit {
-  name: string;
-}
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, LoaderComponent],
+  imports: [RouterOutlet, SignInComponent, LoaderComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
