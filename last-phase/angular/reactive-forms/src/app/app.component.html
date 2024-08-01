@@ -1,21 +1,31 @@
-<h1 class="text-center p-2">Reactive Forms</h1>
-<div class="p-2 d-flex gap-1">
-  <input [formControl]="myInputControl"
-         class="form-control"
-         placeholder="Enter something here"
-         type="text">
-  <button (click)="validate()"
-          class="btn btn-primary">Validate
-  </button>
-</div>
-<small class="px-3 py-1">
-  <strong>Entered: </strong> {{ myInputControl.value }}
-</small>
-<hr>
-<div class="p-2">
-  <app-reactive-form />
-</div>
-<hr>
-<div class="p-2">
-  <app-dan-amarui/>
-</div>
+<!--<h1 class="text-center p-2">Reactive Forms</h1>-->
+<!--<div class="p-2 d-flex gap-1">-->
+<!--  <input [formControl]="myInputControl"-->
+<!--         class="form-control"-->
+<!--         placeholder="Enter something here"-->
+<!--         type="text">-->
+<!--  <button (click)="validate()"-->
+<!--          class="btn btn-primary">Validate-->
+<!--  </button>-->
+<!--</div>-->
+<!--<small class="px-3 py-1">-->
+<!--  <strong>Entered: </strong> {{ myInputControl.value }}-->
+<!--</small>-->
+<!--<hr>-->
+<!--<div class="p-2">-->
+<!--  <app-reactive-form />-->
+<!--</div>-->
+<!--<hr>-->
+<!--<div class="p-2">-->
+<!--  <app-dan-amarui/>-->
+<!--</div>-->
+
+<form>
+  <div class="d-flex align-items-center mb-3 justify-content-center">
+    <h1 class="col-3">Kalu Laalla</h1>
+    <div class="col-9">
+      <label [class]="class" ><strong>Apple Count:</strong> {{ appleCount }}</label>
+    </div>
+  </div>
+</form>
+

@@ -12,6 +12,13 @@ import {DanAmaruiComponent} from "./dan-amarui/dan-amarui.component";
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
+  appleCount = 10;
+
+  class = 'hai';
+
+
+
   myInputControl
     = new FormControl('',
     [Validators.required,

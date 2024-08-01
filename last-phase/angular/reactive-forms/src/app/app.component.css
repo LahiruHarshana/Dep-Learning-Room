@@ -5,3 +5,8 @@
 .ng-dirty.ng-valid{
   border-left: 5px solid lime;
 }
+
+
+.hai{
+  color: red;
+}
