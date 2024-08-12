@@ -1,0 +1,12 @@
+{
+  "name": "hello-nodejs-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node --enable-source-maps dist/main.js",
+    "compile":"tsc --watch"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

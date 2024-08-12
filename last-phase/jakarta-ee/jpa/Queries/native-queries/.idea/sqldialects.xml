@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/ijse/dep12/jpa/quries/QueryDemo3.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/ijse/dep12/jpa/quries/QueryDemo4.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/ijse/dep12/jpa/quries/QueryDemo6.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/ijse/dep12/jpa/quries/QueryDemo7.java" dialect="MySQL" />
+    <file url="file://$PROJECT_DIR$/src/main/java/lk/ijse/dep12/jpa/quries/QueryDemo8.java" dialect="MySQL" />
+    <file url="PROJECT" dialect="MySQL" />
+  </component>
+</project>

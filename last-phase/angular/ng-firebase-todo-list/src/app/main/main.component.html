@@ -19,5 +19,9 @@
                 cursor-pointer hover:text-red-500"
                 fontIcon="delete" inline/>
     </div>
+  } @empty {
+    <div *ngIf="isLoading">
+      Please wait,we are loading your tasks
+    </div>
   }
 </div>

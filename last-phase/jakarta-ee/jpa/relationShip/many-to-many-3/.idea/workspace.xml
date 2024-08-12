@@ -5,9 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="43ce594a-86fb-4232-bfcc-d69e7ff28661" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../../typescript/typescript-lang-3/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../typescript/typescript-lang-2/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../typescript/typescript-lang-2/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../typescript/typescripts-2/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../typescript/typescripts-2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../joins/dep12_joins/1.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../joins/dep12_joins/2.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../joins/dep12_joins/3.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../joins/dep12_joins/4.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../../merging-3way/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/app.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/main/main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/main/main.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/main/main.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/main/main.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/service/task.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/app/service/task.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../angular/ng-firebase-todo-list/src/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,6 +85,7 @@
       <workItem from="1721719573305" duration="158000" />
       <workItem from="1721720044704" duration="3169000" />
       <workItem from="1721889034919" duration="10000" />
+      <workItem from="1722959871423" duration="10000" />
     </task>
     <servers />
   </component>
