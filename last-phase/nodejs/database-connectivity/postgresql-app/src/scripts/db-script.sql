@@ -1,0 +1,5 @@
+CREATE TABLE customer(
+    id VARCHAR(10) PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    address VARCHAR(200) NOT NULL
+);
