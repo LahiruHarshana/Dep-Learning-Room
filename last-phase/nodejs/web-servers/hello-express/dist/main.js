@@ -20,9 +20,11 @@ function handleRequestFn2(req, res) {
     res.end();
 }
 function middleware1(req, res, next) {
-    console.log("Middleware2");
+    console.log("Middleware1");
+    next();
 }
 function middleware2(req, res, next) {
     console.log("Middleware2");
+    next();
 }
 //# sourceMappingURL=main.js.map

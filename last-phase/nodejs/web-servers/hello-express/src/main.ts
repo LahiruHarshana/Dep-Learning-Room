@@ -1,4 +1,4 @@
-import express, {Request, RequestHandler, Response} from 'express';
+import express, {NextFunction, Request, RequestHandler, Response} from 'express';
 
 const app = express();
 
@@ -28,10 +28,12 @@ function handleRequestFn2(req : Request, res:Response){
     res.end();
 }
 
-function middleware1(req : Request,res : Response, next: RequestHandler){
-    console.log("Middleware2");
+function middleware1(req : Request,res : Response, next: NextFunction){
+    console.log("Middleware1");
+    next();
 }
 
-function middleware2(req : Request,res : Response, next: RequestHandler){
+function middleware2(req : Request,res : Response, next: NextFunction){
     console.log("Middleware2");
+    next();
 }
