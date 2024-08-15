@@ -1,10 +1,10 @@
 import express,{Request,Response} from "express";
 
-export const controller = express.Router();
+export const advertismentController = express.Router();
 
-controller.get('/',getAllAdvertisement);
-controller.post('/',postAdvertisement);
-controller.delete('/:id',deleteAdvertisement);
+advertismentController.get('/',getAllAdvertisement);
+advertismentController.post('/',postAdvertisement);
+advertismentController.delete('/:id',deleteAdvertisement);
 
 
 function getAllAdvertisement(req: Request,res : Response) {

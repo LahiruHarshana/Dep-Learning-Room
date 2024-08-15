@@ -1,8 +1,8 @@
 import express from "express";
-export const controller = express.Router();
-controller.get('/', getAllAdvertisement);
-controller.post('/', postAdvertisement);
-controller.delete('/:id', deleteAdvertisement);
+export const advertismentController = express.Router();
+advertismentController.get('/', getAllAdvertisement);
+advertismentController.post('/', postAdvertisement);
+advertismentController.delete('/:id', deleteAdvertisement);
 function getAllAdvertisement(req, res) {
     console.log("Get all advertismenets");
 }
